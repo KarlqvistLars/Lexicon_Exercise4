@@ -13,9 +13,15 @@
             {
                 program.Run();
             }
-            p3.Run();
+            ((IStart)p3).Run();
             int result = ((IStart2)p3).Run();
             Console.WriteLine($"Resultatet från program 3: {result}");
+
+            string s1 = ((IString)p3).GetString();
+            string vT = "program3 getstring";
+
+            Console.WriteLine(s1.Equals(vT, StringComparison.OrdinalIgnoreCase));
+
         }
     }
 }

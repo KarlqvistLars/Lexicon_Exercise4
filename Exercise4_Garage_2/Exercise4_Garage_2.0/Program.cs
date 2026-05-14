@@ -1,4 +1,4 @@
-﻿namespace Exercise4_Garage_2._0
+﻿namespace Exercise4_Garage_2
 {
     internal class Program
     {
