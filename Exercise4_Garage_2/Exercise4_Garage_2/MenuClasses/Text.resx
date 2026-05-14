@@ -141,4 +141,88 @@
   <data name="Wheel" xml:space="preserve">
     <value>hjul</value>
   </data>
+  <data name="MainHeader" xml:space="preserve">
+    <value>Huvudmeny</value>
+  </data>
+  <data name="Rad1Main" xml:space="preserve">
+    <value>Lägg till fordon</value>
+  </data>
+  <data name="Rad2Main" xml:space="preserve">
+    <value>Ta bort fordon</value>
+  </data>
+  <data name="Rad3Main" xml:space="preserve">
+    <value>Visa fordon</value>
+  </data>
+  <data name="Rad4Main" xml:space="preserve">
+    <value>Hämta fordon från fil</value>
+  </data>
+  <data name="Valg" xml:space="preserve">
+    <value>Välj: </value>
+  </data>
+  <data name="Rad1AddVehicle" xml:space="preserve">
+    <value>Bil</value>
+  </data>
+  <data name="Rad2AddVehicle" xml:space="preserve">
+    <value>Buss</value>
+  </data>
+  <data name="Rad3AddVehicle" xml:space="preserve">
+    <value>Motorcykel</value>
+  </data>
+  <data name="Rad4AddVehicle" xml:space="preserve">
+    <value>Båt</value>
+  </data>
+  <data name="Rad5AddVehicle" xml:space="preserve">
+    <value>Flygplan</value>
+  </data>
+  <data name="Rad6AddVehicle" xml:space="preserve">
+    <value>Slunpmässigt</value>
+  </data>
+  <data name="Rad1RemoveVehicle" xml:space="preserve">
+    <value>Sök och ta bort fordon</value>
+  </data>
+  <data name="Rad2RemoveVehicle" xml:space="preserve">
+    <value>Ta bort fordon på regnummer</value>
+  </data>
+  <data name="Rad1ShowVehicle" xml:space="preserve">
+    <value>Visa alla fordon</value>
+  </data>
+  <data name="Rad2ShowVehicle" xml:space="preserve">
+    <value>Visa fordon via regnummer</value>
+  </data>
+  <data name="Rad3ShowVehicle" xml:space="preserve">
+    <value>Sök fordon på typ, regnummer, färg, vikt, längd</value>
+  </data>
+  <data name="Rad1LoadVehicleFromFilePart1" xml:space="preserve">
+    <value>Ladda sparade fordon i befintlig garage storlek.</value>
+  </data>
+  <data name="Rad1LoadVehicleFromFilePart2" xml:space="preserve">
+    <value>Det aktuella garaget sparas automatiskt vid avslut.</value>
+  </data>
+  <data name="Rad5Main" xml:space="preserve">
+    <value>Välj språk</value>
+  </data>
+  <data name="RadAddVehicle" xml:space="preserve">
+    <value>Lägg till fordonsdetaljer</value>
+  </data>
+  <data name="RegNum" xml:space="preserve">
+    <value>registreringsnummer</value>
+  </data>
+  <data name="NumSeats" xml:space="preserve">
+    <value>antal säten</value>
+  </data>
+  <data name="MaxWaterDepth" xml:space="preserve">
+    <value>ange djupgående (m)</value>
+  </data>
+  <data name="MaxSpeed" xml:space="preserve">
+    <value>ange max hastighet (knop)</value>
+  </data>
+  <data name="Deplacement" xml:space="preserve">
+    <value>ange deplacement</value>
+  </data>
+  <data name="Rad1ChooseLanguage" xml:space="preserve">
+    <value>Svenska</value>
+  </data>
+  <data name="Rad2ChooseLanguage" xml:space="preserve">
+    <value>Engelska</value>
+  </data>
 </root>

@@ -1,10 +1,9 @@
-﻿using Exercise4_Garage_2.Interfaces;
-
+﻿using Exercise4_Garage_2.MenuClasses;
+using static Exercise4_Garage_2.IVehicle;
 namespace Exercise4_Garage_2
 {
     public class Vehicle : IVehicle
     {
-        readonly string tab = new string(' ', 3);
         private string? _uuid;
         private string? _color;
         private int _weight;
@@ -23,7 +22,7 @@ namespace Exercise4_Garage_2
             this._length = length;
             this._type = (VehicleType)type;
         }
-        public string Tab { get => tab; }
+        public static string Tab { get => new string(' ', 3); }
         public string? Uuid
         {
             get => _uuid;
@@ -47,6 +46,24 @@ namespace Exercise4_Garage_2
         public string Type
         {
             get => _type.ToString();
+        }
+        string[] IVehicle.InDataVehicle()
+        {
+            return InDataVehicle();
+        }
+        internal static string[] InDataVehicle()
+        {
+            string[] data = new string[4];
+            Console.WriteLine($"{Tab}{Text.RadAddVehicle}:");
+            Console.Write($"{Tab}{Cap(Text.RegNum)}: ");
+            data[0] = Console.ReadLine() ?? string.Empty;
+            Console.Write($"{Tab}{Cap(Text.Color)}: ");
+            data[1] = Console.ReadLine() ?? string.Empty;
+            Console.Write($"{Tab}{Cap(Text.Vikt)}: ");
+            data[2] = Console.ReadLine() ?? "0";
+            Console.Write($"{Tab}{Cap(Text.Length)}: ");
+            data[3] = Console.ReadLine() ?? "0";
+            return data;
         }
         public static string Cap(string text)
         {

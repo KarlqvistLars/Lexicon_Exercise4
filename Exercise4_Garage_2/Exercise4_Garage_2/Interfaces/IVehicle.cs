@@ -1,4 +1,4 @@
-﻿namespace Exercise4_Garage_2.Interfaces
+﻿namespace Exercise4_Garage_2
 {
     public interface IVehicle
     {
@@ -7,13 +7,15 @@
         int Weight { get; set; }
         int Length { get; set; }
         string Type { get; }
-    }
-    enum VehicleType
-    {
-        None,
-        Car,
-        Bus,
-        Truck,
-        Motorcycle
+        enum VehicleType
+        {
+            None,
+            Car,
+            Bus,
+            Boat,
+            Truck,
+            Motorcycle
+        }
+        public string[] InDataVehicle();
     }
 }

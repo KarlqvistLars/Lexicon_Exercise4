@@ -1,11 +1,10 @@
-﻿using Exercise3.UtilitesClasses;
-using Exercise4_Garage_2.Interfaces;
-using System.Text;
+﻿using System.Text;
 
-namespace Exercise3
+namespace Exercise4_Garage_2
 {
-    public class Garage : IGarageHandler
+    public class Garage
     {
+        readonly static string Line30 = new string('=', 30);
         private static int _capacity;
         private readonly Vehicle[] _vehicles;
         public Garage(int capacity)
@@ -21,14 +20,6 @@ namespace Exercise3
         {
             get => _capacity;
         }
-        public void CreateGarage()
-        {
-            Console.WriteLine("Creating garage with capacity: " + _capacity);
-        }
-        public void RunGarage()
-        {
-
-        }
         public bool AddVehicle(Vehicle vehicle)
         {
             for (int i = 0; i < _capacity; i++)
@@ -39,7 +30,7 @@ namespace Exercise3
                     return true;
                 }
             }
-            Console.WriteLine($"{Utilities.vTab}Garage is full, cannot add {vehicle.Type} with UUID: {vehicle.Uuid}");
+            Console.WriteLine($"{Utilities.Tab}Garage is full, cannot add {vehicle.Type} with UUID: {vehicle.Uuid}");
             return false;
         }
         public bool RemoveVehicle(string uuid)
@@ -55,11 +46,11 @@ namespace Exercise3
             Console.WriteLine("Vehicle with UUID: " + uuid + " not found");
             return false;
         }
-        public string VehicleToString()
+        public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Garage [Capacity={_capacity}]");
-            sb.AppendLine(Utilities.line30);
+            sb.AppendLine(Line30);
             if (_vehicles.Length > 0 && _vehicles.Any(v => v != null))
             {
                 foreach (var vehicle in _vehicles)

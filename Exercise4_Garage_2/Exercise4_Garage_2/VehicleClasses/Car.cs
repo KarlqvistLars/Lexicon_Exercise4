@@ -1,5 +1,6 @@
 ﻿using Exercise4_Garage_2.Interfaces;
 using Exercise4_Garage_2.MenuClasses;
+using static Exercise4_Garage_2.IVehicle;
 namespace Exercise4_Garage_2
 {
     internal class Car : Vehicle, ICar
@@ -16,7 +17,7 @@ namespace Exercise4_Garage_2
         public new string Color { get => this.Color; set => ((IVehicle)this).Color = value; }
         public new int Weight { get => this.Weight; set => ((IVehicle)this).Weight = value; }
         public new int Length { get => this.Length; set => ((IVehicle)this).Length = value; }
-        public new static string Type => VehicleType.Car.ToString();
+        public new string Type => VehicleType.Car.ToString();
         public int NumberOfDoors
         {
             get => numberOfDoors;

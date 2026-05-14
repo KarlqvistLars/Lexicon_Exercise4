@@ -1,8 +1,8 @@
-﻿using Exercise4_Garage_2.Interfaces;
-
+﻿using Exercise4_Garage_2.MenuClasses;
+using static Exercise4_Garage_2.IVehicle;
 namespace Exercise4_Garage_2.VehicleClasses
 {
-    public class Bus : Vehicle
+    internal class Bus : Vehicle
     {
         int numberOfSeats;
         int wheels;
@@ -26,6 +26,19 @@ namespace Exercise4_Garage_2.VehicleClasses
         {
             get => wheels;
             set => wheels = value;
+        }
+        public string? ToString(int variant = 0)
+        {
+            switch (variant)
+            {
+                case 1:
+                    return $"{Tab}{Cap(Text.Bil) + Text.medRegistrering}: {Uuid}\n" +
+                        $"{Tab}{Cap(Text.Color)}: {Color}, {Cap(Text.Vikt)}: {Weight}, {Cap(Text.Length)}: {Length}\n";
+                case 2:
+                    return $"{Tab}{Cap(Text.NumSeats)}: {numberOfSeats}, {Cap(Text.Wheel)}: {Wheels}";
+                default:
+                    return $"Typ av utskrift ej definierad";
+            }
         }
     }
 }

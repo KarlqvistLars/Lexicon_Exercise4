@@ -79,11 +79,47 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ange deplacement.
+        /// </summary>
+        internal static string Deplacement {
+            get {
+                return ResourceManager.GetString("Deplacement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to längd.
         /// </summary>
         internal static string Length {
             get {
                 return ResourceManager.GetString("Length", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Huvudmeny.
+        /// </summary>
+        internal static string MainHeader {
+            get {
+                return ResourceManager.GetString("MainHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ange max hastighet (knop).
+        /// </summary>
+        internal static string MaxSpeed {
+            get {
+                return ResourceManager.GetString("MaxSpeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ange djupgående (m).
+        /// </summary>
+        internal static string MaxWaterDepth {
+            get {
+                return ResourceManager.GetString("MaxWaterDepth", resourceCulture);
             }
         }
         
@@ -106,11 +142,227 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to antal säten.
+        /// </summary>
+        internal static string NumSeats {
+            get {
+                return ResourceManager.GetString("NumSeats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bil.
+        /// </summary>
+        internal static string Rad1AddVehicle {
+            get {
+                return ResourceManager.GetString("Rad1AddVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Svenska.
+        /// </summary>
+        internal static string Rad1ChooseLanguage {
+            get {
+                return ResourceManager.GetString("Rad1ChooseLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ladda sparade fordon i befintlig garage storlek..
+        /// </summary>
+        internal static string Rad1LoadVehicleFromFilePart1 {
+            get {
+                return ResourceManager.GetString("Rad1LoadVehicleFromFilePart1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Det aktuella garaget sparas automatiskt vid avslut..
+        /// </summary>
+        internal static string Rad1LoadVehicleFromFilePart2 {
+            get {
+                return ResourceManager.GetString("Rad1LoadVehicleFromFilePart2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lägg till fordon.
+        /// </summary>
+        internal static string Rad1Main {
+            get {
+                return ResourceManager.GetString("Rad1Main", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sök och ta bort fordon.
+        /// </summary>
+        internal static string Rad1RemoveVehicle {
+            get {
+                return ResourceManager.GetString("Rad1RemoveVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visa alla fordon.
+        /// </summary>
+        internal static string Rad1ShowVehicle {
+            get {
+                return ResourceManager.GetString("Rad1ShowVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buss.
+        /// </summary>
+        internal static string Rad2AddVehicle {
+            get {
+                return ResourceManager.GetString("Rad2AddVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Engelska.
+        /// </summary>
+        internal static string Rad2ChooseLanguage {
+            get {
+                return ResourceManager.GetString("Rad2ChooseLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ta bort fordon.
+        /// </summary>
+        internal static string Rad2Main {
+            get {
+                return ResourceManager.GetString("Rad2Main", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ta bort fordon på regnummer.
+        /// </summary>
+        internal static string Rad2RemoveVehicle {
+            get {
+                return ResourceManager.GetString("Rad2RemoveVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visa fordon via regnummer.
+        /// </summary>
+        internal static string Rad2ShowVehicle {
+            get {
+                return ResourceManager.GetString("Rad2ShowVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Motorcykel.
+        /// </summary>
+        internal static string Rad3AddVehicle {
+            get {
+                return ResourceManager.GetString("Rad3AddVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Visa fordon.
+        /// </summary>
+        internal static string Rad3Main {
+            get {
+                return ResourceManager.GetString("Rad3Main", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sök fordon på typ, regnummer, färg, vikt, längd.
+        /// </summary>
+        internal static string Rad3ShowVehicle {
+            get {
+                return ResourceManager.GetString("Rad3ShowVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Båt.
+        /// </summary>
+        internal static string Rad4AddVehicle {
+            get {
+                return ResourceManager.GetString("Rad4AddVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hämta fordon från fil.
+        /// </summary>
+        internal static string Rad4Main {
+            get {
+                return ResourceManager.GetString("Rad4Main", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flygplan.
+        /// </summary>
+        internal static string Rad5AddVehicle {
+            get {
+                return ResourceManager.GetString("Rad5AddVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Välj språk.
+        /// </summary>
+        internal static string Rad5Main {
+            get {
+                return ResourceManager.GetString("Rad5Main", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Slunpmässigt.
+        /// </summary>
+        internal static string Rad6AddVehicle {
+            get {
+                return ResourceManager.GetString("Rad6AddVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lägg till fordonsdetaljer.
+        /// </summary>
+        internal static string RadAddVehicle {
+            get {
+                return ResourceManager.GetString("RadAddVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to registreringsnummer.
+        /// </summary>
+        internal static string RegNum {
+            get {
+                return ResourceManager.GetString("RegNum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Garage 2.0.
         /// </summary>
         internal static string Rubrik {
             get {
                 return ResourceManager.GetString("Rubrik", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Välj: .
+        /// </summary>
+        internal static string Valg {
+            get {
+                return ResourceManager.GetString("Valg", resourceCulture);
             }
         }
         
