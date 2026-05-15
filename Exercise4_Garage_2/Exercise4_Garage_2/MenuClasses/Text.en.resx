@@ -118,120 +118,120 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Bil" xml:space="preserve">
-    <value>bil</value>
+    <value>car</value>
   </data>
   <data name="Rubrik" xml:space="preserve">
     <value>Garage 2.0</value>
   </data>
   <data name="medRegistrering" xml:space="preserve">
-    <value>med registreringsnummer:</value>
+    <value>with registration number</value>
   </data>
   <data name="Color" xml:space="preserve">
-    <value>färg</value>
+    <value>color</value>
   </data>
   <data name="Vikt" xml:space="preserve">
-    <value>vikt</value>
+    <value>weight</value>
   </data>
   <data name="Length" xml:space="preserve">
-    <value>längd</value>
+    <value>length</value>
   </data>
   <data name="NumDoors" xml:space="preserve">
-    <value>antal dörrar</value>
+    <value>number of doors</value>
   </data>
   <data name="Wheel" xml:space="preserve">
-    <value>hjul</value>
+    <value>wheel</value>
   </data>
   <data name="MainHeader" xml:space="preserve">
-    <value>Huvudmeny</value>
+    <value>mainmenu</value>
   </data>
   <data name="Rad1Main" xml:space="preserve">
-    <value>Lägg till fordon</value>
+    <value>Add vehicle</value>
   </data>
   <data name="Rad2Main" xml:space="preserve">
-    <value>Ta bort fordon</value>
+    <value>remove vehicle</value>
   </data>
   <data name="Rad3Main" xml:space="preserve">
-    <value>Visa fordon</value>
+    <value>show vehicle</value>
   </data>
   <data name="Rad4Main" xml:space="preserve">
-    <value>Hämta fordon från fil</value>
+    <value>load vehicles from file</value>
   </data>
   <data name="Valg" xml:space="preserve">
-    <value>Välj: </value>
+    <value>choose:</value>
   </data>
   <data name="Rad1AddVehicle" xml:space="preserve">
-    <value>Bil</value>
+    <value>Car</value>
   </data>
   <data name="Rad2AddVehicle" xml:space="preserve">
-    <value>Buss</value>
+    <value>bus</value>
   </data>
   <data name="Rad3AddVehicle" xml:space="preserve">
-    <value>Motorcykel</value>
+    <value>motorcycle</value>
   </data>
   <data name="Rad4AddVehicle" xml:space="preserve">
-    <value>Båt</value>
+    <value>boat</value>
   </data>
   <data name="Rad5AddVehicle" xml:space="preserve">
-    <value>Flygplan</value>
+    <value>airplane</value>
   </data>
   <data name="Rad6AddVehicle" xml:space="preserve">
-    <value>Slumpmässigt</value>
+    <value>random</value>
   </data>
   <data name="Rad1RemoveVehicle" xml:space="preserve">
-    <value>Sök och ta bort fordon</value>
+    <value>seek and remove vehicle</value>
   </data>
   <data name="Rad2RemoveVehicle" xml:space="preserve">
-    <value>Ta bort fordon på regnummer</value>
+    <value>remove vehicle with registration number</value>
   </data>
   <data name="Rad1ShowVehicle" xml:space="preserve">
-    <value>Visa alla fordon</value>
+    <value>show all vehicles</value>
   </data>
   <data name="Rad2ShowVehicle" xml:space="preserve">
-    <value>Visa fordon via regnummer</value>
+    <value>show vehicle with registration number</value>
   </data>
   <data name="Rad3ShowVehicle" xml:space="preserve">
-    <value>Sök fordon på typ, regnummer, färg, vikt, längd</value>
+    <value>seek vehicle on type, registration number, color, weight, length</value>
   </data>
   <data name="Rad1LoadVehicleFromFilePart1" xml:space="preserve">
-    <value>Ladda sparade fordon i befintlig garage storlek.</value>
+    <value>Load saved vehicles in current garage size</value>
   </data>
   <data name="Rad1LoadVehicleFromFilePart2" xml:space="preserve">
-    <value>Det aktuella garaget sparas automatiskt vid avslut.</value>
+    <value>the current garage is automaticly saved when exit.</value>
   </data>
   <data name="Rad5Main" xml:space="preserve">
-    <value>Välj språk</value>
+    <value>choose language</value>
   </data>
   <data name="RadAddVehicle" xml:space="preserve">
-    <value>Lägg till fordonsdetaljer</value>
+    <value>add vehicle details</value>
   </data>
   <data name="RegNum" xml:space="preserve">
-    <value>registreringsnummer</value>
+    <value>registration number</value>
   </data>
   <data name="NumSeats" xml:space="preserve">
-    <value>antal säten</value>
+    <value>number of seats</value>
   </data>
   <data name="MaxWaterDepth" xml:space="preserve">
-    <value>ange djupgående (m)</value>
+    <value>enter max depth</value>
   </data>
   <data name="MaxSpeed" xml:space="preserve">
-    <value>ange max hastighet (knop)</value>
+    <value>enter max speed (knots)</value>
   </data>
   <data name="Deplacement" xml:space="preserve">
-    <value>ange deplacement</value>
+    <value>enter displacement</value>
   </data>
   <data name="Rad1ChooseLanguage" xml:space="preserve">
-    <value>Svenska</value>
+    <value>Swedish</value>
   </data>
   <data name="Rad2ChooseLanguage" xml:space="preserve">
-    <value>Engelska</value>
+    <value>english</value>
   </data>
   <data name="Avsluta" xml:space="preserve">
-    <value>avsluta</value>
+    <value>exit</value>
   </data>
-  <data name="exit" xml:space="preserve">
-    <value>avsluta</value>
+  <data name="Exit" xml:space="preserve">
+    <value>exit</value>
   </data>
   <data name="Back" xml:space="preserve">
-    <value>tillbaka</value>
+    <value>back</value>
   </data>
 </root>

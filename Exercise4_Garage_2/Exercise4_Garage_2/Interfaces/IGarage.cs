@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Exercise4_Garage_2.Interfaces
 {
-    internal interface IGarageHandler
+    internal interface IGarage
     {
     }
 }

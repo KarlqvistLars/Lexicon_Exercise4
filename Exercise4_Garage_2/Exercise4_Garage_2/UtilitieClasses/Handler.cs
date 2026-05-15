@@ -1,13 +1,15 @@
-﻿namespace Exercise4_Garage_2
+﻿using Exercise4_Garage_2.Interfaces;
+
+namespace Exercise4_Garage_2
 {
-    public class GarageUtilities
+    public class Handler : IHandler
     {
         readonly static string Line30 = new string('=', 30);
         readonly static string Tab = new string(' ', 3);
         /// <summary>
         /// Alla menyer under "Lägg till fordon".
         /// </summary>
-        internal static void AddCar(Garage G)
+        public void AddCar()
         {
             string[] v = new string[4];
             string Title = "Lägg till Bil...";
@@ -41,19 +43,19 @@
 
 
 
-        internal static void AddBus(Garage G)
+        public void AddBus()
         {
             string Title = "Lägg till Buss";
             //ShowHeader(Title);
 
         }
-        internal static void AddMotorcycle(Garage G)
+        public void AddMotorcycle()
         {
             string Title = $" Lägg till MC";
             //ShowHeader(Title);
 
         }
-        internal static void AddBoat(Garage G)
+        public void AddBoat()
         {
             string Title = $"Lägg till Båt";
             //ShowHeader(Title);
@@ -61,7 +63,7 @@
             //Console.WriteLine($"{Utilities.Tab}Denna båt har lagts till i garaget.\n{Utilities.Tab}Tryck Retur för att fortsätta...");
             Console.ReadLine();
         }
-        internal static void AddAirplane(Garage G)
+        public void AddAirplane()
         {
             string Title = $"Lägg till FLP";
             //ShowHeader(Title);
@@ -69,7 +71,7 @@
             Console.WriteLine($"{Utilities.Tab}Detta flygplan har lagts till i garaget.\n{Utilities.Tab}Tryck Retur för att fortsätta...");
             Console.ReadLine();
         }
-        internal static void AddRandomVehicles(Garage G, int count = 0)
+        public void AddRandomVehicles(int count = 0)
         {
             string Title = "Lägg till slumpade fordon";
 
@@ -78,5 +80,21 @@
         }
 
 
+        public void AddVehicle()
+        {
+            string Title = "Lägg till fordon";
+            //ShowHeader(Title);
+            Console.WriteLine($"{Utilities.Tab}Tryck på valfri tangent för att återgå till huvudmenyn...");
+            Console.ReadLine();
+        }
+
+        public void RemoveVehicle()
+        {
+            string Title = "Ta bort fordon";
+            //ShowHeader(Title);
+            Console.WriteLine($"{Utilities.Tab}Tryck på valfri tangent för att återgå till huvudmenyn...");
+            Console.ReadLine();
+
+        }
     }
 }

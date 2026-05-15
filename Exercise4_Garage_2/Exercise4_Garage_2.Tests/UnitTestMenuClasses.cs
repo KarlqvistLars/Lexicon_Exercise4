@@ -19,7 +19,7 @@ namespace Exercise4_Garage_2.Tests
             try
             {
                 // Act
-                MenuHandler.MenuAddVehicle();
+                UI.MenuAddVehicle();
 
                 // Hämtar allt som skrivits till console
                 string result = output.ToString();

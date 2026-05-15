@@ -1,11 +1,58 @@
 ﻿using Exercise4_Garage_2.Interfaces;
 using Exercise4_Garage_2.MenuClasses;
+using System.Globalization;
 
 namespace Exercise4_Garage_2
 {
-    public class MenuHandler : IMenuHandler
+    public class UI : IUI
     {
         private static bool Running { get; set; } = true;
+        static string[] menuTextMain = new string[] { };
+        static string[] menuTextAdd = new string[] { };
+        static string[] menuTextRemove = new string[] { };
+        static string[] menuTextShow = new string[] { };
+        static string[] menuLoadFromFile = new string[] { };
+        static string[] menuTextLanguage = new string[] { };
+        static void LoadMenuText()
+        {
+            menuTextMain = new string[]
+            {
+                Utilities.Cap(Text.Rad1Main),
+                Utilities.Cap(Text.Rad2Main),
+                Utilities.Cap(Text.Rad3Main),
+                Utilities.Cap(Text.Rad4Main),
+                Utilities.Cap(Text.Rad5Main)
+            };
+            menuTextAdd = new string[]
+            {
+                Utilities.Cap(Text.Rad1AddVehicle),
+                Utilities.Cap(Text.Rad2AddVehicle),
+                Utilities.Cap(Text.Rad3AddVehicle),
+                Utilities.Cap(Text.Rad4AddVehicle),
+                Utilities.Cap(Text.Rad5AddVehicle),
+                Utilities.Cap(Text.Rad6AddVehicle)
+            };
+            menuTextRemove = new string[]
+            {
+                Utilities.Cap(Text.Rad1RemoveVehicle),
+                Utilities.Cap(Text.Rad2RemoveVehicle),
+            };
+            menuTextShow = new string[]
+            {
+                Utilities.Cap(Text.Rad1ShowVehicle),
+                Utilities.Cap(Text.Rad2ShowVehicle),
+                Utilities.Cap(Text.Rad3ShowVehicle)
+            };
+            menuLoadFromFile = new string[]
+            {
+                Utilities.Cap(Text.Rad1LoadVehicleFromFilePart1)+"\n"+Utilities.Tab+Utilities.Cap(Text.Rad1LoadVehicleFromFilePart2),
+            };
+            menuTextLanguage = new string[]
+            {
+                Utilities.Cap(Text.Rad1ChooseLanguage),
+                Utilities.Cap(Text.Rad2ChooseLanguage),
+            };
+        }
         public static bool StartGarage(int garageSize, bool populate = false)
         {
             if (populate == false)
@@ -23,18 +70,12 @@ namespace Exercise4_Garage_2
         }
         public static void MenuMain()
         {
-            string[] options = new string[]
-            {
-                Text.Rad1Main,
-                Text.Rad2Main,
-                Text.Rad3Main,
-                Text.Rad4Main,
-                Text.Rad5Main
-            };
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
 
             while (Running)
             {
-                string? input = Utilities.ShowMenu(Text.MainHeader, options, "Avsluta");
+                LoadMenuText();
+                string? input = Utilities.ShowMenu(Utilities.Cap(Text.MainHeader), menuTextMain, Text.exit);
                 switch (input)
                 {
                     case "1":
@@ -57,7 +98,7 @@ namespace Exercise4_Garage_2
                         break;
 
                     case "0":
-                        MenuHandler.ExitGarage();
+                        UI.ExitGarage();
                         break;
 
                     default:
@@ -70,18 +111,11 @@ namespace Exercise4_Garage_2
         private static void MenuAddVehicle()
         {
             bool running = true;
-            string[] options = new string[]
-            {
-                Text.Rad1AddVehicle,
-                Text.Rad2AddVehicle,
-                Text.Rad3AddVehicle,
-                Text.Rad4AddVehicle,
-                Text.Rad5AddVehicle,
-                Text.Rad6AddVehicle
-            };
             while (running)
             {
-                string? input = Utilities.ShowMenu(Text.Rad1Main, options);
+                LoadMenuText();
+
+                string? input = Utilities.ShowMenu(Text.Rad1Main, menuTextAdd, Text.Back);
                 switch (input)
                 {
                     case "1":
@@ -116,15 +150,9 @@ namespace Exercise4_Garage_2
         private static void MenuRemoveVehicle()
         {
             bool running = true;
-            string[] options = new string[]
-            {
-                Text.Rad1RemoveVehicle,
-                Text.Rad2RemoveVehicle,
-            };
-
             while (running)
             {
-                string? input = Utilities.ShowMenu(Text.Rad2Main, options);
+                string? input = Utilities.ShowMenu(Text.Rad2Main, menuTextRemove, Text.Back);
                 switch (input)
                 {
                     case "1":
@@ -149,16 +177,9 @@ namespace Exercise4_Garage_2
         private static void MenuShowVehicle()
         {
             bool running = true;
-            string[] options = new string[]
-            {
-                Text.Rad1ShowVehicle,
-                Text.Rad2ShowVehicle,
-                Text.Rad3ShowVehicle
-            };
-
             while (running)
             {
-                string? input = Utilities.ShowMenu(Text.Rad3Main, options);
+                string? input = Utilities.ShowMenu(Text.Rad3Main, menuTextShow, Text.Back);
                 switch (input)
                 {
                     case "1":
@@ -187,14 +208,9 @@ namespace Exercise4_Garage_2
         private static void MenuLoadVehicleFromFile()
         {
             bool running = true;
-            string[] options = new string[]
-            {
-                Text.Rad1LoadVehicleFromFilePart1+"\n"+Utilities.Tab+Text.Rad1LoadVehicleFromFilePart2,
-            };
-
             while (running)
             {
-                string? input = Utilities.ShowMenu(Text.Rad4Main, options);
+                string? input = Utilities.ShowMenu(Text.Rad4Main, menuLoadFromFile, Text.Back);
                 switch (input)
                 {
                     case "1":
@@ -227,24 +243,20 @@ namespace Exercise4_Garage_2
         private static void MenuChooseLanguage()
         {
             bool running = true;
-            string[] options = new string[]
-            {
-                Text.Rad1ChooseLanguage,
-                Text.Rad2ChooseLanguage,
-            };
-
             while (running)
             {
-                string? input = Utilities.ShowMenu(Text.Rad5Main, options);
+                string? input = Utilities.ShowMenu(Text.Rad5Main, menuTextLanguage, Text.Back);
                 switch (input)
                 {
                     case "1":
                         Console.WriteLine($"{Utilities.Tab}Valt språk: Svenska");
-                        Console.ReadKey();
+                        Thread.CurrentThread.CurrentUICulture = new CultureInfo("sv-SE");
+                        running = false;
                         break;
                     case "2":
                         Console.WriteLine($"{Utilities.Tab}Valt språk: Engelska");
-                        Console.ReadKey();
+                        Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+                        running = false;
                         break;
                     case "0":
                         running = false;
@@ -272,5 +284,7 @@ namespace Exercise4_Garage_2
 #endif
             Running = false;
         }
+
+
     }
 }

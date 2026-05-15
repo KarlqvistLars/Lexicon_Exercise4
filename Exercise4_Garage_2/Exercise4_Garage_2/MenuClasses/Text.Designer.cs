@@ -61,6 +61,24 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to avsluta.
+        /// </summary>
+        internal static string Avsluta {
+            get {
+                return ResourceManager.GetString("Avsluta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to tillbaka.
+        /// </summary>
+        internal static string Back {
+            get {
+                return ResourceManager.GetString("Back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to bil.
         /// </summary>
         internal static string Bil {
@@ -84,6 +102,15 @@ namespace Exercise4_Garage_2.MenuClasses {
         internal static string Deplacement {
             get {
                 return ResourceManager.GetString("Deplacement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to avsluta.
+        /// </summary>
+        internal static string exit {
+            get {
+                return ResourceManager.GetString("exit", resourceCulture);
             }
         }
         
@@ -322,7 +349,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Slunpmässigt.
+        ///   Looks up a localized string similar to Slumpmässigt.
         /// </summary>
         internal static string Rad6AddVehicle {
             get {
