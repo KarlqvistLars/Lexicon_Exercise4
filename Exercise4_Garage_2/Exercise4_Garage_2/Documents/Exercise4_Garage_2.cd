@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Interface Name="Exercise4_Garage_2.Interfaces.IGarage">
+  <Interface Name="Exercise4_Garage_2.Interfaces.IGarage&lt;T&gt;">
     <Position X="0.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AEIAAEAAAAAAABAQCAAABAQAAAABAAAIAAAAAABQIAA=</HashCode>
       <FileName>Interfaces\IGarage.cs</FileName>
     </TypeIdentifier>
   </Interface>

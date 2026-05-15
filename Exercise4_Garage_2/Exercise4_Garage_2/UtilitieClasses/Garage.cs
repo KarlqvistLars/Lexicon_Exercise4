@@ -1,71 +1,72 @@
-﻿using System.Text;
+﻿using System.Collections;
 
 namespace Exercise4_Garage_2
 {
-    public class Garage
+    public class Garage<T> : IEnumerable<T> where T : IVehicle
     {
-        readonly static string Line30 = new string('=', 30);
-        private static int _capacity;
-        private readonly Vehicle[] _vehicles;
+        private List<T> _vehicles = new();
+        private int _capacity = 10;
+
         public Garage(int capacity)
         {
             _capacity = capacity;
-            _vehicles = new Vehicle[_capacity];
         }
-        public Vehicle[] Vehicles
+
+        public bool IsFull => _vehicles.Count >= _capacity;
+
+        public T FindByRegNumber(string uuid)
         {
-            get => _vehicles;
+            return _vehicles.Find(v => v.Uuid == uuid);
         }
-        public int Capacity
+
+        // IList implementation
+
+        public T this[int index]
         {
-            get => _capacity;
+            get => _vehicles[index];
+            set => _vehicles[index] = value;
         }
-        public bool AddVehicle(Vehicle vehicle)
+
+        public int Count => _vehicles.Count;
+
+        public bool IsReadOnly => false;
+
+        public void Add(T item)
         {
-            for (int i = 0; i < _capacity; i++)
-            {
-                if (_vehicles[i] == null || _vehicles[i].Uuid == "")
-                {
-                    _vehicles[i] = vehicle;
-                    return true;
-                }
-            }
-            Console.WriteLine($"{Utilities.Tab}Garage is full, cannot add {vehicle.Type} with UUID: {vehicle.Uuid}");
-            return false;
+            if (IsFull)
+                throw new InvalidOperationException("Garage is full");
+
+            _vehicles.Add(item);
         }
-        public bool RemoveVehicle(string uuid)
+
+        public void Clear() => _vehicles.Clear();
+
+        public bool Contains(T item) => _vehicles.Contains(item);
+
+        public void CopyTo(T[] array, int arrayIndex)
+            => _vehicles.CopyTo(array, arrayIndex);
+
+        public IEnumerator<T> GetEnumerator()
+            => _vehicles.GetEnumerator();
+
+        public int IndexOf(T item)
+            => _vehicles.IndexOf(item);
+
+        public void Insert(int index, T item)
+            => _vehicles.Insert(index, item);
+
+        public bool Remove(T item)
+            => _vehicles.Remove(item);
+
+        public void RemoveAt(int index)
+            => _vehicles.RemoveAt(index);
+
+        IEnumerator IEnumerable.GetEnumerator()
+            => GetEnumerator();
+
+        IEnumerator<T> IEnumerable<T>.GetEnumerator()
         {
-            for (int i = 0; i < _capacity; i++)
-            {
-                if (_vehicles[i] != null && _vehicles[i].Uuid == uuid)
-                {
-                    _vehicles[i] = null;
-                    return true;
-                }
-            }
-            Console.WriteLine("Vehicle with UUID: " + uuid + " not found");
-            return false;
-        }
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Garage [Capacity={_capacity}]");
-            sb.AppendLine(Line30);
-            if (_vehicles.Length > 0 && _vehicles.Any(v => v != null))
-            {
-                foreach (var vehicle in _vehicles)
-                {
-                    if (vehicle != null)
-                    {
-                        sb.AppendLine(vehicle.ToString());
-                    }
-                }
-            }
-            else
-            {
-                sb.AppendLine("Garaget är tomt.");
-            }
-            return sb.ToString();
+            throw new NotImplementedException();
         }
     }
 }
