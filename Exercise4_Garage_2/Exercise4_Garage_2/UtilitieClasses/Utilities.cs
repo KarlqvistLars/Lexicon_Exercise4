@@ -6,7 +6,7 @@ namespace Exercise4_Garage_2
     static public class Utilities
     {
         public readonly static string Tab = new string(' ', 3);
-        readonly static string Line30 = new string('=', 30);
+        public readonly static string Line30 = new string('=', 30);
         readonly static int MenyHight = 10;
         public enum VType
         {

@@ -55,7 +55,7 @@ namespace Exercise4_Garage_2
         internal static string[] InDataVehicle(Garage<IVehicle> garage, VType vType)
         {
             string[] data = new string[4];
-            Console.WriteLine($"{Tab}{Text.RadAddVehicle}: ");
+            Console.WriteLine($"{Tab}{Cap(Text.RadAddVehicle)}: ");
             Console.Write($"{Tab}{Cap(Text.RegNum)}: ");
             data[0] = ReadInput(garage, 0, vType);
             Console.Write($"{Tab}{Cap(Text.Color)} {Text.ColorChoise}: ");
@@ -82,7 +82,7 @@ namespace Exercise4_Garage_2
                 sb.Append(valueType switch
                 {
                     VType.Car => $"{Tab}{Cap(Text.NumDoors)}: {((Car)this).NumberOfDoors}, {Cap(Text.Wheel)}: {((Car)this).Wheels}",
-                    VType.Bus => $"",//{Tab}{Cap(Text.NumSeats)}: {((Bus)this).NumberOfSeats}, {Cap(Text.Wheel)}: {((Bus)this).Wheels}",
+                    VType.Bus => $"{Tab}{Cap(Text.NumSeats)}: {((Bus)this).NumberOfSeats}, {Cap(Text.Wheel)}: {((Bus)this).Wheels}",
                     VType.Motorcycle => $"",//{Tab}{Cap(Text.HasSidecar)}: {((Motorcycle)this).HasSidecar}",
                     VType.Boat => $"",//{Tab}{Cap(Text.BoatType)}: {((Boat)this).BoatType}",
                     VType.Airplane => $"",//{Tab}{Cap(Text.MaxLoad)}: {((Truck)this).MaxLoad}, {Cap(Text.Wheel)}: {((Truck)this).Wheels}",

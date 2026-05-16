@@ -235,7 +235,7 @@
     <value>tillbaka</value>
   </data>
   <data name="LagtsTillGaraget" xml:space="preserve">
-    <value>Denna bil har lagts till i garaget. </value>
+    <value>har lagts till i garaget. </value>
   </data>
   <data name="TryckRetur" xml:space="preserve">
     <value>Tryck Retur för att fortsätta...</value>
@@ -254,5 +254,29 @@
   </data>
   <data name="ColorChoise" xml:space="preserve">
     <value>(1. Röd, 2. Blå, 3. Grön, 4. Gul 5. Svart)</value>
+  </data>
+  <data name="Buss" xml:space="preserve">
+    <value>buss</value>
+  </data>
+  <data name="Motorcykel" xml:space="preserve">
+    <value>motorcykel</value>
+  </data>
+  <data name="Boat" xml:space="preserve">
+    <value>båt</value>
+  </data>
+  <data name="Flygplan" xml:space="preserve">
+    <value>flygplan</value>
+  </data>
+  <data name="DennaBilen" xml:space="preserve">
+    <value>Denna bilen </value>
+  </data>
+  <data name="DennaBussen" xml:space="preserve">
+    <value>Denna bussen </value>
+  </data>
+  <data name="DennaMotorcykeln" xml:space="preserve">
+    <value>Denna motorcykeln </value>
+  </data>
+  <data name="CubicInch" xml:space="preserve">
+    <value>Motor storlek i CC</value>
   </data>
 </root>

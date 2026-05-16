@@ -8,7 +8,7 @@ namespace Exercise4_Garage_2.VehicleClasses
         decimal maxSpeed;
         decimal deplacement;
 
-        public Boat(string uuid, string color, int weight, int length, decimal maxWaterDepth, decimal maxSpeed, decimal deplacement)
+        public Boat(string uuid, string color, int weight, decimal length, decimal maxWaterDepth, decimal maxSpeed, decimal deplacement)
             : base(uuid, color, weight, length, VType.Boat)
         {
             this.maxWaterDepth = maxWaterDepth;
@@ -18,7 +18,7 @@ namespace Exercise4_Garage_2.VehicleClasses
         public new string Uuid { get => this.Uuid; }
         public new string Color { get => this.Color; set => ((IVehicle)this).Color = value; }
         public new int Weight { get => this.Weight; set => ((IVehicle)this).Weight = value; }
-        public new int Length { get => this.Length; set => ((IVehicle)this).Length = value; }
+        public new decimal Length { get => this.Length; set => ((IVehicle)this).Length = value; }
         public new string Type => VType.Boat.ToString();
         public decimal MaxWaterDepth
         {
@@ -35,18 +35,22 @@ namespace Exercise4_Garage_2.VehicleClasses
             get => deplacement;
             set => deplacement = value;
         }
-        public string? ToString(int variant = 0)
+        public string? ToString2()
         {
-            switch (variant)
-            {
-                case 1:
-                    return $"{Tab}{Cap(Text.Bil) + Text.medRegistrering}: {Uuid}\n" +
-                        $"{Tab}{Cap(Text.Color)}: {Color}, {Cap(Text.Vikt)}: {Weight}, {Cap(Text.Length)}: {Length}\n";
-                case 2:
-                    return $"{Tab}{Cap(Text.MaxWaterDepth)}: {MaxWaterDepth}, {Cap(Text.MaxSpeed)}: {MaxSpeed}, {Cap(Text.Deplacement)}: {Deplacement}";
-                default:
-                    return $"Typ av utskrift ej definierad";
-            }
+            return $"{Tab}{Cap(Text.Bil) + Text.medRegistrering}: {Uuid}\n" +
+                        $"{Tab}{Cap(Text.Color)}: {Color}, {Cap(Text.Vikt)}: {Weight}, {Cap(Text.Length)}: {Length}\n" +
+                        $"{Tab}{Cap(Text.MaxWaterDepth)}: {MaxWaterDepth}, {Cap(Text.MaxSpeed)}: {MaxSpeed}, {Cap(Text.Deplacement)}: {Deplacement}";
+        }
+        internal static string[] InData()
+        {
+            string[] data = new string[4];
+            Console.Write($"{Tab}{Cap(Text.MaxWaterDepth)}: ");
+            data[0] = Console.ReadLine() ?? string.Empty;
+            Console.Write($"{Tab}{Cap(Text.MaxSpeed)}: ");
+            data[1] = Console.ReadLine() ?? string.Empty;
+            Console.Write($"{Tab}{Cap(Text.Deplacement)}: ");
+            data[2] = Console.ReadLine() ?? string.Empty;
+            return data;
         }
     }
 }

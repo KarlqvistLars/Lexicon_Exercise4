@@ -106,6 +106,24 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to båt.
+        /// </summary>
+        internal static string Boat {
+            get {
+                return ResourceManager.GetString("Boat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to buss.
+        /// </summary>
+        internal static string Buss {
+            get {
+                return ResourceManager.GetString("Buss", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to färg.
         /// </summary>
         internal static string Color {
@@ -120,6 +138,42 @@ namespace Exercise4_Garage_2.MenuClasses {
         internal static string ColorChoise {
             get {
                 return ResourceManager.GetString("ColorChoise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Motor storlek i CC.
+        /// </summary>
+        internal static string CubicInch {
+            get {
+                return ResourceManager.GetString("CubicInch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Denna bilen .
+        /// </summary>
+        internal static string DennaBilen {
+            get {
+                return ResourceManager.GetString("DennaBilen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Denna bussen .
+        /// </summary>
+        internal static string DennaBussen {
+            get {
+                return ResourceManager.GetString("DennaBussen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Denna motorcykeln .
+        /// </summary>
+        internal static string DennaMotorcykeln {
+            get {
+                return ResourceManager.GetString("DennaMotorcykeln", resourceCulture);
             }
         }
         
@@ -142,6 +196,15 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to flygplan.
+        /// </summary>
+        internal static string Flygplan {
+            get {
+                return ResourceManager.GetString("Flygplan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Lägg till .
         /// </summary>
         internal static string LaggTill {
@@ -151,7 +214,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Denna bil har lagts till i garaget..
+        ///   Looks up a localized string similar to har lagts till i garaget..
         /// </summary>
         internal static string LagtsTillGaraget {
             get {
@@ -201,6 +264,15 @@ namespace Exercise4_Garage_2.MenuClasses {
         internal static string medRegistrering {
             get {
                 return ResourceManager.GetString("medRegistrering", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to motorcykel.
+        /// </summary>
+        internal static string Motorcykel {
+            get {
+                return ResourceManager.GetString("Motorcykel", resourceCulture);
             }
         }
         

@@ -108,10 +108,10 @@ namespace Exercise4_Garage_2
                         Handler.AddCar(garage);
                         break;
                     case "2":
-                        //MenuRemoveVehicle();
+                        Handler.AddBus(garage);
                         break;
                     case "3":
-                        //MenuShowVehicle();
+                        Handler.AddMotorcycle(garage);
                         break;
                     case "4":
                         //MenuLoadVehicleFromFile();

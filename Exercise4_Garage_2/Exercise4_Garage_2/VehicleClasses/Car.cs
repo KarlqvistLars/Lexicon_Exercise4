@@ -33,11 +33,9 @@ namespace Exercise4_Garage_2
                         $"{Tab}{Cap(Text.Color)}: {Color}, {Cap(Text.Vikt)}: {Weight}, {Cap(Text.Length)}: {Length}\n" +
                         $"{Tab}{Cap(Text.NumDoors)}: {NumberOfDoors}, {Cap(Text.Wheel)}: {Wheels}";
         }
-
-        internal static string[] InDataCar()
+        internal static string[] InData()
         {
             string[] data = new string[4];
-            Console.WriteLine($"{Tab}{Text.RadAddVehicle}:");
             Console.Write($"{Tab}{Cap(Text.NumDoors)}: ");
             data[0] = Console.ReadLine() ?? string.Empty;
             Console.Write($"{Tab}{Cap(Text.Wheel)}: ");

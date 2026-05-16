@@ -235,7 +235,7 @@
     <value>back</value>
   </data>
   <data name="LagtsTillGaraget" xml:space="preserve">
-    <value>This car is added to the garage. </value>
+    <value>is added to the garage. </value>
   </data>
   <data name="TryckRetur" xml:space="preserve">
     <value>Press Enter to continue...</value>
@@ -254,5 +254,29 @@
   </data>
   <data name="ColorChoise" xml:space="preserve">
     <value>(1. Red, 2. Blue, 3. Green, 4. Yellow 5. Black)</value>
+  </data>
+  <data name="Buss" xml:space="preserve">
+    <value>bus</value>
+  </data>
+  <data name="Motorcykel" xml:space="preserve">
+    <value>motorcycle</value>
+  </data>
+  <data name="Boat" xml:space="preserve">
+    <value>boat</value>
+  </data>
+  <data name="Flygplan" xml:space="preserve">
+    <value>airplane</value>
+  </data>
+  <data name="DennaBilen" xml:space="preserve">
+    <value>This car </value>
+  </data>
+  <data name="DennaBussen" xml:space="preserve">
+    <value>This bus </value>
+  </data>
+  <data name="DennaMotorcykeln" xml:space="preserve">
+    <value>This motorcycle </value>
+  </data>
+  <data name="CubicInch" xml:space="preserve">
+    <value>Engine size in CubicInch</value>
   </data>
 </root>
