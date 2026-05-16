@@ -12,7 +12,7 @@
         void Clear();
         bool Contains(T item);
         void CopyTo(T[] array, int arrayIndex);
-        IEnumerator<T> GetEnumerator();
+        public IEnumerator<T> GetEnumerator();
         int IndexOf(T item);
         void Insert(int index, T item);
         bool Remove(T item);

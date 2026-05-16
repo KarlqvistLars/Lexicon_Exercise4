@@ -71,7 +71,7 @@ namespace Exercise4_Garage_2
                         MenuRemoveVehicle(garage);
                         break;
                     case "3":
-                        MenuShowVehicle();
+                        MenuShowVehicle(garage);
                         break;
                     case "4":
                         MenuLoadVehicleFromFile();
@@ -154,7 +154,7 @@ namespace Exercise4_Garage_2
                 }
             }
         }
-        private static void MenuShowVehicle()
+        private static void MenuShowVehicle(Garage<IVehicle> garage)
         {
             bool running = true;
             while (running)
@@ -163,13 +163,13 @@ namespace Exercise4_Garage_2
                 switch (input)
                 {
                     case "1":
-                        //MenuAddVehicle();
+                        Handler.ListVehicles(garage);
                         break;
                     case "2":
-                        //MenuRemoveVehicle();
+                        //Visa fordon regnummer
                         break;
                     case "3":
-                        //MenuShowVehicle();
+                        //Sök och visa fordon
                         break;
                     case "4":
                         //MenuLoadVehicleFromFile();

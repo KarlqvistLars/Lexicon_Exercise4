@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Garage<IVehicle> garage = new Garage<IVehicle>(10); // Example size
-            UI.MenuMain(garage);
+            Handler handler = new Handler();
+            handler.StartGarage();
         }
     }
 }

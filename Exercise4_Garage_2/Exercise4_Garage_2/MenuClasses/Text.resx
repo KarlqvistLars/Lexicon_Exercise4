@@ -301,4 +301,19 @@
   <data name="HittadesEj" xml:space="preserve">
     <value>hittades ej.</value>
   </data>
+  <data name="Garage" xml:space="preserve">
+    <value>Garaget</value>
+  </data>
+  <data name="IsFull" xml:space="preserve">
+    <value>är fullt.</value>
+  </data>
+  <data name="WaterDepth" xml:space="preserve">
+    <value>djupgående</value>
+  </data>
+  <data name="BoatSpeed" xml:space="preserve">
+    <value>max hastighet (knop)</value>
+  </data>
+  <data name="Deplac" xml:space="preserve">
+    <value>deplacement</value>
+  </data>
 </root>

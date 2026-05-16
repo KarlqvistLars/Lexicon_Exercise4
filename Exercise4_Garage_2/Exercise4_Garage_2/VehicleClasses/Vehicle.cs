@@ -45,9 +45,9 @@ namespace Exercise4_Garage_2
             get => _length;
             set => _length = value;
         }
-        public string Type
+        public VType Type
         {
-            get => _type.ToString();
+            get => _type;
         }
         string[] IVehicle.InDataVehicle(Garage<IVehicle> garage, VType vType)
         {
@@ -85,7 +85,7 @@ namespace Exercise4_Garage_2
                     VType.Car => $"{Tab}{Cap(Text.NumDoors)}: {((Car)this).NumberOfDoors}, {Cap(Text.Wheel)}: {((Car)this).Wheels}",
                     VType.Bus => $"{Tab}{Cap(Text.NumSeats)}: {((Bus)this).NumberOfSeats}, {Cap(Text.Wheel)}: {((Bus)this).Wheels}",
                     VType.Motorcycle => $"{Tab}{Cap(Text.Wheel)}: {((Motorcycle)this).Wheels}, {Cap(Text.CubicInch)}: {((Motorcycle)this).CubicInch}",
-                    VType.Boat => $"{Tab}{Cap(Text.MaxWaterDepth)}: {((Boat)this).MaxWaterDepth}, {Cap(Text.MaxSpeed)}: {((Boat)this).MaxSpeed}, {Cap(Text.Deplacement)}: {((Boat)this).Deplacement}",
+                    VType.Boat => $"{Tab}{Cap(Text.WaterDepth)}: {((Boat)this).MaxWaterDepth}, {Cap(Text.BoatSpeed)}: {((Boat)this).MaxSpeed}\n{Tab}{Cap(Text.Deplac)}: {((Boat)this).Deplacement}",
                     VType.Airplane => $"{Tab}{Cap(Text.Lyftkapacitet)}: {((Airplane)this).LiftCapacity}, {Cap(Text.Vingbredd)}: {((Airplane)this).WingSpan}, {Cap(Text.Pax)}: {((Airplane)this).Passengers}",
                     _ => $""
                 });

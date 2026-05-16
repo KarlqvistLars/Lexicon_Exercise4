@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Exercise4_Garage_2.MenuClasses;
+using System.Collections;
 
 namespace Exercise4_Garage_2
 {
@@ -24,19 +25,23 @@ namespace Exercise4_Garage_2
         }
         public int Count => _vehicles.Count;
         public bool IsReadOnly => false;
-        public void Add(T item)
+        public bool Add(T item)
         {
             if (IsFull)
-                throw new InvalidOperationException("Garage is full");
-
+            {
+                Console.WriteLine($"{Utilities.Cap(Text.Garage)} {Text.IsFull}.");
+                item.ToString2();
+                return false;
+            }
             _vehicles.Add(item);
+            return true;
         }
         public void Clear() => _vehicles.Clear();
         public bool Contains(T item) => _vehicles.Contains(item);
         public void CopyTo(T[] array, int arrayIndex)
             => _vehicles.CopyTo(array, arrayIndex);
         public IEnumerator<T> GetEnumerator()
-            => _vehicles.GetEnumerator();
+            => _vehicles.OfType<T>().GetEnumerator();
         public int IndexOf(T item)
             => _vehicles.IndexOf(item);
         public void Insert(int index, T item)

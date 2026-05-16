@@ -91,7 +91,7 @@ namespace Exercise4_Garage_2
                     break;
                 case 2:// Vikt
                     input = Console.ReadLine() ?? string.Empty;
-                    output = InputWeigth(input);
+                    output = InputInteger(input);
                     break;
                 case 3:// Längd
                     input = Console.ReadLine() ?? string.Empty;
@@ -109,7 +109,7 @@ namespace Exercise4_Garage_2
             return output;
         }
         // 2.4
-        private static string InputDecimal(string input)
+        public static string InputDecimal(string input)
         {
             do
             {
@@ -119,14 +119,14 @@ namespace Exercise4_Garage_2
                 }
                 else
                 {
-                    Console.WriteLine($"{Tab}Ogiltigt längdvärde. \n{Tab}Ange ett positivt decimaltal för längden.");
+                    Console.WriteLine($"{Tab}Ogiltigt format. \n{Tab}Ange ett positivt decimaltal.");
                     Console.Write($"{Tab}Försök igen: ");
                     input = Console.ReadLine() ?? string.Empty;
                 }
             } while (true);
         }
         // 2.3
-        private static string InputWeigth(string input)
+        public static string InputInteger(string input)
         {
             do
             {
@@ -136,7 +136,7 @@ namespace Exercise4_Garage_2
                 }
                 else
                 {
-                    Console.WriteLine($"{Tab}Ogiltigt viktvärde. \n{Tab}Ange ett positivt heltal för vikten.");
+                    Console.WriteLine($"{Tab}Ogiltigt format. \n{Tab}Ange ett positivt heltal.");
                     Console.Write($"{Tab}Försök igen: ");
                     input = Console.ReadLine() ?? string.Empty;
                 }
@@ -276,6 +276,20 @@ namespace Exercise4_Garage_2
                     break;
             }
             return result;
+        }
+        public static string GenerateRandom()
+        {
+            Random random = new Random();
+
+            //string[] colors = { "Röd", "Blå", "Grön", "Svart", "Vit", "Gul", "Silver" };
+
+            string letter = "SE-";
+            int number = random.Next(1, 26);
+            for (int i = 0; i < 3; i++)
+            {
+                letter += (((char)random.Next('A', 'Z' + 1)).ToString());
+            }
+            return letter;
         }
     }
 }

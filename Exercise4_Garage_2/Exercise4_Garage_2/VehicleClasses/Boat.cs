@@ -45,11 +45,11 @@ namespace Exercise4_Garage_2.VehicleClasses
         {
             string[] data = new string[4];
             Console.Write($"{Tab}{Cap(Text.MaxWaterDepth)}: ");
-            data[0] = Console.ReadLine() ?? string.Empty;
+            data[0] = InputDecimal(Console.ReadLine() ?? string.Empty);
             Console.Write($"{Tab}{Cap(Text.MaxSpeed)}: ");
-            data[1] = Console.ReadLine() ?? string.Empty;
+            data[1] = InputDecimal(Console.ReadLine() ?? string.Empty);
             Console.Write($"{Tab}{Cap(Text.Deplacement)}: ");
-            data[2] = Console.ReadLine() ?? string.Empty;
+            data[2] = InputDecimal(Console.ReadLine() ?? string.Empty);
             return data;
         }
     }

@@ -115,6 +115,15 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to max hastighet (knop).
+        /// </summary>
+        internal static string BoatSpeed {
+            get {
+                return ResourceManager.GetString("BoatSpeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to buss.
         /// </summary>
         internal static string Buss {
@@ -178,6 +187,15 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to deplacement.
+        /// </summary>
+        internal static string Deplac {
+            get {
+                return ResourceManager.GetString("Deplac", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ange deplacement.
         /// </summary>
         internal static string Deplacement {
@@ -214,11 +232,29 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Garaget.
+        /// </summary>
+        internal static string Garage {
+            get {
+                return ResourceManager.GetString("Garage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to hittades ej..
         /// </summary>
         internal static string HittadesEj {
             get {
                 return ResourceManager.GetString("HittadesEj", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to är fullt..
+        /// </summary>
+        internal static string IsFull {
+            get {
+                return ResourceManager.GetString("IsFull", resourceCulture);
             }
         }
         
@@ -597,6 +633,15 @@ namespace Exercise4_Garage_2.MenuClasses {
         internal static string Vingbredd {
             get {
                 return ResourceManager.GetString("Vingbredd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to djupgående.
+        /// </summary>
+        internal static string WaterDepth {
+            get {
+                return ResourceManager.GetString("WaterDepth", resourceCulture);
             }
         }
         

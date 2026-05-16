@@ -8,7 +8,7 @@ namespace Exercise4_Garage_2
         string Color { get; set; }
         int Weight { get; set; }
         decimal Length { get; set; }
-        string Type { get; }
+        VType Type { get; }
         public string[] InDataVehicle(Garage<IVehicle> garage, VType vehicleType);
         public string? ToString2(VType vehicleType = VType.None);
     }
