@@ -37,7 +37,7 @@ namespace Exercise4_Garage_2.VehicleClasses
         }
         public string? ToString2()
         {
-            return $"{Tab}{Cap(Text.Bil) + Text.medRegistrering}: {Uuid}\n" +
+            return $"{Tab}{Cap(Text.Boat)}{Text.medRegistrering}: {Uuid}\n" +
                         $"{Tab}{Cap(Text.Color)}: {Color}, {Cap(Text.Vikt)}: {Weight}, {Cap(Text.Length)}: {Length}\n" +
                         $"{Tab}{Cap(Text.MaxWaterDepth)}: {MaxWaterDepth}, {Cap(Text.MaxSpeed)}: {MaxSpeed}, {Cap(Text.Deplacement)}: {Deplacement}";
         }

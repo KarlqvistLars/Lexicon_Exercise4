@@ -35,11 +35,11 @@ namespace Exercise4_Garage_2.VehicleClasses
                         $"{Tab}{Cap(Text.CubicInch)}: {CubicInch}, {Cap(Text.Wheel)}: {Wheels}";
         }
 
-        internal static string[] InData()
+        internal static string[] InData(Garage<IVehicle> garage)
         {
             string[] data = new string[4];
             Console.Write($"{Tab}{Cap(Text.CubicInch)}: ");
-            data[0] = Console.ReadLine() ?? string.Empty;
+            data[0] = ReadInput(garage, 3, VType.Motorcycle);
             Console.Write($"{Tab}{Cap(Text.Wheel)}: ");
             data[1] = Console.ReadLine() ?? string.Empty;
             return data;

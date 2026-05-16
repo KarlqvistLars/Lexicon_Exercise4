@@ -279,4 +279,25 @@
   <data name="CubicInch" xml:space="preserve">
     <value>Motor storlek i CC</value>
   </data>
+  <data name="Lyftkapacitet" xml:space="preserve">
+    <value>lyftkapacitet </value>
+  </data>
+  <data name="Vingbredd" xml:space="preserve">
+    <value>spännvidd</value>
+  </data>
+  <data name="Pax" xml:space="preserve">
+    <value>passagerare</value>
+  </data>
+  <data name="TaBortFordon" xml:space="preserve">
+    <value>Ta bort fordon</value>
+  </data>
+  <data name="TogsBortGaraget" xml:space="preserve">
+    <value> togs bort från garaget. </value>
+  </data>
+  <data name="FordonMedRegistrering" xml:space="preserve">
+    <value>Fordon med registrering</value>
+  </data>
+  <data name="HittadesEj" xml:space="preserve">
+    <value>hittades ej</value>
+  </data>
 </root>

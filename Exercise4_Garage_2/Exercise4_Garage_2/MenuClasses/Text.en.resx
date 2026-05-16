@@ -279,4 +279,25 @@
   <data name="CubicInch" xml:space="preserve">
     <value>Engine size in CubicInch</value>
   </data>
+  <data name="Lyftkapacitet" xml:space="preserve">
+    <value>lift capacity</value>
+  </data>
+  <data name="Vingbredd" xml:space="preserve">
+    <value>wingspan</value>
+  </data>
+  <data name="Pax" xml:space="preserve">
+    <value>passenger</value>
+  </data>
+  <data name="TaBortFordon" xml:space="preserve">
+    <value>remove vehicle</value>
+  </data>
+  <data name="TogsBortGaraget" xml:space="preserve">
+    <value> was removed from garage </value>
+  </data>
+  <data name="FordonMedRegistrering" xml:space="preserve">
+    <value>Vehicle with regnumber</value>
+  </data>
+  <data name="HittadesEj" xml:space="preserve">
+    <value>not found.</value>
+  </data>
 </root>

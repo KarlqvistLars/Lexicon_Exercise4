@@ -87,7 +87,7 @@ namespace Exercise4_Garage_2
                     break; // Color
                 case 1:// Color
                     input = Console.ReadLine() ?? string.Empty;
-                    output = InputColor(input);
+                    output = InputString(input);
                     break;
                 case 2:// Vikt
                     input = Console.ReadLine() ?? string.Empty;
@@ -95,21 +95,21 @@ namespace Exercise4_Garage_2
                     break;
                 case 3:// Längd
                     input = Console.ReadLine() ?? string.Empty;
-                    output = InputLength(input);
-                    break; // Year
-                case 4:
+                    output = InputDecimal(input);
+                    break;
+                case 4:// ??
                     input = Console.ReadLine() ?? string.Empty;
-                    break; // Mileage
-                case 5:
+                    break;
+                case 5:// ??
                     input = Console.ReadLine() ?? string.Empty;
-                    break; // Price
+                    break;
                 default:
                     break;
             }
             return output;
         }
         // 2.4
-        private static string InputLength(string input)
+        private static string InputDecimal(string input)
         {
             do
             {
@@ -143,7 +143,7 @@ namespace Exercise4_Garage_2
             } while (true);
         }
         // 2.2
-        private static string InputColor(string input)
+        private static string InputString(string input)
         {
             do
             {

@@ -67,26 +67,21 @@ namespace Exercise4_Garage_2
                     case "1":
                         MenuAddVehicle(garage);
                         break;
-
                     case "2":
-                        MenuRemoveVehicle();
+                        MenuRemoveVehicle(garage);
                         break;
-
                     case "3":
                         MenuShowVehicle();
                         break;
-
                     case "4":
                         MenuLoadVehicleFromFile();
                         break;
                     case "5":
                         MenuChooseLanguage();
                         break;
-
                     case "0":
                         UI.ExitGarage();
                         break;
-
                     default:
                         Console.WriteLine($"{Utilities.Tab}Ogiltigt val");
                         Console.ReadKey();
@@ -114,18 +109,17 @@ namespace Exercise4_Garage_2
                         Handler.AddMotorcycle(garage);
                         break;
                     case "4":
-                        //MenuLoadVehicleFromFile();
+                        Handler.AddBoat(garage);
                         break;
                     case "5":
-                        //MenuLoadVehicleFromFile();
+                        Handler.AddAirplane(garage);
                         break;
                     case "6":
-                        //MenuLoadVehicleFromFile();
+                        Handler.AddRandomVehicles(garage);
                         break;
                     case "0":
                         running = false;
                         break;
-
                     default:
                         Console.WriteLine($"{Utilities.Tab}Ogiltigt val");
                         Console.ReadKey();
@@ -133,7 +127,7 @@ namespace Exercise4_Garage_2
                 }
             }
         }
-        private static void MenuRemoveVehicle()
+        private static void MenuRemoveVehicle(Garage<IVehicle> garage)
         {
             bool running = true;
             while (running)
@@ -146,7 +140,7 @@ namespace Exercise4_Garage_2
                         break;
 
                     case "2":
-                        //MenuRemoveVehicle();
+                        Handler.RemoveVehicleRegNum(garage);
                         break;
 
                     case "0":

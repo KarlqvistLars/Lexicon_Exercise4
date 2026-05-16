@@ -1,4 +1,5 @@
 ﻿using Exercise4_Garage_2.MenuClasses;
+using Exercise4_Garage_2.VehicleClasses;
 using System.Text;
 using static Exercise4_Garage_2.Utilities;
 namespace Exercise4_Garage_2
@@ -83,9 +84,9 @@ namespace Exercise4_Garage_2
                 {
                     VType.Car => $"{Tab}{Cap(Text.NumDoors)}: {((Car)this).NumberOfDoors}, {Cap(Text.Wheel)}: {((Car)this).Wheels}",
                     VType.Bus => $"{Tab}{Cap(Text.NumSeats)}: {((Bus)this).NumberOfSeats}, {Cap(Text.Wheel)}: {((Bus)this).Wheels}",
-                    VType.Motorcycle => $"",//{Tab}{Cap(Text.HasSidecar)}: {((Motorcycle)this).HasSidecar}",
-                    VType.Boat => $"",//{Tab}{Cap(Text.BoatType)}: {((Boat)this).BoatType}",
-                    VType.Airplane => $"",//{Tab}{Cap(Text.MaxLoad)}: {((Truck)this).MaxLoad}, {Cap(Text.Wheel)}: {((Truck)this).Wheels}",
+                    VType.Motorcycle => $"{Tab}{Cap(Text.Wheel)}: {((Motorcycle)this).Wheels}, {Cap(Text.CubicInch)}: {((Motorcycle)this).CubicInch}",
+                    VType.Boat => $"{Tab}{Cap(Text.MaxWaterDepth)}: {((Boat)this).MaxWaterDepth}, {Cap(Text.MaxSpeed)}: {((Boat)this).MaxSpeed}, {Cap(Text.Deplacement)}: {((Boat)this).Deplacement}",
+                    VType.Airplane => $"{Tab}{Cap(Text.Lyftkapacitet)}: {((Airplane)this).LiftCapacity}, {Cap(Text.Vingbredd)}: {((Airplane)this).WingSpan}, {Cap(Text.Pax)}: {((Airplane)this).Passengers}",
                     _ => $""
                 });
             }
