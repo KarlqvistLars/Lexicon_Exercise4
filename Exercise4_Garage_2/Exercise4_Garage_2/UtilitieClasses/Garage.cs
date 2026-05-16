@@ -11,6 +11,7 @@ namespace Exercise4_Garage_2
         {
             _capacity = capacity;
         }
+        public int Capacity => _capacity;
 
         public bool IsFull => _vehicles.Count >= _capacity;
 
@@ -64,9 +65,11 @@ namespace Exercise4_Garage_2
         IEnumerator IEnumerable.GetEnumerator()
             => GetEnumerator();
 
-        IEnumerator<T> IEnumerable<T>.GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
+        //IEnumerator<T> IEnumerable<T>.GetEnumerator()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+
     }
 }

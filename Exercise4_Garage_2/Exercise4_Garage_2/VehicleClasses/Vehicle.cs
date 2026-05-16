@@ -1,5 +1,6 @@
 ﻿using Exercise4_Garage_2.MenuClasses;
-using static Exercise4_Garage_2.IVehicle;
+using System.Text;
+using static Exercise4_Garage_2.Utilities;
 namespace Exercise4_Garage_2
 {
     public class Vehicle : IVehicle
@@ -7,20 +8,20 @@ namespace Exercise4_Garage_2
         private string? _uuid;
         private string? _color;
         private int _weight;
-        private int _length;
-        private VehicleType _type;
+        private decimal _length;
+        private VType _type;
         public Vehicle()
         {
             _color = string.Empty;
-            _type = VehicleType.None;
+            _type = VType.None;
         }
-        public Vehicle(string uuid, string color, int weight, int length, ValueType type)
+        public Vehicle(string uuid, string color, int weight, decimal length, VType type)
         {
             this._uuid = uuid;
             this._color = color;
             this._weight = weight;
             this._length = length;
-            this._type = (VehicleType)type;
+            this._type = (VType)type;
         }
         public static string Tab { get => new string(' ', 3); }
         public string? Uuid
@@ -38,7 +39,7 @@ namespace Exercise4_Garage_2
             get => _weight;
             set => _weight = value;
         }
-        public int Length
+        public decimal Length
         {
             get => _length;
             set => _length = value;
@@ -47,22 +48,22 @@ namespace Exercise4_Garage_2
         {
             get => _type.ToString();
         }
-        string[] IVehicle.InDataVehicle()
+        string[] IVehicle.InDataVehicle(Garage<IVehicle> garage, VType vType)
         {
-            return InDataVehicle();
+            return InDataVehicle(garage, vType);
         }
-        internal static string[] InDataVehicle()
+        internal static string[] InDataVehicle(Garage<IVehicle> garage, VType vType)
         {
             string[] data = new string[4];
-            Console.WriteLine($"{Tab}{Text.RadAddVehicle}:");
+            Console.WriteLine($"{Tab}{Text.RadAddVehicle}: ");
             Console.Write($"{Tab}{Cap(Text.RegNum)}: ");
-            data[0] = Console.ReadLine() ?? string.Empty;
-            Console.Write($"{Tab}{Cap(Text.Color)}: ");
-            data[1] = Console.ReadLine() ?? string.Empty;
+            data[0] = ReadInput(garage, 0, vType);
+            Console.Write($"{Tab}{Cap(Text.Color)} {Text.ColorChoise}: ");
+            data[1] = ReadInput(garage, 1, vType);
             Console.Write($"{Tab}{Cap(Text.Vikt)}: ");
-            data[2] = Console.ReadLine() ?? "0";
+            data[2] = ReadInput(garage, 2, vType);
             Console.Write($"{Tab}{Cap(Text.Length)}: ");
-            data[3] = Console.ReadLine() ?? "0";
+            data[3] = ReadInput(garage, 3, vType);
             return data;
         }
         public static string Cap(string text)
@@ -70,6 +71,29 @@ namespace Exercise4_Garage_2
             return string.IsNullOrEmpty(text)
                 ? text
                 : char.ToUpper(text[0]) + text[1..];
+        }
+        public string? ToString2(VType valueType = VType.None)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"{Tab}{Cap(Text.RegNum)}: {Uuid}");
+            sb.AppendLine($"{Tab}{Cap(Text.Color)}: {Color}, {Cap(Text.Vikt)}: {Weight}, {Cap(Text.Length)}: {Length}");
+            if (valueType != VType.None)
+            {
+                sb.Append(valueType switch
+                {
+                    VType.Car => $"{Tab}{Cap(Text.NumDoors)}: {((Car)this).NumberOfDoors}, {Cap(Text.Wheel)}: {((Car)this).Wheels}",
+                    VType.Bus => $"",//{Tab}{Cap(Text.NumSeats)}: {((Bus)this).NumberOfSeats}, {Cap(Text.Wheel)}: {((Bus)this).Wheels}",
+                    VType.Motorcycle => $"",//{Tab}{Cap(Text.HasSidecar)}: {((Motorcycle)this).HasSidecar}",
+                    VType.Boat => $"",//{Tab}{Cap(Text.BoatType)}: {((Boat)this).BoatType}",
+                    VType.Airplane => $"",//{Tab}{Cap(Text.MaxLoad)}: {((Truck)this).MaxLoad}, {Cap(Text.Wheel)}: {((Truck)this).Wheels}",
+                    _ => $""
+                });
+            }
+            else
+            {
+                return $"Typ av fordon ej definierad";
+            }
+            return sb.ToString();
         }
     }
 }

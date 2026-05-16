@@ -1,5 +1,5 @@
 ﻿using Exercise4_Garage_2.MenuClasses;
-using static Exercise4_Garage_2.IVehicle;
+using static Exercise4_Garage_2.Utilities;
 namespace Exercise4_Garage_2.VehicleClasses
 {
     internal class Bus : Vehicle
@@ -7,7 +7,7 @@ namespace Exercise4_Garage_2.VehicleClasses
         int numberOfSeats;
         int wheels;
         public Bus(string uuid, string color, int weight, int length, int numberOfSeats, int wheels)
-        : base(uuid, color, weight, length, VehicleType.Bus)
+        : base(uuid, color, weight, length, VType.Bus)
         {
             this.numberOfSeats = numberOfSeats;
             this.wheels = wheels;
@@ -16,7 +16,7 @@ namespace Exercise4_Garage_2.VehicleClasses
         public new string Color { get => this.Color; set => ((IVehicle)this).Color = value; }
         public new int Weight { get => this.Weight; set => ((IVehicle)this).Weight = value; }
         public new int Length { get => this.Length; set => ((IVehicle)this).Length = value; }
-        public new string Type => VehicleType.Bus.ToString();
+        public new string Type => VType.Bus.ToString();
         public int NumberOfSeats
         {
             get => numberOfSeats;
@@ -27,18 +27,11 @@ namespace Exercise4_Garage_2.VehicleClasses
             get => wheels;
             set => wheels = value;
         }
-        public string? ToString(int variant = 0)
+        public string? ToString2()
         {
-            switch (variant)
-            {
-                case 1:
-                    return $"{Tab}{Cap(Text.Bil) + Text.medRegistrering}: {Uuid}\n" +
-                        $"{Tab}{Cap(Text.Color)}: {Color}, {Cap(Text.Vikt)}: {Weight}, {Cap(Text.Length)}: {Length}\n";
-                case 2:
-                    return $"{Tab}{Cap(Text.NumSeats)}: {numberOfSeats}, {Cap(Text.Wheel)}: {Wheels}";
-                default:
-                    return $"Typ av utskrift ej definierad";
-            }
+            return $"{Tab}{Cap(Text.Bil) + Text.medRegistrering}: {Uuid}\n" +
+                        $"{Tab}{Cap(Text.Color)}: {Color}, {Cap(Text.Vikt)}: {Weight}, {Cap(Text.Length)}: {Length}\n" +
+                        $"{Tab}{Cap(Text.NumSeats)}: {numberOfSeats}, {Cap(Text.Wheel)}: {Wheels}";
         }
     }
 }

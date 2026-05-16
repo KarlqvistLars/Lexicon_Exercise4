@@ -1,17 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Interface Name="Exercise4_Garage_2.Interfaces.IGarage&lt;T&gt;">
-    <Position X="0.5" Y="1.25" Width="1.5" />
+    <Position X="2.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEIAAEAAAAAAABAQCAAABAQAAAABAAAIAAAAAABQIAA=</HashCode>
+      <HashCode>AEIAAEAAAAAAABAQCAAABAQCAAABAAAIAAAAAABQIAA=</HashCode>
       <FileName>Interfaces\IGarage.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Exercise4_Garage_2.Interfaces.IHandler">
-    <Position X="2" Y="1.25" Width="1.5" />
+    <Position X="0.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAAAAAAAAACAAUAAAAEAAABAAAAAgAAAAAIAAA=</HashCode>
+      <HashCode>EAAEAAAAAAAAAAACAAUAAAAEAAABAAAAAgAAAAAIAAA=</HashCode>
       <FileName>Interfaces\IHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Exercise4_Garage_2.Interfaces.IUI">
+    <Position X="0.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IUI.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Exercise4_Garage_2.IVehicle">
+    <Position X="4.25" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAUAAAAAABAACAAAAAAAQAAgAAAAAA=</HashCode>
+      <FileName>Interfaces\IVehicle.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

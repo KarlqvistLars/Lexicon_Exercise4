@@ -157,7 +157,7 @@
     <value>load vehicles from file</value>
   </data>
   <data name="Valg" xml:space="preserve">
-    <value>choose:</value>
+    <value>choose</value>
   </data>
   <data name="Rad1AddVehicle" xml:space="preserve">
     <value>Car</value>
@@ -228,10 +228,31 @@
   <data name="Avsluta" xml:space="preserve">
     <value>exit</value>
   </data>
-  <data name="Exit" xml:space="preserve">
+  <data name="exit" xml:space="preserve">
     <value>exit</value>
   </data>
   <data name="Back" xml:space="preserve">
     <value>back</value>
+  </data>
+  <data name="LagtsTillGaraget" xml:space="preserve">
+    <value>This car is added to the garage. </value>
+  </data>
+  <data name="TryckRetur" xml:space="preserve">
+    <value>Press Enter to continue...</value>
+  </data>
+  <data name="platser" xml:space="preserve">
+    <value> parking spots.</value>
+  </data>
+  <data name="Av" xml:space="preserve">
+    <value> off </value>
+  </data>
+  <data name="AntalFordon" xml:space="preserve">
+    <value>number of vehicles in the garage</value>
+  </data>
+  <data name="LaggTill" xml:space="preserve">
+    <value>Add </value>
+  </data>
+  <data name="ColorChoise" xml:space="preserve">
+    <value>(1. Red, 2. Blue, 3. Green, 4. Yellow 5. Black)</value>
   </data>
 </root>

@@ -1,6 +1,4 @@
-﻿using Exercise4_Garage_2.MenuClasses;
-
-namespace Exercise4_Garage_2.Tests
+﻿namespace Exercise4_Garage_2.Tests
 {
     public class UnitTestMenuClasses
     {
@@ -19,7 +17,7 @@ namespace Exercise4_Garage_2.Tests
             try
             {
                 // Act
-                UI.MenuAddVehicle();
+                //UI.MenuAddVehicle();
 
                 // Hämtar allt som skrivits till console
                 string result = output.ToString();

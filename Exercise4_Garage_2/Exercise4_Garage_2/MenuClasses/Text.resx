@@ -157,7 +157,7 @@
     <value>Hämta fordon från fil</value>
   </data>
   <data name="Valg" xml:space="preserve">
-    <value>Välj: </value>
+    <value>Välj</value>
   </data>
   <data name="Rad1AddVehicle" xml:space="preserve">
     <value>Bil</value>
@@ -233,5 +233,26 @@
   </data>
   <data name="Back" xml:space="preserve">
     <value>tillbaka</value>
+  </data>
+  <data name="LagtsTillGaraget" xml:space="preserve">
+    <value>Denna bil har lagts till i garaget.</value>
+  </data>
+  <data name="TryckRetur" xml:space="preserve">
+    <value>Tryck Retur för att fortsätta...</value>
+  </data>
+  <data name="platser" xml:space="preserve">
+    <value> platser.</value>
+  </data>
+  <data name="Av" xml:space="preserve">
+    <value> av </value>
+  </data>
+  <data name="AntalFordon" xml:space="preserve">
+    <value>antal fordon i garaget</value>
+  </data>
+  <data name="LaggTill" xml:space="preserve">
+    <value>Lägg till </value>
+  </data>
+  <data name="ColorChoise" xml:space="preserve">
+    <value>(1. Röd, 2. Blå, 3. Grön, 4. Gul 5. Svart)</value>
   </data>
 </root>

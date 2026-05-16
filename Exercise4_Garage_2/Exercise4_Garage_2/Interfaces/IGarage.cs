@@ -3,6 +3,7 @@
     public interface IGarage<T> : IEnumerable<T> where T : Vehicle
     {
         T FindByRegNumber(string uuid);
+        public int Capacity { get; }
         bool IsFull { get; }
         public T this[int index] { get; set; }
         int Count { get; }

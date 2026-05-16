@@ -13,7 +13,8 @@ namespace Exercise4_Garage_2
         static string[] menuTextShow = new string[] { };
         static string[] menuLoadFromFile = new string[] { };
         static string[] menuTextLanguage = new string[] { };
-        static void LoadMenuText()
+        private static Handler Handler = new Handler();
+        public static void LoadMenuText()
         {
             menuTextMain = new string[]
             {
@@ -53,22 +54,7 @@ namespace Exercise4_Garage_2
                 Utilities.Cap(Text.Rad2ChooseLanguage),
             };
         }
-        public static bool StartGarage(int garageSize, bool populate = false)
-        {
-            if (populate == false)
-            {
-                //garage = new Garage(garageSize);
-                MenuMain();
-            }
-            else
-            {
-                //garage = new Garage(20); // Standardstorlek
-                //GarageHandler.AddStartVehicles(15); // Lägg till 15 slumpmässiga fordon
-                MenuMain();
-            }
-            return true;
-        }
-        public static void MenuMain()
+        public static void MenuMain(Garage<IVehicle> garage)
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
 
@@ -79,7 +65,7 @@ namespace Exercise4_Garage_2
                 switch (input)
                 {
                     case "1":
-                        MenuAddVehicle();
+                        MenuAddVehicle(garage);
                         break;
 
                     case "2":
@@ -108,7 +94,7 @@ namespace Exercise4_Garage_2
                 }
             }
         }
-        private static void MenuAddVehicle()
+        private static void MenuAddVehicle(Garage<IVehicle> garage)
         {
             bool running = true;
             while (running)
@@ -119,7 +105,7 @@ namespace Exercise4_Garage_2
                 switch (input)
                 {
                     case "1":
-                        //MenuAddVehicle();
+                        Handler.AddCar(garage);
                         break;
                     case "2":
                         //MenuRemoveVehicle();
@@ -284,7 +270,5 @@ namespace Exercise4_Garage_2
 #endif
             Running = false;
         }
-
-
     }
 }

@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            UI.MenuMain();
+            Garage<IVehicle> garage = new Garage<IVehicle>(10); // Example size
+            UI.MenuMain(garage);
         }
     }
 }

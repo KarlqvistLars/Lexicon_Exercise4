@@ -1,5 +1,5 @@
 ﻿using Exercise4_Garage_2.MenuClasses;
-using static Exercise4_Garage_2.IVehicle;
+using static Exercise4_Garage_2.Utilities;
 namespace Exercise4_Garage_2.VehicleClasses
 {
     internal class Boat : Vehicle
@@ -9,7 +9,7 @@ namespace Exercise4_Garage_2.VehicleClasses
         decimal deplacement;
 
         public Boat(string uuid, string color, int weight, int length, decimal maxWaterDepth, decimal maxSpeed, decimal deplacement)
-            : base(uuid, color, weight, length, VehicleType.Boat)
+            : base(uuid, color, weight, length, VType.Boat)
         {
             this.maxWaterDepth = maxWaterDepth;
             this.maxSpeed = maxSpeed;
@@ -19,7 +19,7 @@ namespace Exercise4_Garage_2.VehicleClasses
         public new string Color { get => this.Color; set => ((IVehicle)this).Color = value; }
         public new int Weight { get => this.Weight; set => ((IVehicle)this).Weight = value; }
         public new int Length { get => this.Length; set => ((IVehicle)this).Length = value; }
-        public new string Type => VehicleType.Boat.ToString();
+        public new string Type => VType.Boat.ToString();
         public decimal MaxWaterDepth
         {
             get => maxWaterDepth;
