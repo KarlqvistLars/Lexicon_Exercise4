@@ -1,4 +1,5 @@
 ﻿//#define TESTMODE
+using Exercise4_Garage_2.MenuClasses;
 using System.Text.RegularExpressions;
 
 namespace Exercise4_Garage_2
@@ -25,7 +26,7 @@ namespace Exercise4_Garage_2
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write($"{Tab}* ");
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("Garage 2.0");
+            Console.Write($"{Text.GarageVer}");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(" * ");
             Console.ResetColor();
@@ -52,7 +53,7 @@ namespace Exercise4_Garage_2
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write($"{Tab}* ");
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("Garage 1.0");
+            Console.Write($"{Text.GarageVer}");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(" * ");
             Console.ResetColor();
@@ -76,7 +77,7 @@ namespace Exercise4_Garage_2
                 : char.ToUpper(text[0]) + text[1..];
         }
         // 1.
-        public static string ReadInput(Garage<IVehicle> garage, int type, VType vType)
+        public static string ReadInput(Garage<IVehicle> garage, int type, VType vType, bool searchFlag = false)
         {
             string input, output = string.Empty;
             switch (type)
@@ -87,15 +88,15 @@ namespace Exercise4_Garage_2
                     break; // Color
                 case 1:// Color
                     input = Console.ReadLine() ?? string.Empty;
-                    output = InputString(input);
+                    output = InputString(input, searchFlag);
                     break;
                 case 2:// Vikt
                     input = Console.ReadLine() ?? string.Empty;
-                    output = InputInteger(input);
+                    output = InputInteger(input, searchFlag);
                     break;
                 case 3:// Längd
                     input = Console.ReadLine() ?? string.Empty;
-                    output = InputDecimal(input);
+                    output = InputDecimal(input, searchFlag);
                     break;
                 case 4:// ??
                     input = Console.ReadLine() ?? string.Empty;
@@ -109,8 +110,9 @@ namespace Exercise4_Garage_2
             return output;
         }
         // 2.4
-        public static string InputDecimal(string input)
+        public static string InputDecimal(string input, bool searchFlag = false)
         {
+            if (searchFlag && input == string.Empty) { return input; }
             do
             {
                 if (decimal.TryParse(input, out decimal weight) && weight > 0)
@@ -126,8 +128,9 @@ namespace Exercise4_Garage_2
             } while (true);
         }
         // 2.3
-        public static string InputInteger(string input)
+        public static string InputInteger(string input, bool searchFlag = false)
         {
+            if (searchFlag && input == string.Empty) { return input; }
             do
             {
                 if (int.TryParse(input, out int weight) && weight > 0)
@@ -143,8 +146,9 @@ namespace Exercise4_Garage_2
             } while (true);
         }
         // 2.2
-        private static string InputString(string input)
+        private static string InputString(string input, bool searchFlag = false)
         {
+            if (searchFlag && input == string.Empty) { return input; }
             do
             {
                 switch (input)
@@ -281,11 +285,7 @@ namespace Exercise4_Garage_2
         public static string GenerateRandom()
         {
             Random random = new Random();
-
-            //string[] colors = { "Röd", "Blå", "Grön", "Svart", "Vit", "Gul", "Silver" };
-
             string letter = "SE-";
-            int number = random.Next(1, 26);
             for (int i = 0; i < 3; i++)
             {
                 letter += (((char)random.Next('A', 'Z' + 1)).ToString());

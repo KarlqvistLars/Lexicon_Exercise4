@@ -53,18 +53,25 @@ namespace Exercise4_Garage_2
         {
             return InDataVehicle(garage, vType);
         }
-        internal static string[] InDataVehicle(Garage<IVehicle> garage, VType vType)
+        internal static string[] InDataVehicle(Garage<IVehicle> garage, VType vType, bool searchFlag = false)
         {
             string[] data = new string[4];
-            Console.WriteLine($"{Tab}{Cap(Text.RadAddVehicle)}: ");
-            Console.Write($"{Tab}{Cap(Text.RegNum)}: ");
-            data[0] = ReadInput(garage, 0, vType);
+            if (searchFlag)
+            {
+                data[0] = string.Empty;
+            }
+            else
+            {
+                Console.WriteLine($"{Tab}{Cap(Text.RadAddVehicle)}: ");
+                Console.Write($"{Tab}{Cap(Text.RegNum)}: ");
+                data[0] = ReadInput(garage, 0, vType, searchFlag);
+            }
             Console.Write($"{Tab}{Cap(Text.Color)} {Text.ColorChoise}: ");
-            data[1] = ReadInput(garage, 1, vType);
+            data[1] = ReadInput(garage, 1, vType, searchFlag);
             Console.Write($"{Tab}{Cap(Text.Vikt)}: ");
-            data[2] = ReadInput(garage, 2, vType);
+            data[2] = ReadInput(garage, 2, vType, searchFlag);
             Console.Write($"{Tab}{Cap(Text.Length)}: ");
-            data[3] = ReadInput(garage, 3, vType);
+            data[3] = ReadInput(garage, 3, vType, searchFlag);
             return data;
         }
         public static string Cap(string text)

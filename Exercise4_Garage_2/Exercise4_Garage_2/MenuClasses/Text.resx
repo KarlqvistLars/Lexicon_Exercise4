@@ -319,4 +319,7 @@
   <data name="Hittades" xml:space="preserve">
     <value>hittades</value>
   </data>
+  <data name="GarageVer" xml:space="preserve">
+    <value>Garage 2.0</value>
+  </data>
 </root>

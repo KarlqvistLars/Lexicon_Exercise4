@@ -241,6 +241,15 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Garage 2.0.
+        /// </summary>
+        internal static string GarageVer {
+            get {
+                return ResourceManager.GetString("GarageVer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to hittades.
         /// </summary>
         internal static string Hittades {
