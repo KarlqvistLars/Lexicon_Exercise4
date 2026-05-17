@@ -121,8 +121,7 @@ namespace Exercise4_Garage_2
                         running = false;
                         break;
                     default:
-                        Console.WriteLine($"{Utilities.Tab}Ogiltigt val");
-                        Console.ReadKey();
+                        Handler.OgitigtVal();
                         break;
                 }
             }
@@ -136,20 +135,16 @@ namespace Exercise4_Garage_2
                 switch (input)
                 {
                     case "1":
-                        //MenuAddVehicle();
+                        Handler.RemoveVehicle(garage);
                         break;
-
                     case "2":
                         Handler.RemoveVehicleRegNum(garage);
                         break;
-
                     case "0":
                         running = false;
                         break;
-
                     default:
-                        Console.WriteLine($"{Utilities.Tab}Ogiltigt val");
-                        Console.ReadKey();
+                        Handler.OgitigtVal();
                         break;
                 }
             }
@@ -159,7 +154,7 @@ namespace Exercise4_Garage_2
             bool running = true;
             while (running)
             {
-                string? input = Utilities.ShowMenu(Text.Rad3Main, menuTextShow, Text.Back);
+                string input = Utilities.ShowMenu(Text.Rad3Main, menuTextShow, Text.Back).Trim();
                 switch (input)
                 {
                     case "1":
@@ -169,18 +164,13 @@ namespace Exercise4_Garage_2
                         Handler.FindVehicleByRegNumber(garage);
                         break;
                     case "3":
-                        //Sök och visa fordon
-                        break;
-                    case "4":
-                        //MenuLoadVehicleFromFile();
+                        Handler.SeachAndFilterVehicles(garage);
                         break;
                     case "0":
                         running = false;
                         break;
-
                     default:
-                        Console.WriteLine($"{Utilities.Tab}Ogiltigt val");
-                        Console.ReadKey();
+                        Handler.OgitigtVal();
                         break;
                 }
             }
@@ -196,26 +186,20 @@ namespace Exercise4_Garage_2
                     case "1":
                         //MenuAddVehicle();
                         break;
-
                     case "2":
                         //MenuRemoveVehicle();
                         break;
-
                     case "3":
                         //MenuShowVehicle();
                         break;
-
                     case "4":
                         //MenuLoadVehicleFromFile();
                         break;
-
                     case "0":
                         running = false;
                         break;
-
                     default:
-                        Console.WriteLine($"{Utilities.Tab}Ogiltigt val");
-                        Console.ReadKey();
+                        Handler.OgitigtVal();
                         break;
                 }
             }
@@ -241,10 +225,8 @@ namespace Exercise4_Garage_2
                     case "0":
                         running = false;
                         break;
-
                     default:
-                        Console.WriteLine($"{Utilities.Tab}Ogiltigt val");
-                        Console.ReadKey();
+                        Handler.OgitigtVal();
                         break;
                 }
             }

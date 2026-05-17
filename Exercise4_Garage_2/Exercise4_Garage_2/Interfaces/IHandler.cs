@@ -7,6 +7,5 @@
         void AddRandomVehicles(Garage<IVehicle> garage, int count = 0);
         void RemoveVehicle(Garage<IVehicle> garage);
         void RemoveVehicleRegNum(Garage<IVehicle> garage);
-
     }
 }

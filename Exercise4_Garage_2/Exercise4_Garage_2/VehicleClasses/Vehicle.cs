@@ -53,18 +53,25 @@ namespace Exercise4_Garage_2
         {
             return InDataVehicle(garage, vType);
         }
-        internal static string[] InDataVehicle(Garage<IVehicle> garage, VType vType)
+        internal static string[] InDataVehicle(Garage<IVehicle> garage, VType vType, bool searchFlag = false)
         {
             string[] data = new string[4];
-            Console.WriteLine($"{Tab}{Cap(Text.RadAddVehicle)}: ");
-            Console.Write($"{Tab}{Cap(Text.RegNum)}: ");
-            data[0] = ReadInput(garage, 0, vType);
+            if (searchFlag)
+            {
+                data[0] = string.Empty;
+            }
+            else
+            {
+                Console.WriteLine($"{Tab}{Cap(Text.RadAddVehicle)}: ");
+                Console.Write($"{Tab}{Cap(Text.RegNum)}: ");
+                data[0] = ReadInput(garage, 0, vType, searchFlag);
+            }
             Console.Write($"{Tab}{Cap(Text.Color)} {Text.ColorChoise}: ");
-            data[1] = ReadInput(garage, 1, vType);
+            data[1] = ReadInput(garage, 1, vType, searchFlag);
             Console.Write($"{Tab}{Cap(Text.Vikt)}: ");
-            data[2] = ReadInput(garage, 2, vType);
+            data[2] = ReadInput(garage, 2, vType, searchFlag);
             Console.Write($"{Tab}{Cap(Text.Length)}: ");
-            data[3] = ReadInput(garage, 3, vType);
+            data[3] = ReadInput(garage, 3, vType, searchFlag);
             return data;
         }
         public static string Cap(string text)
@@ -73,7 +80,7 @@ namespace Exercise4_Garage_2
                 ? text
                 : char.ToUpper(text[0]) + text[1..];
         }
-        public string? ToString2(VType valueType = VType.None)
+        public string? ToString3(VType valueType = VType.None)
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"{Tab}{valueType.ToString()} {Text.medRegistrering}: {Uuid}");
@@ -96,5 +103,41 @@ namespace Exercise4_Garage_2
             }
             return sb.ToString();
         }
+
+        public string? ToString2(VType valueType = VType.None)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"{Tab}{valueType.ToString()} {Text.medRegistrering}: {Uuid}");
+            sb.AppendLine($"{Tab}{Cap(Text.Color)}: {Color}, {Cap(Text.Vikt)}: {Weight}, {Cap(Text.Length)}: {Length}");
+            if (valueType != VType.None)
+            {
+                switch (valueType)
+                {
+                    case VType.Car:
+                        sb.Append($"{Tab}{Cap(Text.NumDoors)}: {((Car)this).NumberOfDoors}, {Cap(Text.Wheel)}: {((Car)this).Wheels}");
+                        break;
+                    case VType.Bus:
+                        sb.Append($"{Tab}{Cap(Text.NumSeats)}: {((Bus)this).NumberOfSeats}, {Cap(Text.Wheel)}: {((Bus)this).Wheels}");
+                        break;
+                    case VType.Motorcycle:
+                        sb.Append($"{Tab}{Cap(Text.Wheel)}: {((Motorcycle)this).Wheels}, {Cap(Text.CubicInch)}: {((Motorcycle)this).CubicInch}");
+                        break;
+                    case VType.Boat:
+                        sb.Append($"{Tab}{Cap(Text.WaterDepth)}: {((Boat)this).MaxWaterDepth}, {Cap(Text.BoatSpeed)}: {((Boat)this).MaxSpeed}\n{Tab}{Cap(Text.Deplac)}: {((Boat)this).Deplacement}");
+                        break;
+                    case VType.Airplane:
+                        sb.Append($"{Tab}{Cap(Text.Lyftkapacitet)}: {((Airplane)this).LiftCapacity}, {Cap(Text.Vingbredd)}: {((Airplane)this).WingSpan}, {Cap(Text.Pax)}: {((Airplane)this).Passengers}");
+                        break;
+                    default:
+                        return $"";
+                }
+            }
+            else
+            {
+                return $"Typ av fordon ej definierad";
+            }
+            return sb.ToString();
+        }
+
     }
 }
