@@ -159,7 +159,8 @@ namespace Exercise4_Garage_2
             bool running = true;
             while (running)
             {
-                string? input = Utilities.ShowMenu(Text.Rad3Main, menuTextShow, Text.Back);
+                string input = Utilities.ShowMenu(Text.Rad3Main, menuTextShow, Text.Back).Trim();
+
                 switch (input)
                 {
                     case "1":
@@ -169,10 +170,8 @@ namespace Exercise4_Garage_2
                         Handler.FindVehicleByRegNumber(garage);
                         break;
                     case "3":
-                        //Sök och visa fordon
-                        break;
-                    case "4":
-                        //MenuLoadVehicleFromFile();
+                        Console.WriteLine(input);
+                        Handler.SeachAndFilterVehicles(garage);
                         break;
                     case "0":
                         running = false;

@@ -12,7 +12,6 @@ namespace Exercise4_Garage_2.VehicleClasses
             this._cubicInch = cubicInch;
             this._wheels = wheels;
         }
-
         public new string Uuid { get => this.Uuid; }
         public new string Color { get => this.Color; set => ((IVehicle)this).Color = value; }
         public new int Weight { get => this.Weight; set => ((IVehicle)this).Weight = value; }
@@ -34,7 +33,6 @@ namespace Exercise4_Garage_2.VehicleClasses
                         $"{Tab}{Cap(Text.Color)}: {Color}, {Cap(Text.Vikt)}: {Weight}, {Cap(Text.Length)}: {Length}\n" +
                         $"{Tab}{Cap(Text.CubicInch)}: {CubicInch}, {Cap(Text.Wheel)}: {Wheels}";
         }
-
         internal static string[] InData()
         {
             string[] data = new string[4];

@@ -136,7 +136,7 @@ namespace Exercise4_Garage_2
             Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
             Console.ReadLine();
         }
-        public void ListVehicles(Garage<IVehicle> garage)
+        public bool ListVehicles(Garage<IVehicle> garage)
         {
             string Title = $"{Text.Rad3Main}.";
             Utilities.ShowHeader(Title);
@@ -146,16 +146,19 @@ namespace Exercise4_Garage_2
             }
             else
             {
+                int counting = 1;
                 foreach (var vehicle in garage)
                 {
-                    Console.WriteLine(vehicle.ToString2(vehicle.Type));
+                    Console.WriteLine($"{Utilities.Tab}{counting}.\n{vehicle.ToString2(vehicle.Type)}");
                     Console.WriteLine($"{Utilities.Line30}{Utilities.Line30}");
+                    counting++;
                 }
             }
             Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
             Console.ReadLine();
+            return true;
         }
-        internal void FindVehicleByRegNumber(Garage<IVehicle> garage)
+        public bool FindVehicleByRegNumber(Garage<IVehicle> garage)
         {
             string Title = $"{Utilities.Cap(Text.Rad3Main)}.";
             Utilities.ShowHeader(Title);
@@ -183,6 +186,19 @@ namespace Exercise4_Garage_2
             }
             Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
             Console.ReadLine();
+            return true;
+        }
+        public bool SeachAndFilterVehicles(Garage<IVehicle> garage)
+        {
+            string Title = $"{Text.Rad3ShowVehicle}.";
+            Utilities.ShowHeader(Title);
+            return true;
+        }
+        public bool OgitigtVal()
+        {
+            System.Console.WriteLine($"{Utilities.Tab}Ogiltigt val");
+            Console.ReadKey();
+            return true;
         }
     }
 }

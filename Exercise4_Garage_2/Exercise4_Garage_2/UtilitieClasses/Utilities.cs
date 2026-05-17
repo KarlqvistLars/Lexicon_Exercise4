@@ -192,7 +192,8 @@ namespace Exercise4_Garage_2
                         }
                         else
                         {
-                            Console.WriteLine($"{Tab}Registreringsnumret finns redan i garaget.\n{Tab}Ange ett unikt registreringsnummer: ");
+                            Console.Write($"{Tab}Registreringsnumret finns redan i garaget.\n{Tab}Ange ett unikt registreringsnummer: ");
+                            regNum = Console.ReadLine().ToUpper() ?? string.Empty;
                         }
                     }
                 }
