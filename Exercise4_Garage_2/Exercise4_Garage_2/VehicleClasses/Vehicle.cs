@@ -76,7 +76,7 @@ namespace Exercise4_Garage_2
         public string? ToString2(VType valueType = VType.None)
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"{Tab}{Cap(Text.RegNum)}: {Uuid}");
+            sb.AppendLine($"{Tab}{valueType.ToString()} {Text.medRegistrering}: {Uuid}");
             sb.AppendLine($"{Tab}{Cap(Text.Color)}: {Color}, {Cap(Text.Vikt)}: {Weight}, {Cap(Text.Length)}: {Length}");
             if (valueType != VType.None)
             {

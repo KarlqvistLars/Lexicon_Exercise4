@@ -315,4 +315,7 @@
   <data name="Deplac" xml:space="preserve">
     <value>deplacement</value>
   </data>
+  <data name="Hittades" xml:space="preserve">
+    <value>found</value>
+  </data>
 </root>

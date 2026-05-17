@@ -100,19 +100,19 @@ namespace Exercise4_Garage_2
                 switch (input)
                 {
                     case "1":
-                        Handler.AddCar(garage);
+                        Handler.AddVehicle(garage, Utilities.VType.Car);
                         break;
                     case "2":
-                        Handler.AddBus(garage);
+                        Handler.AddVehicle(garage, Utilities.VType.Bus);
                         break;
                     case "3":
-                        Handler.AddMotorcycle(garage);
+                        Handler.AddVehicle(garage, Utilities.VType.Motorcycle);
                         break;
                     case "4":
-                        Handler.AddBoat(garage);
+                        Handler.AddVehicle(garage, Utilities.VType.Boat);
                         break;
                     case "5":
-                        Handler.AddAirplane(garage);
+                        Handler.AddVehicle(garage, Utilities.VType.Airplane);
                         break;
                     case "6":
                         Handler.AddRandomVehicles(garage);
@@ -166,7 +166,7 @@ namespace Exercise4_Garage_2
                         Handler.ListVehicles(garage);
                         break;
                     case "2":
-                        //Visa fordon regnummer
+                        Handler.FindVehicleByRegNumber(garage);
                         break;
                     case "3":
                         //Sök och visa fordon

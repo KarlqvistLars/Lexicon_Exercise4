@@ -26,7 +26,6 @@ namespace Exercise4_Garage_2
             }
             return true;
         }
-        //public void AddVehicles(Garage<IVehicle> garage, VType type)  
         public void AddVehicle(Garage<IVehicle> garage, VType type)
         {
             string[] v = new string[4];
@@ -55,87 +54,7 @@ namespace Exercise4_Garage_2
             Console.WriteLine($"\n{Utilities.Line30}{Utilities.Line30}");
             Console.WriteLine($"{Utilities.Tab}{Cap(type.ToString())} {Text.LagtsTillGaraget}\n{garage.Last().ToString2(type)}");
             Console.WriteLine($"{Utilities.Line30}{Utilities.Line30}");
-            Console.WriteLine($"{Utilities.Tab}{Utilities.Cap(Text.AntalFordon)}{garage.Count}{Text.Av}{garage.Capacity}{Text.platser}");
-            Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
-            Console.ReadLine();
-        }
-        public void AddCar(Garage<IVehicle> garage)
-        {
-            string[] v = new string[4];
-            string[] c = new string[4];
-            string Title = $"{Text.LaggTill} {Text.Bil}.";
-            Utilities.ShowHeader(Title);
-            v = Vehicle.InDataVehicle(garage, Utilities.VType.Car);
-            c = Car.InData();
-            garage.Add(new Car(v[0], v[1], int.Parse(v[2]), decimal.Parse(v[3]), int.Parse(c[0]), int.Parse(c[1])));
-            Console.WriteLine($"\n{Utilities.Line30}{Utilities.Line30}");
-            Console.WriteLine($"{Utilities.Tab}{Cap(Text.Bil)} {Text.LagtsTillGaraget}\n{garage.Last().ToString2(Utilities.VType.Car)}");
-            Console.WriteLine($"{Utilities.Line30}{Utilities.Line30}");
-            Console.WriteLine($"{Utilities.Tab}{Utilities.Cap(Text.AntalFordon)}{garage.Count}{Text.Av}{garage.Capacity}{Text.platser}");
-            Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
-            Console.ReadLine();
-        }
-        public void AddBus(Garage<IVehicle> garage)
-        {
-            string[] v = new string[4];
-            string[] c = new string[4];
-            string Title = $"{Text.LaggTill} {Text.Buss}.";
-            Utilities.ShowHeader(Title);
-            v = Vehicle.InDataVehicle(garage, Utilities.VType.Bus);
-            c = Bus.InData();
-            garage.Add(new Bus(v[0], v[1], int.Parse(v[2]), decimal.Parse(v[3]), int.Parse(c[0]), int.Parse(c[1])));
-            Console.WriteLine($"\n{Utilities.Line30}{Utilities.Line30}");
-            Console.WriteLine($"{Utilities.Tab}{Cap(Text.Buss)} {Text.LagtsTillGaraget}\n{garage.Last().ToString2(Utilities.VType.Bus)}");
-            Console.WriteLine($"{Utilities.Line30}{Utilities.Line30}");
-            Console.WriteLine($"{Utilities.Tab}{Utilities.Cap(Text.AntalFordon)}{garage.Count}{Text.Av}{garage.Capacity}{Text.platser}");
-            Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
-            Console.ReadLine();
-        }
-        public void AddMotorcycle(Garage<IVehicle> garage)
-        {
-            string[] v = new string[4];
-            string[] c = new string[4];
-            string Title = $"{Text.LaggTill} {Text.Motorcykel}.";
-            Utilities.ShowHeader(Title);
-            v = Vehicle.InDataVehicle(garage, Utilities.VType.Motorcycle);
-            c = Motorcycle.InData(garage);
-            garage.Add(new Motorcycle(v[0], v[1], int.Parse(v[2]), decimal.Parse(v[3]), int.Parse(c[0]), int.Parse(c[1])));
-            Console.WriteLine($"\n{Utilities.Line30}{Utilities.Line30}");
-            Console.WriteLine($"{Utilities.Tab}{Cap(Text.Motorcykel)} {Text.LagtsTillGaraget}\n{garage.Last().ToString2(Utilities.VType.Motorcycle)}");
-            Console.WriteLine($"{Utilities.Line30}{Utilities.Line30}");
-            Console.WriteLine($"{Utilities.Tab}{Utilities.Cap(Text.AntalFordon)}{garage.Count}{Text.Av}{garage.Capacity}{Text.platser}");
-            Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
-            Console.ReadLine();
-        }
-        public void AddBoat(Garage<IVehicle> garage)
-        {
-            string[] v = new string[4];
-            string[] c = new string[4];
-            string Title = $"{Text.LaggTill} {Text.Boat}.";
-            Utilities.ShowHeader(Title);
-            v = Vehicle.InDataVehicle(garage, Utilities.VType.Boat);
-            c = Boat.InData();
-            garage.Add(new Boat(v[0], v[1], int.Parse(v[2]), decimal.Parse(v[3]), decimal.Parse(c[0]), decimal.Parse(c[1]), decimal.Parse(c[2])));
-            Console.WriteLine($"\n{Utilities.Line30}{Utilities.Line30}");
-            Console.WriteLine($"{Utilities.Tab}{Cap(Text.Boat)} {Text.LagtsTillGaraget}\n{garage.Last().ToString2(Utilities.VType.Boat)}");
-            Console.WriteLine($"{Utilities.Line30}{Utilities.Line30}");
-            Console.WriteLine($"{Utilities.Tab}{Utilities.Cap(Text.AntalFordon)}{garage.Count}{Text.Av}{garage.Capacity}{Text.platser}");
-            Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
-            Console.ReadLine();
-        }
-        public void AddAirplane(Garage<IVehicle> garage)
-        {
-            string[] v = new string[4];
-            string[] c = new string[4];
-            string Title = $"{Text.LaggTill} {Text.Flygplan}.";
-            Utilities.ShowHeader(Title);
-            v = Vehicle.InDataVehicle(garage, Utilities.VType.Airplane);
-            c = Airplane.InData();
-            garage.Add(new Airplane(v[0], v[1], int.Parse(v[2]), decimal.Parse(v[3]), int.Parse(c[0]), decimal.Parse(c[1]), int.Parse(c[2])));
-            Console.WriteLine($"\n{Utilities.Line30}{Utilities.Line30}");
-            Console.WriteLine($"{Utilities.Tab}{Vehicle.Cap(VType.Airplane.ToString())}{Text.LagtsTillGaraget}\n{garage.Last().ToString2(Utilities.VType.Airplane)}");
-            Console.WriteLine($"{Utilities.Line30}{Utilities.Line30}");
-            Console.WriteLine($"{Utilities.Tab}{Utilities.Cap(Text.AntalFordon)}{garage.Count}{Text.Av}{garage.Capacity}{Text.platser}");
+            Console.WriteLine($"{Utilities.Tab}{Utilities.Cap(Text.AntalFordon)} {garage.Count}{Text.Av}{garage.Capacity}{Text.platser}");
             Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
             Console.ReadLine();
         }
@@ -232,6 +151,35 @@ namespace Exercise4_Garage_2
                     Console.WriteLine(vehicle.ToString2(vehicle.Type));
                     Console.WriteLine($"{Utilities.Line30}{Utilities.Line30}");
                 }
+            }
+            Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
+            Console.ReadLine();
+        }
+        internal void FindVehicleByRegNumber(Garage<IVehicle> garage)
+        {
+            string Title = $"{Utilities.Cap(Text.Rad3Main)}.";
+            Utilities.ShowHeader(Title);
+            Console.Write($"\n{Utilities.Tab}{Utilities.Cap(Text.Rad3Main)} {Text.medRegistrering}: ");
+            string input = Console.ReadLine()?.ToUpper() ?? string.Empty;
+            bool notFound = true;
+            foreach (var vehicle in garage)
+            {
+                if (vehicle.Uuid == input)
+                {
+                    Console.WriteLine($"\n{Utilities.Line30}{Utilities.Line30}");
+                    Console.WriteLine($"{Utilities.Tab}{Utilities.Cap(Text.FordonMedRegistrering)} {input} {Text.Hittades}");
+                    Console.WriteLine($"{Utilities.Line30}{Utilities.Line30}");
+                    Console.WriteLine(vehicle.ToString2(vehicle.Type));
+                    Console.WriteLine($"{Utilities.Line30}{Utilities.Line30}");
+                    notFound = false;
+                    break;
+                }
+            }
+            if (notFound)
+            {
+                Console.WriteLine($"\n{Utilities.Line30}{Utilities.Line30}");
+                Console.WriteLine($"{Utilities.Tab}{Utilities.Cap(Text.FordonMedRegistrering)} {input} {Text.HittadesEj}");
+                Console.WriteLine($"{Utilities.Line30}{Utilities.Line30}");
             }
             Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
             Console.ReadLine();
