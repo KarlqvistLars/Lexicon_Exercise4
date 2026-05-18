@@ -7,6 +7,8 @@ namespace Exercise4_Garage_2
     {
         private List<T> _vehicles = new();
         private int _capacity = 10;
+        internal readonly IVehicle[] Vehicles;
+
         public Garage(int capacity)
         {
             _capacity = capacity;

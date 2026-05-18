@@ -43,5 +43,9 @@ namespace Exercise4_Garage_2
             data[1] = InputInteger(Console.ReadLine() ?? string.Empty);
             return data;
         }
+        public string ToStringTypeSpec()
+        {
+            return $"[Wheels:{Wheels};NumberOfSeats:{NumberOfSeats}]";
+        }
     }
 }

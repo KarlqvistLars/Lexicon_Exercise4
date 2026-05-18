@@ -184,16 +184,10 @@ namespace Exercise4_Garage_2
                 switch (input)
                 {
                     case "1":
-                        //MenuAddVehicle();
+                        //Ladda sparade fordon i befintlig garage storlek.
                         break;
                     case "2":
                         //MenuRemoveVehicle();
-                        break;
-                    case "3":
-                        //MenuShowVehicle();
-                        break;
-                    case "4":
-                        //MenuLoadVehicleFromFile();
                         break;
                     case "0":
                         running = false;
