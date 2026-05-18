@@ -1,6 +1,7 @@
 ﻿using Exercise4_Garage_2.Interfaces;
 using Exercise4_Garage_2.MenuClasses;
 using Exercise4_Garage_2.VehicleClasses;
+using System.Text;
 using static Exercise4_Garage_2.Utilities;
 
 namespace Exercise4_Garage_2
@@ -11,8 +12,25 @@ namespace Exercise4_Garage_2
         Garage<IVehicle> garage = new Garage<IVehicle>(1);
         public bool StartGarage(int garageSize = 0, bool populate = false)
         {
+            string path = Environment.GetCommandLineArgs()[0];
+            string installationPath = Path.GetDirectoryName(path);
+
             if (garageSize <= 0)
-                garageSize = 10;
+            {
+                ShowHeader("Välkommen till garaget 2.0!");
+                Console.WriteLine($"Installation path: \n{installationPath}");
+                Console.WriteLine($"Base directory: \n{AppDomain.CurrentDomain.BaseDirectory}");
+                Console.Write($"{Utilities.Tab}{"\nTryck Enter för standardstorlek, eller välj en storlek för garaget: "}");
+                garageSize = int.TryParse(Console.ReadLine(), out int size) ? size : 0;
+                Console.Write($"{Utilities.Tab}{"\nVill du starta med garaget fullt? (Y/N): "}");
+                string startFull = Console.ReadLine();
+                if (startFull?.ToUpper() == "Y")
+                {
+                    populate = true;
+                }
+                if (garageSize <= 0)
+                    garageSize = 10;
+            }
             if (populate == false)
             {
                 garage = new Garage<IVehicle>(garageSize);
@@ -20,8 +38,8 @@ namespace Exercise4_Garage_2
             }
             else
             {
-                garage = new Garage<IVehicle>(20);
-                //Handler.AddStartVehicles(15); // Lägg till 15 slumpmässiga fordon
+                garage = new Garage<IVehicle>(garageSize);
+                AddStartVehicles(garage, garageSize); // Lägg till 15 slumpmässiga fordon
                 UI.MenuMain(garage);
             }
             return true;
@@ -106,6 +124,10 @@ namespace Exercise4_Garage_2
             Console.WriteLine($"{Utilities.Tab}{count} st slumpade fordon har lagts till i garaget.");
             Console.WriteLine($"{Utilities.Tab}Tryck på valfri tangent för att återgå till huvudmenyn...");
             Console.ReadLine();
+        }
+        internal void AddStartVehicles(Garage<IVehicle> garage, int count)
+        {
+            AddRandomVehicles(garage, count);
         }
         public void RemoveVehicle(Garage<IVehicle> garage)
         {
@@ -255,6 +277,118 @@ namespace Exercise4_Garage_2
             System.Console.WriteLine($"{Utilities.Tab}Ogiltigt val");
             Console.ReadKey();
             return true;
+        }
+        public static void SaveVehicles(Garage<IVehicle> garage, string filePath)
+        {
+            if (!File.Exists(filePath))
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+                File.Create(filePath).Close();
+            }
+            StringBuilder sb = new();
+            sb.AppendLine($"GarageCapacity:{garage.Capacity}");
+            foreach (var vehicle in garage.Vehicles)
+            {
+                if (vehicle != null)
+                {
+                    switch (vehicle.Type)
+                    {
+                        case VType.Car:
+                            sb.AppendLine($"Type:Car;Uuid:{vehicle.Uuid};Color:{vehicle.Color};Weight:{vehicle.Weight};Length:{vehicle.Length}{((Car)vehicle).ToStringTypeSpec()}");
+                            break;
+                        case VType.Bus:
+                            sb.AppendLine($"Type:Bus;Uuid:{vehicle.Uuid};Color:{vehicle.Color};Weight:{vehicle.Weight};Length:{vehicle.Length}{((Bus)vehicle).ToStringTypeSpec()}");
+                            break;
+                        case VType.Motorcycle:
+                            sb.AppendLine($"Type:Motorcycle;Uuid:{vehicle.Uuid};Color:{vehicle.Color};Weight:{vehicle.Weight};Length:{vehicle.Length}{((Motorcycle)vehicle).ToStringTypeSpec()}");
+                            break;
+                        case VType.Boat:
+                            sb.AppendLine($"Type:Boat;Uuid:{vehicle.Uuid};Color:{vehicle.Color};Weight:{vehicle.Weight};Length:{vehicle.Length}{((Boat)vehicle).ToStringTypeSpec()}");
+                            break;
+                        case VType.Airplane:
+                            sb.AppendLine($"Type:Airplane;Uuid:{vehicle.Uuid};Color:{vehicle.Color};Weight:{vehicle.Weight};Length:{vehicle.Length}{((Airplane)vehicle).ToStringTypeSpec()}");
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+            File.WriteAllText(filePath, sb.ToString());
+            sb.Clear();
+        }
+        public static string LoadVehicles(Garage<IVehicle> garage, string filePath)
+        {
+            if (!File.Exists(filePath)) { return $"{Utilities.Tab}{filePath} existerar ej inga fordon har laddats."; }
+            var lines = File.ReadAllLines(filePath);
+            int capacity = int.Parse(lines[0].Split(':')[1]);
+
+            IVehicle[] vehicles = garage.Vehicles;
+
+            Garage<IVehicle> garageLoading = new Garage<IVehicle>(capacity);
+            int vehicleCount = 0;
+            foreach (var line in lines)
+            {
+                IVehicle v = new Vehicle();
+                if (string.IsNullOrWhiteSpace(line)) { continue; }
+                var vehicleParts = line.Split('[');
+                var parts = vehicleParts[0].Split(';');
+                if (parts.Length < 4) { continue; }
+                var type = parts[0].Split(':')[1].Trim();
+                var uuid = parts[1].Split(':')[1].Trim();
+                var color = parts[2].Split(':')[1].Trim();
+                var weight = int.Parse(parts[3].Split(':')[1].Trim());
+                var length = int.Parse(parts[4].Split(':')[1].Trim());
+                //Console.WriteLine($"Comm[{type}][{uuid}][{color}][{weight}][{length}]");
+                var specificData = vehicleParts[1].Trim(']');
+                //Console.WriteLine($"Spec[{specificData}]");
+                switch (type)
+                {
+                    case "Car":
+                        var carData = specificData.Split(';');
+                        var wheels = (carData[0].Split(':')[1].Trim());
+                        var numberOfDoors = int.Parse(carData[1].Split(':')[1].Trim(']'));
+                        //Console.WriteLine($"Spec[{wheels}][{numberOfDoors}]");
+                        v = new Car(uuid, color, weight, length, numberOfDoors, int.TryParse(wheels, out int cw) ? cw : 0);
+                        break;
+                    case "Bus":
+                        var busData = specificData.Split(';');
+                        var busWheels = (busData[0].Split(':')[1].Trim());
+                        var busSeats = int.Parse(busData[1].Split(':')[1].Trim(']'));
+                        //Console.WriteLine($"Spec[{busWheels}][{busSeats}]");
+                        v = new Bus(uuid, color, weight, length, busSeats, int.TryParse(busWheels, out int bw) ? bw : 0);
+                        break;
+                    case "Motorcycle":
+                        var motoData = specificData.Split(';');
+                        var motoWheels = (motoData[0].Split(':')[1].Trim());
+                        var cubicInch = int.Parse(motoData[1].Split(':')[1].Trim(']'));
+                        //Console.WriteLine($"Spec[{motoWheels}][{cubicInch}]");
+                        v = new Motorcycle(uuid, color, weight, length, cubicInch, int.TryParse(motoWheels, out int mw) ? mw : 0);
+                        break;
+                    case "Boat":
+                        var boatData = specificData.Split(';');
+                        var maxDepth = boatData[0].Split(':')[1].Trim();
+                        var maxSpeed = boatData[1].Split(':')[1].Trim(']');
+                        var deplacement = boatData[2].Split(':')[1].Trim(']');
+                        //Console.WriteLine($"Spec[{maxDepth}][{maxSpeed}][{deplacement}]");
+                        v = new Boat(uuid, color, weight, length, decimal.TryParse(maxDepth, out decimal md) ? md : 0, decimal.TryParse(maxSpeed, out decimal msp) ? msp : 0, decimal.TryParse(deplacement, out decimal d) ? d : 0);
+                        break;
+                    case "Airplane":
+                        var planeData = specificData.Split(';');
+                        var planeLiftCapacity = planeData[0].Split(':')[1].Trim(']');
+                        var planeWingspan = planeData[1].Split(':')[1].Trim();
+                        var planePax = planeData[2].Split(':')[1].Trim();
+                        //Console.WriteLine($"Spec[{planeLiftCapacity}][{planeWingspan}][{planePax}]");
+                        v = new Airplane(uuid, color, weight, length, int.TryParse(planeLiftCapacity, out int lc) ? lc : 0, decimal.TryParse(planeWingspan, out decimal ws) ? ws : 0, int.TryParse(planePax, out int pax) ? pax : 0);
+                        break;
+                    default:
+                        break;
+                }
+                garageLoading.Add(v);
+                vehicleCount++;
+            }
+
+            garage = garageLoading;
+            return $"{Utilities.Tab}{vehicleCount} st fordon har laddats från {filePath}.\n{Utilities.Tab}Tryck Enter för att fortsätta...";
         }
     }
 }

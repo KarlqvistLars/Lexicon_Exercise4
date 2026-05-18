@@ -88,7 +88,7 @@ namespace Exercise4_Garage_2
                     break; // Color
                 case 1:// Color
                     input = Console.ReadLine() ?? string.Empty;
-                    output = InputString(input, searchFlag);
+                    output = InputColor(input, searchFlag);
                     break;
                 case 2:// Vikt
                     input = Console.ReadLine() ?? string.Empty;
@@ -146,7 +146,7 @@ namespace Exercise4_Garage_2
             } while (true);
         }
         // 2.2
-        private static string InputString(string input, bool searchFlag = false)
+        private static string InputColor(string input, bool searchFlag = false)
         {
             if (searchFlag && input == string.Empty) { return input; }
             do
@@ -291,6 +291,20 @@ namespace Exercise4_Garage_2
                 letter += (((char)random.Next('A', 'Z' + 1)).ToString());
             }
             return letter;
+        }
+
+        public static string NavigatePath(string path = "")
+        {
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            // Läs vilka bibliotek och filer som finns i basmappen
+            // Skriv dessa på skärm
+            // Läs in användarens val av bibliotek eller fil
+            // Ge alternativ i form av sifferval: 
+            // 1. Gå upp - ../
+            // 2. Här - ./
+            // 3. Gå in i bibliotek - /BiblioteksNamn osv.
+            // Fråga användaren om den vill öppna filen eller gå in i biblioteket(Y/N
+            return Path.Combine(baseDirectory, path);
         }
     }
 }

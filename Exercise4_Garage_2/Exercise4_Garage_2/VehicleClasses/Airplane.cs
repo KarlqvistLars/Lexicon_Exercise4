@@ -52,6 +52,10 @@ namespace Exercise4_Garage_2.VehicleClasses
             data[2] = Console.ReadLine() ?? string.Empty;
             return data;
         }
+        public string ToStringTypeSpec()
+        {
+            return $"[LiftCapacity:{LiftCapacity};WingSpan:{WingSpan};Passengers:{Passengers}]";
+        }
     }
 }
 
