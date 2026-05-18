@@ -4,28 +4,38 @@ namespace Exercise4_Garage_2
 {
     internal class Car : Vehicle
     {
-        int numberOfDoors;
-        int wheels;
-        public Car(string uuid, string color, int weight, decimal length, int numberOfDoors, int wheels)
-        : base(uuid, color, weight, length, VType.Car)
+        private int _numberOfDoors;
+        private int _wheels;
+        public Car()
         {
-            this.numberOfDoors = numberOfDoors;
-            this.wheels = wheels;
+
         }
-        public new string Uuid { get => this.Uuid; }
-        public new string Color { get => this.Color; set => ((IVehicle)this).Color = value; }
-        public new int Weight { get => this.Weight; set => ((IVehicle)this).Weight = value; }
-        public new decimal Length { get => this.Length; set => ((IVehicle)this).Length = value; }
-        public new string Type => VType.Car.ToString();
+        public Car(
+            string uuid,
+            string color,
+            int weight,
+            decimal length,
+            int numberOfDoors,
+            int wheels)
+            : base(uuid, color, weight, length, VType.Car)
+        {
+            _numberOfDoors = numberOfDoors;
+            _wheels = wheels;
+        }
+        public string Uuid { get => this.Uuid; }
+        public string Color { get => this.Color; set => ((IVehicle)this).Color = value; }
+        public int Weight { get => this.Weight; set => ((IVehicle)this).Weight = value; }
+        public decimal Length { get => this.Length; set => ((IVehicle)this).Length = value; }
+        //public new string Type => VType.Car.ToString();
         public int NumberOfDoors
         {
-            get => numberOfDoors;
-            set => numberOfDoors = value;
+            get => _numberOfDoors;
+            set => _numberOfDoors = value;
         }
         public int Wheels
         {
-            get => wheels;
-            set => wheels = value;
+            get => _wheels;
+            set => _wheels = value;
         }
         public string? ToString2()
         {

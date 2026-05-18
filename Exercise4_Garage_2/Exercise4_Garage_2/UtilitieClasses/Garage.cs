@@ -43,7 +43,7 @@ namespace Exercise4_Garage_2
         public void CopyTo(T[] array, int arrayIndex)
             => _vehicles.CopyTo(array, arrayIndex);
         public IEnumerator<T> GetEnumerator()
-            => _vehicles.OfType<T>().GetEnumerator();
+            => _vehicles.GetEnumerator();
         public int IndexOf(T item)
             => _vehicles.IndexOf(item);
         public void Insert(int index, T item)

@@ -46,7 +46,8 @@ namespace Exercise4_Garage_2
             };
             menuLoadFromFile = new string[]
             {
-                Utilities.Cap(Text.Rad1LoadVehicleFromFilePart1)+"\n"+Utilities.Tab+Utilities.Cap(Text.Rad1LoadVehicleFromFilePart2),
+                Utilities.Cap(Text.Rad1LoadVehicleFromFilePart1),
+                Utilities.Cap(Text.Rad1LoadVehicleFromFilePart2),
             };
             menuTextLanguage = new string[]
             {
@@ -56,7 +57,7 @@ namespace Exercise4_Garage_2
         }
         public static void MenuMain(Garage<IVehicle> garage)
         {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("sv-SE");
 
             while (Running)
             {
@@ -74,7 +75,7 @@ namespace Exercise4_Garage_2
                         MenuShowVehicle(garage);
                         break;
                     case "4":
-                        MenuLoadVehicleFromFile();
+                        garage = MenuLoadVehicleFromFile(garage);
                         break;
                     case "5":
                         MenuChooseLanguage();
@@ -175,7 +176,7 @@ namespace Exercise4_Garage_2
                 }
             }
         }
-        private static void MenuLoadVehicleFromFile()
+        private static Garage<IVehicle> MenuLoadVehicleFromFile(Garage<IVehicle> garage)
         {
             bool running = true;
             while (running)
@@ -184,10 +185,14 @@ namespace Exercise4_Garage_2
                 switch (input)
                 {
                     case "1":
-                        //Ladda sparade fordon i befintlig garage storlek.
+                        var result = Utilities.NavigatePath(garage);
+                        garage = result.Item2;
+                        Console.WriteLine($"{Utilities.Tab}{result.Item1}");
+                        Console.ReadKey();
                         break;
                     case "2":
-                        //MenuRemoveVehicle();
+                        //Handler.SaveVehicles(garage, Handler.GetInstallationPath() + "\\garage.txt");
+                        Utilities.NavigateToSave(garage);
                         break;
                     case "0":
                         running = false;
@@ -197,6 +202,7 @@ namespace Exercise4_Garage_2
                         break;
                 }
             }
+            return garage;
         }
         private static void MenuChooseLanguage()
         {
