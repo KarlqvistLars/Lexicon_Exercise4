@@ -314,19 +314,24 @@ namespace Exercise4_Garage_2
                 {
                     shortpath = currentDirectory;
                 }
-                Console.WriteLine($"{Tab}{Text.FilesIn}{Text.CurrentDir}:\n{Tab}{shortpath}\n{Line30}{Line30}");
-                FileInfo[] files = new DirectoryInfo(currentDirectory).GetFiles();
-                bool hasFiles = files.Length > 0;
-                foreach (var file in files)
+                Console.WriteLine($"{Tab}{Text.FilesIn}{Text.CurrentDir}:\n{Tab}{shortpath}");
+                List<FileInfo> files = new DirectoryInfo(currentDirectory).GetFiles().ToList();
+                foreach (var file in files.ToList())
                 {
-                    if (file.Name.Contains(".txt"))
+                    if (!file.Name.Contains(".txt"))
                     {
-                        Console.WriteLine($"{Tab}{file.Name}");
+                        files.Remove(file);
                     }
                 }
+                bool hasFiles = files.Count > 0;
                 Console.WriteLine($"{Line30}{Line30}");
                 if (hasFiles)
                 {
+                    foreach (var file in files)
+                    {
+                        Console.WriteLine($"{Tab}{file.Name}");
+                    }
+                    Console.WriteLine($"{Line30}{Line30}");
                     Console.Write($"{Tab}{Utilities.Cap(Text.ValgDassaFiler)}?");
                     string choice = Console.ReadLine();
                     if (choice.ToUpper() == "Y")
@@ -336,16 +341,27 @@ namespace Exercise4_Garage_2
                         FileInfo[] choosefile = new DirectoryInfo(currentDirectory).GetFiles();
                         FileInfo[] fileNames = new FileInfo[choosefile.Length];
                         int indexFil = 1;
+                        StringBuilder sw = new StringBuilder();
                         foreach (var file in choosefile)
                         {
                             if (file.Name.Contains(".txt"))
                             {
-                                Console.WriteLine($"{indexFil}. {file.Name}");
+                                sw.AppendLine($"{indexFil}. {file.Name}");
                                 fileNames[indexFil - 1] = file;
                                 indexFil++;
                             }
                         }
-                        Console.WriteLine($"{Line30}{Line30}");
+                        if (sw.Length == 0)
+                        {
+                            Console.WriteLine($"{Tab}Inga .txt filer i denna katalog.");
+                            Console.WriteLine($"{Line30}{Line30}");
+                            return (string.Empty, garage);
+                        }
+                        else
+                        {
+                            Console.WriteLine(sw.ToString());
+                            Console.WriteLine($"{Line30}{Line30}");
+                        }
                         Console.Write($"{Utilities.Tab}{Text.ValjFil}: ");
                         string fileChoise = Console.ReadLine();
                         string pathToOpen = Path.Combine(currentDirectory, fileNames[int.Parse(fileChoise) - 1].Name).ToString();
@@ -353,7 +369,11 @@ namespace Exercise4_Garage_2
                         return result;
                     }
                 }
-                Console.WriteLine($"\n{Utilities.Tab}{Cap(Text.CurrentDir)}: \n{Utilities.Tab}{Utilities.ShortenPath(currentDirectory)}");
+                else
+                {
+                    Console.WriteLine($"{Tab}Inga .txt filer i denna katalog.");
+                }
+                Console.WriteLine($"{Utilities.Line30}{Utilities.Line30}");
                 int index = 2;
                 Console.WriteLine($"1.  .\\");
                 foreach (var item in content)
@@ -362,9 +382,9 @@ namespace Exercise4_Garage_2
                     index++;
                 }
                 Console.WriteLine($"0. ..\\");
-                Console.WriteLine($"{Utilities.Tab}{Text.ValjBibliotek}: ");
+                Console.WriteLine($"{Utilities.Line30}{Utilities.Line30}");
+                Console.Write($"{Utilities.Tab}{Text.ValjBibliotek}: ");
                 int open = int.TryParse(Console.ReadLine(), out int op) ? op : -1;
-
                 (valid, currentDirectory) = InputValgBibliotek(currentDirectory, open);
                 content = Directory.GetDirectories(currentDirectory);
             } while (true);
@@ -450,6 +470,7 @@ namespace Exercise4_Garage_2
                 return (false, new DirectoryInfo(currentDirectory).FullName);
             }
             else { return (true, content[open - 2]); }
+
         }
     }
 }

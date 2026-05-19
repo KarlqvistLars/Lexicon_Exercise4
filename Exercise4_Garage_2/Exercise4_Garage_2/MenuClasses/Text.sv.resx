@@ -322,7 +322,7 @@
     <value>Garage 2.0</value>
   </data>
   <data name="ValgDassaFiler" xml:space="preserve">
-    <value>Välj någon av dessa filer(Y/N)</value>
+    <value>Välj någon av dessa filer(Y/N el.Enter)</value>
   </data>
   <data name="ValjBibliotek" xml:space="preserve">
     <value>Välj bibliotek</value>

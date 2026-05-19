@@ -160,12 +160,16 @@ namespace Exercise4_Garage_2
                 {
                     case "1":
                         Handler.ListVehicles(garage);
+                        Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
+                        Console.ReadLine();
                         break;
                     case "2":
                         Handler.FindVehicleByRegNumber(garage);
                         break;
                     case "3":
                         Handler.SeachAndFilterVehicles(garage);
+                        Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
+                        Console.ReadLine();
                         break;
                     case "0":
                         running = false;

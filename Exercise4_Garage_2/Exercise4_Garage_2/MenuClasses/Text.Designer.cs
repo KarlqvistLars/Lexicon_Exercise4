@@ -358,7 +358,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to med registreringsnummer:.
+        ///   Looks up a localized string similar to med registreringsnummer.
         /// </summary>
         internal static string medRegistrering {
             get {
@@ -655,7 +655,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Välj någon av dessa filer(Y/N).
+        ///   Looks up a localized string similar to Välj någon av dessa filer(Y/N el.Enter).
         /// </summary>
         internal static string ValgDassaFiler {
             get {

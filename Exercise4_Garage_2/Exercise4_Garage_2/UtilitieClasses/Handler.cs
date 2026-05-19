@@ -136,9 +136,26 @@ namespace Exercise4_Garage_2
         {
             string Title = $"{Utilities.Cap(Text.Rad1RemoveVehicle)}.";
             Utilities.ShowHeader(Title);
-            if (SeachAndFilterVehicles(garage))
+            var (result, filteredGarage) = SeachAndFilterVehicles(garage);
+            if (result)
             {
-                RemoveVehicleRegNum(garage);
+                Console.Write($"\n{Utilities.Tab}{Utilities.Cap(Text.TaBortFordon)} med listnr: ");
+                int input = int.TryParse(Console.ReadLine(), out int n) ? n : 0;
+                var vehicleToRemove = filteredGarage[input - 1];
+
+                //Console.WriteLine(vehicleToRemove.Uuid);
+                //Console.ReadKey();
+
+                string regnr = vehicleToRemove.Uuid;
+                for (int i = 0; i < garage.Count; i++)
+                {
+                    if (garage[i].Uuid == regnr)
+                    {
+                        garage.Remove(garage[i]);
+                        Console.WriteLine($"\n{Utilities.Line30}{Utilities.Line30}");
+                        Console.WriteLine($"{Utilities.Tab}{Utilities.Cap(Text.FordonMedRegistrering)} {regnr} {Text.TogsBortGaraget}\n{garage[i].ToString2(garage[i].Type)}");
+                    }
+                }
             }
             else
             {
@@ -146,6 +163,7 @@ namespace Exercise4_Garage_2
                 Console.WriteLine($"{Utilities.Tab}Tryck på Enter för att återgå till huvudmenyn...");
                 Console.ReadLine();
             }
+            Console.ReadKey();
         }
         public void RemoveVehicleRegNum(Garage<IVehicle> garage)
         {
@@ -175,10 +193,10 @@ namespace Exercise4_Garage_2
             Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
             Console.ReadLine();
         }
-        public static bool ListVehicles(Garage<IVehicle> garage)
+        public static (bool, Garage<IVehicle>) ListVehicles(Garage<IVehicle> garage)
         {
             bool listNotEmpty = false;
-
+            Garage<IVehicle> garageFiltered = new Garage<IVehicle>(garage.Count);
             string Title = $"{Utilities.Cap(Text.Rad3Main)}.";
             Utilities.ShowHeader(Title);
             if (garage.Count == 0)
@@ -193,15 +211,14 @@ namespace Exercise4_Garage_2
                 {
                     Console.WriteLine($"{Utilities.Tab}{counting}.\n{vehicle.ToString2(vehicle.Type)}");
                     Console.WriteLine($"{Utilities.Line30}{Utilities.Line30}");
+                    garageFiltered.Add(vehicle);
                     counting++;
                 }
                 listNotEmpty = true;
             }
-            Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
-            Console.ReadLine();
-            return listNotEmpty;
+            return (listNotEmpty, garageFiltered);
         }
-        public bool FindVehicleByRegNumber(Garage<IVehicle> garage)
+        public (bool, Garage<IVehicle>) FindVehicleByRegNumber(Garage<IVehicle> garage)
         {
             string Title = $"{Utilities.Cap(Text.Rad3Main)}.";
             Utilities.ShowHeader(Title);
@@ -229,9 +246,9 @@ namespace Exercise4_Garage_2
             }
             Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
             Console.ReadLine();
-            return true;
+            return (true, garage);
         }
-        public bool SeachAndFilterVehicles(Garage<IVehicle> garage)
+        public (bool, Garage<IVehicle>) SeachAndFilterVehicles(Garage<IVehicle> garage)
         {
             string Title = $"{Utilities.Cap(Text.Rad3ShowVehicle)}.";
             Utilities.ShowHeader(Title);
@@ -250,15 +267,15 @@ namespace Exercise4_Garage_2
             string[] ve = Vehicle.InDataVehicle(garage, type, true);
             Console.WriteLine($"\n{Utilities.Line30}{Utilities.Line30}");
 
-            bool result = ShowGarageSearch(garage, type, ve[0].Length > 0 ? ve[0] : string.Empty, ve[1].Length > 1 ? ve[1] : string.Empty, ve[2].Length > 0 ? int.Parse(ve[2]) : 0, ve[3].Length > 0 ? decimal.Parse(ve[3]) : 0);
+            var result = ShowGarageSearch(garage, type, ve[0].Length > 0 ? ve[0] : string.Empty, ve[1].Length > 1 ? ve[1] : string.Empty, ve[2].Length > 0 ? int.Parse(ve[2]) : 0, ve[3].Length > 0 ? decimal.Parse(ve[3]) : 0);
             return result;
         }
-        private bool ShowGarageSearch(Garage<IVehicle> garage, VType vT, string regNumber, string color, int weight, decimal length)
+        private (bool, Garage<IVehicle>) ShowGarageSearch(Garage<IVehicle> garage, VType vT, string regNumber, string color, int weight, decimal length)
         {
             if (garage == null)
             {
                 Console.WriteLine($"{Utilities.Tab}Garaget är tomt.");
-                return false;
+                return (false, garage);
             }
             Garage<IVehicle> filteredGarage = new Garage<IVehicle>(garage.Capacity);
             string[] fordon = { "fordon", "bilar", "bussar", "motorcyklar", "båtar", "flygplan" };
