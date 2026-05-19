@@ -103,7 +103,6 @@ namespace Exercise4_Garage_2
             }
             return sb.ToString();
         }
-
         public string? ToString2(VType valueType = VType.None)
         {
             StringBuilder sb = new StringBuilder();

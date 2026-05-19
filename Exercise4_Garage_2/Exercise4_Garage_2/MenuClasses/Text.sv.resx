@@ -322,7 +322,7 @@
     <value>Garage 2.0</value>
   </data>
   <data name="ValgDassaFiler" xml:space="preserve">
-    <value>Välj någon av dessa filer(Y/N)</value>
+    <value>Välj någon av dessa filer(Y/N el.Enter)</value>
   </data>
   <data name="ValjBibliotek" xml:space="preserve">
     <value>Välj bibliotek</value>
@@ -338,5 +338,8 @@
   </data>
   <data name="VehicleLodedFrom" xml:space="preserve">
     <value>fordon inlästa från</value>
+  </data>
+  <data name="FelaktigInput" xml:space="preserve">
+    <value>felaktig input</value>
   </data>
 </root>
