@@ -94,7 +94,7 @@ Exercise4_Garage_2/
 ├── Program.cs
 ├── Documents/
 │   ├── Exercise4_Garage_2.cd
-│   └── Vehiclekalsses.txt
+│   └── Vehicleklasses.txt
 ├── Interfaces/
 │   ├── IGarage.cs
 │   ├── IHandler.cs
