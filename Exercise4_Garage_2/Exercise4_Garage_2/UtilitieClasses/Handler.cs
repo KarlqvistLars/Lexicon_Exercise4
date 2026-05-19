@@ -23,7 +23,7 @@ namespace Exercise4_Garage_2
             if (garageSize <= 0)
             {
                 ShowHeader("Välkommen till garaget 2.0!");
-                Console.Write($"\n{Utilities.Tab}Tryck Enter för standardstorlek,\n{Utilities.Tab}eller välj en storlek för garaget: ");
+                Console.Write($"\n{Utilities.Tab}Tryck Enter för standardstorlek 20,\n{Utilities.Tab}eller välj en storlek för garaget: ");
                 garageSize = int.TryParse(Console.ReadLine(), out int size) ? size : 0;
                 Console.Write($"\n{Utilities.Tab}Vill du starta med ett fullt garage? (Y/N): ");
                 string startFull = Console.ReadLine();
@@ -32,7 +32,7 @@ namespace Exercise4_Garage_2
                     populate = true;
                 }
                 if (garageSize <= 0)
-                    garageSize = 10;
+                    garageSize = 20;
             }
             if (populate == false)
             {
@@ -42,7 +42,7 @@ namespace Exercise4_Garage_2
             else
             {
                 garage = new Garage<IVehicle>(garageSize);
-                AddStartVehicles(garage, garageSize); // Lägg till 15 slumpmässiga fordon
+                AddStartVehicles(garage, garageSize);
                 UI.MenuMain(garage);
             }
             return true;
