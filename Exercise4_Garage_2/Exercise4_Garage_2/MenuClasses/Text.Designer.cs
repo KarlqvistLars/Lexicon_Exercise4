@@ -277,6 +277,15 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to har tagits bort.
+        /// </summary>
+        internal static string HarTagitsBort {
+            get {
+                return ResourceManager.GetString("HarTagitsBort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to hittades.
         /// </summary>
         internal static string Hittades {
