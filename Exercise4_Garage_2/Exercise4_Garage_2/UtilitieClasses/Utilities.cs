@@ -293,13 +293,14 @@ namespace Exercise4_Garage_2
             }
             return letter;
         }
-        public static (string, Garage<IVehicle>) NavigatePath(Garage<IVehicle> garage, string path = "")
+        public static (string, Garage<IVehicle>) NavigateToOpen(Garage<IVehicle> garage, string path = "")
         {
+            bool valid = false;
             string Title = Text.ValjFil;
             ShowHeader(Title);
             Handler handler = new Handler();
             string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            currentDirectory = InputValgBibliotek(currentDirectory, "1");
+            (valid, currentDirectory) = InputValgBibliotek(currentDirectory, 1);
             var content = Directory.GetDirectories(currentDirectory);
             do
             {
@@ -362,9 +363,9 @@ namespace Exercise4_Garage_2
                 }
                 Console.WriteLine($"0. ..\\");
                 Console.WriteLine($"{Utilities.Tab}{Text.ValjBibliotek}: ");
-                string open = Console.ReadLine();
+                int open = int.TryParse(Console.ReadLine(), out int op) ? op : -1;
 
-                currentDirectory = InputValgBibliotek(currentDirectory, open);
+                (valid, currentDirectory) = InputValgBibliotek(currentDirectory, open);
                 content = Directory.GetDirectories(currentDirectory);
             } while (true);
         }
@@ -374,15 +375,14 @@ namespace Exercise4_Garage_2
             ShowHeader(Title);
             Handler handler = new Handler();
             string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            currentDirectory = InputValgBibliotek(currentDirectory, "1");
-            var content = Directory.GetDirectories(currentDirectory);
+            var (valid, newDirectory) = InputValgBibliotek(currentDirectory, 1);
+
+            var content = Directory.GetDirectories(newDirectory);
             do
             {
                 FileInfo[] files = new DirectoryInfo(currentDirectory).GetFiles();
                 bool hasFiles = files.Length > 0;
-                Console.WriteLine($"\n{Utilities.Tab}{Cap(Text.CurrentDir)}: \n{Utilities.Tab}{Utilities.ShortenPath(currentDirectory)}");
-                /// lisa bilblioteken här
-                Console.WriteLine($"{Line30}{Line30}");
+                content = Directory.GetDirectories(currentDirectory);
                 int index = 2;
                 Console.WriteLine($"1.  .\\");
                 foreach (var item in content)
@@ -393,19 +393,23 @@ namespace Exercise4_Garage_2
                 Console.WriteLine($"0. ..\\");
                 Console.WriteLine($"{Line30}{Line30}");
                 Console.Write($"{Utilities.Tab}{Text.ValjBibliotek}: ");
-                string open = Console.ReadLine();
+                int open = int.TryParse(Console.ReadLine(), out int op) ? op : -1;
                 ShowHeader(Title);
-                Console.WriteLine($"{Line30}{Line30}");
-                currentDirectory = InputValgBibliotek(currentDirectory, open);
-                content = Directory.GetDirectories(currentDirectory);
-                Console.Write($"{Tab}Spara i denna katalog? (Y/N)");
-                if (Console.ReadLine().ToUpper() == "Y")
+                (valid, currentDirectory) = InputValgBibliotek(currentDirectory, open);
+                if (valid)
                 {
-                    Console.WriteLine($"{Tab}Ange filnamn (utan .txt): ");
-                    string fileName = Console.ReadLine();
-                    path = Path.Combine(currentDirectory, fileName + ".txt");
-                    Handler.SaveVehicles(garage, path);
-                    break;
+                    Console.WriteLine($"{Utilities.Tab}{ShortenPath(currentDirectory)}");
+                    Console.Write($"{Tab}Spara i denna katalog(Y/N el.Enter)?");
+                    if (Console.ReadLine().ToUpper() == "Y")
+                    {
+                        Console.WriteLine($"{Line30}{Line30}");
+                        Console.Write($"{Tab}Ange filnamn (utan .txt): ");
+                        string fileName = Console.ReadLine();
+                        path = Path.Combine(currentDirectory, fileName + ".txt");
+                        Handler.SaveVehicles(garage, path);
+                        break;
+                    }
+                    Console.WriteLine($"{Line30}{Line30}");
                 }
             } while (true);
             return (path, garage);
@@ -425,21 +429,27 @@ namespace Exercise4_Garage_2
             }
             return sb.ToString();
         }
-        private static string InputValgBibliotek(string currentDirectory, string open)
+        private static (bool, string) InputValgBibliotek(string currentDirectory, int open)
         {
             var content = Directory.GetDirectories(currentDirectory);
-            if (open == "1") { return currentDirectory; }
-            else if (open == "0")
+            if (open == 1) { return (true, currentDirectory); }
+            else if (open == 0)
             {
                 DirectoryInfo current = new DirectoryInfo(currentDirectory);
                 if (current.Parent != null)
                 {
                     current = current.Parent;
                 }
-                Console.WriteLine(current.FullName);
-                return current.FullName;
+                return (true, current.FullName);
             }
-            else { return content[int.Parse(open) - 2]; }
+            else if (open == -1 || open > content.Length + 1)
+            {
+                ShowHeader(Text.ValjFil);
+                Console.WriteLine($"{Utilities.Tab}Ogiltigt val, försök igen.");
+                Console.WriteLine($"{Line30}{Line30}");
+                return (false, new DirectoryInfo(currentDirectory).FullName);
+            }
+            else { return (true, content[open - 2]); }
         }
     }
 }

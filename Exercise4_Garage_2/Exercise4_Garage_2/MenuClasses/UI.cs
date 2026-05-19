@@ -185,13 +185,12 @@ namespace Exercise4_Garage_2
                 switch (input)
                 {
                     case "1":
-                        var result = Utilities.NavigatePath(garage);
+                        var result = Utilities.NavigateToOpen(garage);
                         garage = result.Item2;
                         Console.WriteLine($"{Utilities.Tab}{result.Item1}");
                         Console.ReadKey();
                         break;
                     case "2":
-                        //Handler.SaveVehicles(garage, Handler.GetInstallationPath() + "\\garage.txt");
                         Utilities.NavigateToSave(garage);
                         break;
                     case "0":

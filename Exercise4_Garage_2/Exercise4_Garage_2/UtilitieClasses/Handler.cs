@@ -16,7 +16,6 @@ namespace Exercise4_Garage_2
         {
             return Path.GetDirectoryName(path);
         }
-
         public bool StartGarage(int garageSize = 0, bool populate = false)
         {
             string installationPath = GetInstallationPath();
@@ -323,7 +322,6 @@ namespace Exercise4_Garage_2
             File.WriteAllText(FullfilePath, sb.ToString());
             sb.Clear();
         }
-
         public (string, Garage<IVehicle>) LoadVehicles(Garage<IVehicle> garage, string filePath)
         {
 
