@@ -223,6 +223,15 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to felaktig input.
+        /// </summary>
+        internal static string FelaktigInput {
+            get {
+                return ResourceManager.GetString("FelaktigInput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Filer i .
         /// </summary>
         internal static string FilesIn {

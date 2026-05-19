@@ -339,4 +339,7 @@
   <data name="VehicleLodedFrom" xml:space="preserve">
     <value>fordon inlästa från</value>
   </data>
+  <data name="FelaktigInput" xml:space="preserve">
+    <value>felaktig input</value>
+  </data>
 </root>

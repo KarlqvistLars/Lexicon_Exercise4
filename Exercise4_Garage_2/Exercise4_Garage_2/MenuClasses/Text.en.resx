@@ -339,4 +339,7 @@
   <data name="VehicleLodedFrom" xml:space="preserve">
     <value>vehicle loaded from</value>
   </data>
+  <data name="FelaktigInput" xml:space="preserve">
+    <value>invalid input</value>
+  </data>
 </root>
