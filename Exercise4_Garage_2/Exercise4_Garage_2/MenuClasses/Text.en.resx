@@ -322,7 +322,7 @@
     <value>Garage 2.0</value>
   </data>
   <data name="ValgDassaFiler" xml:space="preserve">
-    <value>Choose any of these files(Y/N el.Enter)</value>
+    <value>Choose any of these files (Yes/No/Abort - Enter)</value>
   </data>
   <data name="ValjBibliotek" xml:space="preserve">
     <value>Choose library</value>
@@ -344,5 +344,8 @@
   </data>
   <data name="HarTagitsBort" xml:space="preserve">
     <value>has been removed</value>
+  </data>
+  <data name="SparaIKatalog" xml:space="preserve">
+    <value>Save in this catalog (Yes/No/Abort - Enter)</value>
   </data>
 </root>

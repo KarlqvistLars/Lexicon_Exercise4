@@ -637,6 +637,15 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Spara i denna katalog (Yes/No/Abort - Enter).
+        /// </summary>
+        internal static string SparaIKatalog {
+            get {
+                return ResourceManager.GetString("SparaIKatalog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ta bort fordon.
         /// </summary>
         internal static string TaBortFordon {
@@ -673,7 +682,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Välj någon av dessa filer(Y/N el.Enter).
+        ///   Looks up a localized string similar to Välj någon av dessa filer (Yes/No/Abort - Enter).
         /// </summary>
         internal static string ValgDassaFiler {
             get {
