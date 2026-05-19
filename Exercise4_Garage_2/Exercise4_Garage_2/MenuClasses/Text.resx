@@ -154,7 +154,7 @@
     <value>Visa fordon</value>
   </data>
   <data name="Rad4Main" xml:space="preserve">
-    <value>Hämta fordon från fil</value>
+    <value>Hämta/Spara fordon</value>
   </data>
   <data name="Valg" xml:space="preserve">
     <value>Välj</value>
@@ -193,10 +193,10 @@
     <value>Sök fordon på typ, regnummer, färg, vikt, längd</value>
   </data>
   <data name="Rad1LoadVehicleFromFilePart1" xml:space="preserve">
-    <value>Ladda sparade fordon i befintlig garage storlek.</value>
+    <value>Ladda sparade fordon från fil.</value>
   </data>
   <data name="Rad1LoadVehicleFromFilePart2" xml:space="preserve">
-    <value>Det aktuella garaget sparas automatiskt vid avslut.</value>
+    <value>Spara fordon till fil.</value>
   </data>
   <data name="Rad5Main" xml:space="preserve">
     <value>Välj språk</value>
@@ -321,5 +321,23 @@
   </data>
   <data name="GarageVer" xml:space="preserve">
     <value>Garage 2.0</value>
+  </data>
+  <data name="ValgDassaFiler" xml:space="preserve">
+    <value>Välj någon av dessa filer(Y/N)</value>
+  </data>
+  <data name="ValjBibliotek" xml:space="preserve">
+    <value>Välj bibliotek</value>
+  </data>
+  <data name="ValjFil" xml:space="preserve">
+    <value>Välj fil</value>
+  </data>
+  <data name="CurrentDir" xml:space="preserve">
+    <value>aktivt bibliotek</value>
+  </data>
+  <data name="FilesIn" xml:space="preserve">
+    <value>Filer i </value>
+  </data>
+  <data name="VehicleLodedFrom" xml:space="preserve">
+    <value>fordon inlästa från fil</value>
   </data>
 </root>

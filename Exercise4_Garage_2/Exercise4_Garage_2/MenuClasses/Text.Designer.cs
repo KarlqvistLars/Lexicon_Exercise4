@@ -160,6 +160,15 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to aktivt bibliotek.
+        /// </summary>
+        internal static string CurrentDir {
+            get {
+                return ResourceManager.GetString("CurrentDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Denna bilen .
         /// </summary>
         internal static string DennaBilen {
@@ -210,6 +219,15 @@ namespace Exercise4_Garage_2.MenuClasses {
         internal static string exit {
             get {
                 return ResourceManager.GetString("exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filer i .
+        /// </summary>
+        internal static string FilesIn {
+            get {
+                return ResourceManager.GetString("FilesIn", resourceCulture);
             }
         }
         
@@ -412,7 +430,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ladda sparade fordon i befintlig garage storlek..
+        ///   Looks up a localized string similar to Ladda sparade fordon från fil..
         /// </summary>
         internal static string Rad1LoadVehicleFromFilePart1 {
             get {
@@ -421,7 +439,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Det aktuella garaget sparas automatiskt vid avslut..
+        ///   Looks up a localized string similar to Spara fordon till fil..
         /// </summary>
         internal static string Rad1LoadVehicleFromFilePart2 {
             get {
@@ -538,7 +556,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hämta fordon från fil.
+        ///   Looks up a localized string similar to Hämta/Spara fordon.
         /// </summary>
         internal static string Rad4Main {
             get {
@@ -633,6 +651,42 @@ namespace Exercise4_Garage_2.MenuClasses {
         internal static string Valg {
             get {
                 return ResourceManager.GetString("Valg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Välj någon av dessa filer(Y/N).
+        /// </summary>
+        internal static string ValgDassaFiler {
+            get {
+                return ResourceManager.GetString("ValgDassaFiler", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Välj bibliotek.
+        /// </summary>
+        internal static string ValjBibliotek {
+            get {
+                return ResourceManager.GetString("ValjBibliotek", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Välj fil.
+        /// </summary>
+        internal static string ValjFil {
+            get {
+                return ResourceManager.GetString("ValjFil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to fordon inlästa från fil.
+        /// </summary>
+        internal static string VehicleLodedFrom {
+            get {
+                return ResourceManager.GetString("VehicleLodedFrom", resourceCulture);
             }
         }
         

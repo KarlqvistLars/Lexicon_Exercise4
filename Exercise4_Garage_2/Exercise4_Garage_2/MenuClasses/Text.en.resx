@@ -154,7 +154,7 @@
     <value>show vehicle</value>
   </data>
   <data name="Rad4Main" xml:space="preserve">
-    <value>load vehicles from file</value>
+    <value>Load/Save vehicles</value>
   </data>
   <data name="Valg" xml:space="preserve">
     <value>choose</value>
@@ -193,10 +193,10 @@
     <value>seek vehicle on type, registration number, color, weight, length</value>
   </data>
   <data name="Rad1LoadVehicleFromFilePart1" xml:space="preserve">
-    <value>Load saved vehicles in current garage size</value>
+    <value>Load saved vehicles from file.</value>
   </data>
   <data name="Rad1LoadVehicleFromFilePart2" xml:space="preserve">
-    <value>the current garage is automaticly saved when exit.</value>
+    <value>Save garage to file.</value>
   </data>
   <data name="Rad5Main" xml:space="preserve">
     <value>choose language</value>
@@ -320,5 +320,23 @@
   </data>
   <data name="GarageVer" xml:space="preserve">
     <value>Garage 2.0</value>
+  </data>
+  <data name="ValgDassaFiler" xml:space="preserve">
+    <value>Choose any of these files(Y/N)</value>
+  </data>
+  <data name="ValjBibliotek" xml:space="preserve">
+    <value>Choose library</value>
+  </data>
+  <data name="ValjFil" xml:space="preserve">
+    <value>Choose file</value>
+  </data>
+  <data name="CurrentDir" xml:space="preserve">
+    <value>current directory</value>
+  </data>
+  <data name="FilesIn" xml:space="preserve">
+    <value>Files in </value>
+  </data>
+  <data name="VehicleLodedFrom" xml:space="preserve">
+    <value>vehicle loaded from</value>
   </data>
 </root>

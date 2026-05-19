@@ -10,19 +10,22 @@ namespace Exercise4_Garage_2
     {
         public Handler() { }
         Garage<IVehicle> garage = new Garage<IVehicle>(1);
+
+        static string path = Environment.GetCommandLineArgs()[0];
+        public static string GetInstallationPath()
+        {
+            return Path.GetDirectoryName(path);
+        }
         public bool StartGarage(int garageSize = 0, bool populate = false)
         {
-            string path = Environment.GetCommandLineArgs()[0];
-            string installationPath = Path.GetDirectoryName(path);
+            string installationPath = GetInstallationPath();
 
             if (garageSize <= 0)
             {
                 ShowHeader("Välkommen till garaget 2.0!");
-                Console.WriteLine($"Installation path: \n{installationPath}");
-                Console.WriteLine($"Base directory: \n{AppDomain.CurrentDomain.BaseDirectory}");
-                Console.Write($"{Utilities.Tab}{"\nTryck Enter för standardstorlek, eller välj en storlek för garaget: "}");
+                Console.Write($"\n{Utilities.Tab}Tryck Enter för standardstorlek,\n{Utilities.Tab}eller välj en storlek för garaget: ");
                 garageSize = int.TryParse(Console.ReadLine(), out int size) ? size : 0;
-                Console.Write($"{Utilities.Tab}{"\nVill du starta med garaget fullt? (Y/N): "}");
+                Console.Write($"\n{Utilities.Tab}Vill du starta med ett fullt garage? (Y/N): ");
                 string startFull = Console.ReadLine();
                 if (startFull?.ToUpper() == "Y")
                 {
@@ -172,10 +175,11 @@ namespace Exercise4_Garage_2
             Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
             Console.ReadLine();
         }
-        public bool ListVehicles(Garage<IVehicle> garage)
+        public static bool ListVehicles(Garage<IVehicle> garage)
         {
             bool listNotEmpty = false;
-            string Title = $"{Text.Rad3Main}.";
+
+            string Title = $"{Utilities.Cap(Text.Rad3Main)}.";
             Utilities.ShowHeader(Title);
             if (garage.Count == 0)
             {
@@ -278,16 +282,16 @@ namespace Exercise4_Garage_2
             Console.ReadKey();
             return true;
         }
-        public static void SaveVehicles(Garage<IVehicle> garage, string filePath)
+        public static void SaveVehicles(Garage<IVehicle> garage, string FullfilePath)
         {
-            if (!File.Exists(filePath))
+            if (!File.Exists(FullfilePath))
             {
-                Directory.CreateDirectory(Path.GetDirectoryName(filePath));
-                File.Create(filePath).Close();
+                Directory.CreateDirectory(Path.GetDirectoryName(FullfilePath));
+                File.Create(FullfilePath).Close();
             }
             StringBuilder sb = new();
             sb.AppendLine($"GarageCapacity:{garage.Capacity}");
-            foreach (var vehicle in garage.Vehicles)
+            foreach (var vehicle in garage)
             {
                 if (vehicle != null)
                 {
@@ -313,82 +317,88 @@ namespace Exercise4_Garage_2
                     }
                 }
             }
-            File.WriteAllText(filePath, sb.ToString());
+            Console.WriteLine($"{Utilities.Tab}Sparar fordon till \n{FullfilePath}");
+            Console.ReadKey();
+            File.WriteAllText(FullfilePath, sb.ToString());
             sb.Clear();
         }
-        public static string LoadVehicles(Garage<IVehicle> garage, string filePath)
+        public (string, Garage<IVehicle>) LoadVehicles(Garage<IVehicle> garage, string filePath)
         {
-            if (!File.Exists(filePath)) { return $"{Utilities.Tab}{filePath} existerar ej inga fordon har laddats."; }
+
+            if (!File.Exists(filePath)) { return ($"{Utilities.Tab}{filePath} existerar ej inga fordon har laddats.", garage); }
+
             var lines = File.ReadAllLines(filePath);
-            int capacity = int.Parse(lines[0].Split(':')[1]);
-
-            IVehicle[] vehicles = garage.Vehicles;
-
-            Garage<IVehicle> garageLoading = new Garage<IVehicle>(capacity);
             int vehicleCount = 0;
-            foreach (var line in lines)
+            string output = "";
+            try
             {
-                IVehicle v = new Vehicle();
-                if (string.IsNullOrWhiteSpace(line)) { continue; }
-                var vehicleParts = line.Split('[');
-                var parts = vehicleParts[0].Split(';');
-                if (parts.Length < 4) { continue; }
-                var type = parts[0].Split(':')[1].Trim();
-                var uuid = parts[1].Split(':')[1].Trim();
-                var color = parts[2].Split(':')[1].Trim();
-                var weight = int.Parse(parts[3].Split(':')[1].Trim());
-                var length = int.Parse(parts[4].Split(':')[1].Trim());
-                //Console.WriteLine($"Comm[{type}][{uuid}][{color}][{weight}][{length}]");
-                var specificData = vehicleParts[1].Trim(']');
-                //Console.WriteLine($"Spec[{specificData}]");
-                switch (type)
-                {
-                    case "Car":
-                        var carData = specificData.Split(';');
-                        var wheels = (carData[0].Split(':')[1].Trim());
-                        var numberOfDoors = int.Parse(carData[1].Split(':')[1].Trim(']'));
-                        //Console.WriteLine($"Spec[{wheels}][{numberOfDoors}]");
-                        v = new Car(uuid, color, weight, length, numberOfDoors, int.TryParse(wheels, out int cw) ? cw : 0);
-                        break;
-                    case "Bus":
-                        var busData = specificData.Split(';');
-                        var busWheels = (busData[0].Split(':')[1].Trim());
-                        var busSeats = int.Parse(busData[1].Split(':')[1].Trim(']'));
-                        //Console.WriteLine($"Spec[{busWheels}][{busSeats}]");
-                        v = new Bus(uuid, color, weight, length, busSeats, int.TryParse(busWheels, out int bw) ? bw : 0);
-                        break;
-                    case "Motorcycle":
-                        var motoData = specificData.Split(';');
-                        var motoWheels = (motoData[0].Split(':')[1].Trim());
-                        var cubicInch = int.Parse(motoData[1].Split(':')[1].Trim(']'));
-                        //Console.WriteLine($"Spec[{motoWheels}][{cubicInch}]");
-                        v = new Motorcycle(uuid, color, weight, length, cubicInch, int.TryParse(motoWheels, out int mw) ? mw : 0);
-                        break;
-                    case "Boat":
-                        var boatData = specificData.Split(';');
-                        var maxDepth = boatData[0].Split(':')[1].Trim();
-                        var maxSpeed = boatData[1].Split(':')[1].Trim(']');
-                        var deplacement = boatData[2].Split(':')[1].Trim(']');
-                        //Console.WriteLine($"Spec[{maxDepth}][{maxSpeed}][{deplacement}]");
-                        v = new Boat(uuid, color, weight, length, decimal.TryParse(maxDepth, out decimal md) ? md : 0, decimal.TryParse(maxSpeed, out decimal msp) ? msp : 0, decimal.TryParse(deplacement, out decimal d) ? d : 0);
-                        break;
-                    case "Airplane":
-                        var planeData = specificData.Split(';');
-                        var planeLiftCapacity = planeData[0].Split(':')[1].Trim(']');
-                        var planeWingspan = planeData[1].Split(':')[1].Trim();
-                        var planePax = planeData[2].Split(':')[1].Trim();
-                        //Console.WriteLine($"Spec[{planeLiftCapacity}][{planeWingspan}][{planePax}]");
-                        v = new Airplane(uuid, color, weight, length, int.TryParse(planeLiftCapacity, out int lc) ? lc : 0, decimal.TryParse(planeWingspan, out decimal ws) ? ws : 0, int.TryParse(planePax, out int pax) ? pax : 0);
-                        break;
-                    default:
-                        break;
-                }
-                garageLoading.Add(v);
-                vehicleCount++;
-            }
+                int capacity = int.Parse(lines[0].Split(':')[1]);
 
-            garage = garageLoading;
-            return $"{Utilities.Tab}{vehicleCount} st fordon har laddats från {filePath}.\n{Utilities.Tab}Tryck Enter för att fortsätta...";
+                IVehicle[] vehicles = garage.Vehicles;
+
+                Garage<IVehicle> garageLoading = new Garage<IVehicle>(capacity);
+                foreach (var line in lines)
+                {
+                    IVehicle v = new Vehicle();
+                    if (string.IsNullOrWhiteSpace(line)) { continue; }
+                    var vehicleParts = line.Split('[');
+                    var parts = vehicleParts[0].Split(';');
+                    if (parts.Length < 4) { continue; }
+                    var type = parts[0].Split(':')[1].Trim();
+                    var uuid = parts[1].Split(':')[1].Trim();
+                    var color = parts[2].Split(':')[1].Trim();
+                    var weight = int.Parse(parts[3].Split(':')[1].Trim());
+                    var length = int.Parse(parts[4].Split(':')[1].Trim());
+                    var specificData = vehicleParts[1].Trim(']');
+                    switch (type)
+                    {
+                        case "Car":
+                            var carData = specificData.Split(';');
+                            var wheels = (carData[0].Split(':')[1].Trim());
+                            var numberOfDoors = int.Parse(carData[1].Split(':')[1].Trim(']'));
+                            v = new Car(uuid, color, weight, length, numberOfDoors, int.TryParse(wheels, out int cw) ? cw : 0);
+                            break;
+                        case "Bus":
+                            var busData = specificData.Split(';');
+                            var busWheels = (busData[0].Split(':')[1].Trim());
+                            var busSeats = int.Parse(busData[1].Split(':')[1].Trim(']'));
+                            v = new Bus(uuid, color, weight, length, busSeats, int.TryParse(busWheels, out int bw) ? bw : 0);
+                            break;
+                        case "Motorcycle":
+                            var motoData = specificData.Split(';');
+                            var motoWheels = (motoData[0].Split(':')[1].Trim());
+                            var cubicInch = int.Parse(motoData[1].Split(':')[1].Trim(']'));
+                            v = new Motorcycle(uuid, color, weight, length, cubicInch, int.TryParse(motoWheels, out int mw) ? mw : 0);
+                            break;
+                        case "Boat":
+                            var boatData = specificData.Split(';');
+                            var maxDepth = boatData[0].Split(':')[1].Trim();
+                            var maxSpeed = boatData[1].Split(':')[1].Trim(']');
+                            var deplacement = boatData[2].Split(':')[1].Trim(']');
+                            v = new Boat(uuid, color, weight, length, decimal.TryParse(maxDepth, out decimal md) ? md : 0, decimal.TryParse(maxSpeed, out decimal msp) ? msp : 0, decimal.TryParse(deplacement, out decimal d) ? d : 0);
+                            break;
+                        case "Airplane":
+                            var planeData = specificData.Split(';');
+                            var planeLiftCapacity = planeData[0].Split(':')[1].Trim(']');
+                            var planeWingspan = planeData[1].Split(':')[1].Trim();
+                            var planePax = planeData[2].Split(':')[1].Trim();
+                            v = new Airplane(uuid, color, weight, length, int.TryParse(planeLiftCapacity, out int lc) ? lc : 0, decimal.TryParse(planeWingspan, out decimal ws) ? ws : 0, int.TryParse(planePax, out int pax) ? pax : 0);
+                            break;
+                        default:
+                            break;
+                    }
+                    garageLoading.Add(v);
+                    vehicleCount++;
+                }
+                garage = garageLoading;
+
+            }
+            catch (Exception)
+            {
+
+            }
+            output = $"{vehicleCount} st {Text.VehicleLodedFrom}: \n{Utilities.Tab}{Utilities.ShortenPath(filePath)}.\n{Utilities.Tab}{Text.TryckRetur}";
+            return (output, garage);
         }
     }
 }
