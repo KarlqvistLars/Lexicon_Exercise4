@@ -7,7 +7,7 @@
 ## Garage 2.0
 
 Detta projekt är en forsättning på Garage 1.0.<br>
-Det ärockså en konsolbaserad garageapplikation i C#. Programmet skall simulera ett enkelt garage där olika typer av fordon kan parkeras/förvaras.
+Det är också en konsolbaserad garageapplikation i C#. Programmet skall simulera ett enkelt garage där olika typer av fordon kan parkeras/förvaras.
 
 Vid program start kan man välja storlek på antalet fordon som ska kunna få plats.
 ```
