@@ -142,7 +142,9 @@ namespace Exercise4_Garage_2
                 Console.Write($"\n{Utilities.Tab}{Utilities.Cap(Text.TaBortFordon)} med listnr: ");
                 int input = int.TryParse(Console.ReadLine(), out int n) ? n : 0;
 
-                if (filteredGarage != null && filteredGarage.Count > 0)
+                Console.WriteLine($"Filerred garage:> {filteredGarage.Count}");
+
+                if (filteredGarage != null && filteredGarage.Count <= 0)
                 {
                     Console.WriteLine($"{Utilities.Tab}Cap({Text.FelaktigInput}).");
                     Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
@@ -150,6 +152,7 @@ namespace Exercise4_Garage_2
                     return;
                 }
                 var vehicleToRemove = filteredGarage[input - 1];
+
                 string regnr = vehicleToRemove.Uuid;
                 for (int i = 0; i < garage.Count; i++)
                 {
@@ -167,6 +170,7 @@ namespace Exercise4_Garage_2
                 Console.WriteLine($"{Utilities.Tab}Tryck på Enter för att återgå till huvudmenyn...");
                 Console.ReadLine();
             }
+            Console.ReadLine();
         }
         public void RemoveVehicleRegNum(Garage<IVehicle> garage)
         {
