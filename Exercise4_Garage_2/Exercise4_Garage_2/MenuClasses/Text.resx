@@ -343,4 +343,7 @@
   <data name="FelaktigInput" xml:space="preserve">
     <value>felaktig input</value>
   </data>
+  <data name="HarTagitsBort" xml:space="preserve">
+    <value>har tagits bort</value>
+  </data>
 </root>
