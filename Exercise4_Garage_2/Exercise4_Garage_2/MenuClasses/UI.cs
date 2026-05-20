@@ -2,10 +2,8 @@
 using Exercise4_Garage_2.MenuClasses;
 using System.Globalization;
 
-namespace Exercise4_Garage_2
-{
-    public class UI : IUI
-    {
+namespace Exercise4_Garage_2 {
+    public class UI : IUI {
         private static bool Running { get; set; } = true;
         static string[] menuTextMain = new string[] { };
         static string[] menuTextAdd = new string[] { };
@@ -14,8 +12,7 @@ namespace Exercise4_Garage_2
         static string[] menuLoadFromFile = new string[] { };
         static string[] menuTextLanguage = new string[] { };
         private static Handler Handler = new Handler();
-        public static void LoadMenuText()
-        {
+        public static void LoadMenuText() {
             menuTextMain = new string[]
             {
                 Utilities.Cap(Text.Rad1Main),
@@ -55,16 +52,13 @@ namespace Exercise4_Garage_2
                 Utilities.Cap(Text.Rad2ChooseLanguage),
             };
         }
-        public static void MenuMain(Garage<IVehicle> garage)
-        {
+        public static void MenuMain(Garage<IVehicle> garage) {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("sv-SE");
 
-            while (Running)
-            {
+            while (Running) {
                 LoadMenuText();
                 string? input = Utilities.ShowMenu(Utilities.Cap(Text.MainHeader), menuTextMain, Text.exit);
-                switch (input)
-                {
+                switch (input) {
                     case "1":
                         MenuAddVehicle(garage);
                         break;
@@ -90,16 +84,13 @@ namespace Exercise4_Garage_2
                 }
             }
         }
-        private static void MenuAddVehicle(Garage<IVehicle> garage)
-        {
+        public static void MenuAddVehicle(Garage<IVehicle> garage) {
             bool running = true;
-            while (running)
-            {
+            while (running) {
                 LoadMenuText();
 
                 string? input = Utilities.ShowMenu(Text.Rad1Main, menuTextAdd, Text.Back);
-                switch (input)
-                {
+                switch (input) {
                     case "1":
                         Handler.AddVehicle(garage, Utilities.VType.Car);
                         break;
@@ -127,14 +118,11 @@ namespace Exercise4_Garage_2
                 }
             }
         }
-        private static void MenuRemoveVehicle(Garage<IVehicle> garage)
-        {
+        private static void MenuRemoveVehicle(Garage<IVehicle> garage) {
             bool running = true;
-            while (running)
-            {
+            while (running) {
                 string? input = Utilities.ShowMenu(Text.Rad2Main, menuTextRemove, Text.Back);
-                switch (input)
-                {
+                switch (input) {
                     case "1":
                         Handler.RemoveVehicle(garage);
                         break;
@@ -150,14 +138,11 @@ namespace Exercise4_Garage_2
                 }
             }
         }
-        private static void MenuShowVehicle(Garage<IVehicle> garage)
-        {
+        private static void MenuShowVehicle(Garage<IVehicle> garage) {
             bool running = true;
-            while (running)
-            {
+            while (running) {
                 string input = Utilities.ShowMenu(Text.Rad3Main, menuTextShow, Text.Back).Trim();
-                switch (input)
-                {
+                switch (input) {
                     case "1":
                         Handler.ListVehicles(garage);
                         Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
@@ -180,14 +165,11 @@ namespace Exercise4_Garage_2
                 }
             }
         }
-        private static Garage<IVehicle> MenuLoadVehicleFromFile(Garage<IVehicle> garage)
-        {
+        private static Garage<IVehicle> MenuLoadVehicleFromFile(Garage<IVehicle> garage) {
             bool running = true;
-            while (running)
-            {
+            while (running) {
                 string? input = Utilities.ShowMenu(Text.Rad4Main, menuLoadFromFile, Text.Back);
-                switch (input)
-                {
+                switch (input) {
                     case "1":
                         var result = Utilities.NavigateToOpen(garage);
                         garage = result.Item2;
@@ -207,14 +189,11 @@ namespace Exercise4_Garage_2
             }
             return garage;
         }
-        private static void MenuChooseLanguage()
-        {
+        private static void MenuChooseLanguage() {
             bool running = true;
-            while (running)
-            {
+            while (running) {
                 string? input = Utilities.ShowMenu(Text.Rad5Main, menuTextLanguage, Text.Back);
-                switch (input)
-                {
+                switch (input) {
                     case "1":
                         Console.WriteLine($"{Utilities.Tab}Valt språk: Svenska");
                         Thread.CurrentThread.CurrentUICulture = new CultureInfo("sv-SE");
@@ -234,13 +213,11 @@ namespace Exercise4_Garage_2
                 }
             }
         }
-        private static void ExitGarage()
-        {
+        private static void ExitGarage() {
             // Här kan allt sparas eller städas upp innan programmet avslutas
             string closing = "Programmet avslutas...";
             Console.Write(Utilities.Tab);
-            foreach (var item in closing)
-            {
+            foreach (var item in closing) {
                 Console.Write(item);
                 Thread.Sleep(50);
             }

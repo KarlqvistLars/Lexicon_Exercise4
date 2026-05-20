@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A07BA817-436F-19F8-9BB4-6CE9E9B6C7CA}|Exercise4_Garage_2\\Exercise4_Garage_2.csproj|c:\\projekt\\2026\\26014_dotnetutb\\code\\lexicon_exercise4\\exercise4_garage_2\\exercise4_garage_2\\utilitieclasses\\handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A07BA817-436F-19F8-9BB4-6CE9E9B6C7CA}|Exercise4_Garage_2\\Exercise4_Garage_2.csproj|solutionrelative:exercise4_garage_2\\utilitieclasses\\handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A07BA817-436F-19F8-9BB4-6CE9E9B6C7CA}|Exercise4_Garage_2\\Exercise4_Garage_2.csproj|c:\\projekt\\2026\\26014_dotnetutb\\code\\lexicon_exercise4\\exercise4_garage_2\\exercise4_garage_2\\menuclasses\\text.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
       "RelativeMoniker": "D:0:0:{A07BA817-436F-19F8-9BB4-6CE9E9B6C7CA}|Exercise4_Garage_2\\Exercise4_Garage_2.csproj|solutionrelative:exercise4_garage_2\\menuclasses\\text.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A07BA817-436F-19F8-9BB4-6CE9E9B6C7CA}|Exercise4_Garage_2\\Exercise4_Garage_2.csproj|c:\\projekt\\2026\\26014_dotnetutb\\code\\lexicon_exercise4\\exercise4_garage_2\\exercise4_garage_2\\utilitieclasses\\handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A07BA817-436F-19F8-9BB4-6CE9E9B6C7CA}|Exercise4_Garage_2\\Exercise4_Garage_2.csproj|solutionrelative:exercise4_garage_2\\utilitieclasses\\handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A07BA817-436F-19F8-9BB4-6CE9E9B6C7CA}|Exercise4_Garage_2\\Exercise4_Garage_2.csproj|c:\\projekt\\2026\\26014_dotnetutb\\code\\lexicon_exercise4\\exercise4_garage_2\\exercise4_garage_2\\utilitieclasses\\utilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A07BA817-436F-19F8-9BB4-6CE9E9B6C7CA}|Exercise4_Garage_2\\Exercise4_Garage_2.csproj|solutionrelative:exercise4_garage_2\\utilitieclasses\\utilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A07BA817-436F-19F8-9BB4-6CE9E9B6C7CA}|Exercise4_Garage_2\\Exercise4_Garage_2.csproj|c:\\projekt\\2026\\26014_dotnetutb\\code\\lexicon_exercise4\\exercise4_garage_2\\exercise4_garage_2\\menuclasses\\text.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A07BA817-436F-19F8-9BB4-6CE9E9B6C7CA}|Exercise4_Garage_2\\Exercise4_Garage_2.csproj|solutionrelative:exercise4_garage_2\\menuclasses\\text.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE99F9A4-55A3-B8E8-F1CC-C6AD7B3AE3D1}|Exercise4_Garage_2.Tests\\Exercise4_Garage_2.Tests.csproj|c:\\projekt\\2026\\26014_dotnetutb\\code\\lexicon_exercise4\\exercise4_garage_2\\exercise4_garage_2.tests\\unittestmenuclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE99F9A4-55A3-B8E8-F1CC-C6AD7B3AE3D1}|Exercise4_Garage_2.Tests\\Exercise4_Garage_2.Tests.csproj|solutionrelative:exercise4_garage_2.tests\\unittestmenuclasses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A07BA817-436F-19F8-9BB4-6CE9E9B6C7CA}|Exercise4_Garage_2\\Exercise4_Garage_2.csproj|c:\\projekt\\2026\\26014_dotnetutb\\code\\lexicon_exercise4\\exercise4_garage_2\\exercise4_garage_2\\menuclasses\\ui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,8 +37,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 21,
-          "SelectedChildIndex": 3,
+          "DockedWidth": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,72 +50,92 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Utilities.cs",
-              "DocumentMoniker": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\UtilitieClasses\\Utilities.cs",
-              "RelativeDocumentMoniker": "Exercise4_Garage_2\\UtilitieClasses\\Utilities.cs",
-              "ToolTip": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\UtilitieClasses\\Utilities.cs",
-              "RelativeToolTip": "Exercise4_Garage_2\\UtilitieClasses\\Utilities.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAnwE4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T13:05:11.514Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Handler.cs",
-              "DocumentMoniker": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\UtilitieClasses\\Handler.cs",
-              "RelativeDocumentMoniker": "Exercise4_Garage_2\\UtilitieClasses\\Handler.cs",
-              "ToolTip": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\UtilitieClasses\\Handler.cs",
-              "RelativeToolTip": "Exercise4_Garage_2\\UtilitieClasses\\Handler.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAIwJMAAABgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T13:05:10.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UI.cs",
-              "DocumentMoniker": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\MenuClasses\\UI.cs",
-              "RelativeDocumentMoniker": "Exercise4_Garage_2\\MenuClasses\\UI.cs",
-              "ToolTip": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\MenuClasses\\UI.cs",
-              "RelativeToolTip": "Exercise4_Garage_2\\MenuClasses\\UI.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAgwLYAAAAAAAAAAAAAAA==",
+              "Title": "Text.Designer.cs",
+              "DocumentMoniker": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\MenuClasses\\Text.Designer.cs",
+              "RelativeDocumentMoniker": "Exercise4_Garage_2\\MenuClasses\\Text.Designer.cs",
+              "ToolTip": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\MenuClasses\\Text.Designer.cs",
+              "RelativeToolTip": "Exercise4_Garage_2\\MenuClasses\\Text.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T13:05:06.476Z",
+              "WhenOpened": "2026-05-20T06:53:19.817Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\Program.cs",
-              "RelativeDocumentMoniker": "Exercise4_Garage_2\\Program.cs",
-              "ToolTip": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\Program.cs",
-              "RelativeToolTip": "Exercise4_Garage_2\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "UnitTestMenuClasses.cs",
+              "DocumentMoniker": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2.Tests\\UnitTestMenuClasses.cs",
+              "RelativeDocumentMoniker": "Exercise4_Garage_2.Tests\\UnitTestMenuClasses.cs",
+              "ToolTip": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2.Tests\\UnitTestMenuClasses.cs",
+              "RelativeToolTip": "Exercise4_Garage_2.Tests\\UnitTestMenuClasses.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T13:05:00.512Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 21,
-          "SelectedChildIndex": 0,
-          "Children": [
+              "WhenOpened": "2026-05-20T06:07:12.786Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Text.resx",
               "DocumentMoniker": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\MenuClasses\\Text.resx",
               "RelativeDocumentMoniker": "Exercise4_Garage_2\\MenuClasses\\Text.resx",
               "ToolTip": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\MenuClasses\\Text.resx",
               "RelativeToolTip": "Exercise4_Garage_2\\MenuClasses\\Text.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2026-05-19T17:19:21.094Z",
+              "WhenOpened": "2026-05-19T19:26:05.765Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Utilities.cs",
+              "DocumentMoniker": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\UtilitieClasses\\Utilities.cs",
+              "RelativeDocumentMoniker": "Exercise4_Garage_2\\UtilitieClasses\\Utilities.cs",
+              "ToolTip": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\UtilitieClasses\\Utilities.cs",
+              "RelativeToolTip": "Exercise4_Garage_2\\UtilitieClasses\\Utilities.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T13:05:11.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Handler.cs",
+              "DocumentMoniker": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\UtilitieClasses\\Handler.cs",
+              "RelativeDocumentMoniker": "Exercise4_Garage_2\\UtilitieClasses\\Handler.cs",
+              "ToolTip": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\UtilitieClasses\\Handler.cs",
+              "RelativeToolTip": "Exercise4_Garage_2\\UtilitieClasses\\Handler.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAqwBcBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T13:05:10.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UI.cs",
+              "DocumentMoniker": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\MenuClasses\\UI.cs",
+              "RelativeDocumentMoniker": "Exercise4_Garage_2\\MenuClasses\\UI.cs",
+              "ToolTip": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\MenuClasses\\UI.cs",
+              "RelativeToolTip": "Exercise4_Garage_2\\MenuClasses\\UI.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAwwFYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T13:05:06.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\Program.cs",
+              "RelativeDocumentMoniker": "Exercise4_Garage_2\\Program.cs",
+              "ToolTip": "C:\\PROJEKT\\2026\\26014_dotnetUtb\\code\\Lexicon_Exercise4\\Exercise4_Garage_2\\Exercise4_Garage_2\\Program.cs",
+              "RelativeToolTip": "Exercise4_Garage_2\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T13:05:00.512Z"
             }
           ]
         }

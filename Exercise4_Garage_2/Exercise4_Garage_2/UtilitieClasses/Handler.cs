@@ -5,6 +5,12 @@ using System.Text;
 using static Exercise4_Garage_2.Utilities;
 
 namespace Exercise4_Garage_2 {
+    /// <summary>
+    /// Handler-klassen är service klass till [Garage.cs] och ansvarar för att hantera alla operationer relaterade till garaget och fordonen. 
+    /// Den innehåller metoder för att starta garaget, lägga till fordon, ta bort fordon, söka och filtrera fordon, samt spara och ladda fordon från en fil. 
+    /// Den fungerar som en central punkt för all logik som rör garaget och dess innehåll, 
+    /// och interagerar med användaren genom konsolen för att utföra dessa operationer.
+    /// </summary>
     public class Handler : IHandler {
         public Handler() { }
         Garage<IVehicle> garage = new Garage<IVehicle>(1);
@@ -68,16 +74,16 @@ namespace Exercise4_Garage_2 {
             Console.ReadLine();
         }
         public void AddRandomVehicles(Garage<IVehicle> G, int count = 0) {
-            string Title = "Lägg till slumpade fordon";
+            string Title = $"{Text.LaggTill} {Text.SlumpadeFordon}";
             List<string> randomRegNumbers = new List<string>();
             ShowHeader(Title);
             if (count == 0) {
-                Console.Write($"{Tab}Hur många: ");
+                Console.Write($"{Tab}{Text.HurManga}: ");
                 count = int.TryParse(Console.ReadLine(), out int n) ? n : 0;
                 if (count > G.Capacity - G.Count) {
                     count = G.Capacity - G.Count;
-                    Console.WriteLine($"{Tab}Endast {count} fordon kan få plats.");
-                    Console.WriteLine($"{Tab}Tryck Enter för att fortsätta...");
+                    Console.WriteLine($"{Tab}Endast {count} {Text.FordonKanFaPlats}.");
+                    Console.WriteLine($"{Tab}{Text.TryckRetur}");
                     Console.ReadLine();
                 }
             }
@@ -107,8 +113,8 @@ namespace Exercise4_Garage_2 {
                         break;
                 }
             }
-            Console.WriteLine($"{Utilities.Tab}{count} st slumpade fordon har lagts till i garaget.");
-            Console.WriteLine($"{Utilities.Tab}Tryck på valfri tangent för att återgå till huvudmenyn...");
+            Console.WriteLine($"{Utilities.Tab}{count} {Text.SlumpadeFordonHarLagtsTillIGaraget}");
+            Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
             Console.ReadLine();
         }
         internal void AddStartVehicles(Garage<IVehicle> garage, int count) {
@@ -238,8 +244,8 @@ namespace Exercise4_Garage_2 {
         public (bool, Garage<IVehicle>) SeachAndFilterVehicles(Garage<IVehicle> garage) {
             string Title = $"{Utilities.Cap(Text.Rad3ShowVehicle)}.";
             Utilities.ShowHeader(Title);
-            Console.WriteLine($"{Utilities.Tab}{"Sök och filtrera fordon"}");
-            Console.Write($"{Utilities.Tab}{"Vill du söka efter en 1. Bil, 2. Buss, 3. Motorcykel, 4. Båt, 5. Flygplan"}: ");
+            Console.WriteLine($"{Utilities.Tab}{$"{Text.SokOchFiltrera}"}");
+            Console.Write($"{Utilities.Tab}{$"{Text.VillDuSokaEfter}"}? ");
             int typeInput = int.TryParse(Console.ReadLine(), out int t) ? t : 0;
             VType type = typeInput switch {
                 1 => VType.Car,
@@ -261,8 +267,6 @@ namespace Exercise4_Garage_2 {
                 return (false, garage);
             }
             Garage<IVehicle> filteredGarage = new Garage<IVehicle>(garage.Capacity);
-            string[] fordon = { "fordon", "bilar", "bussar", "motorcyklar", "båtar", "flygplan" };
-
             foreach (Vehicle v in garage) {
                 if (v != null && (vT == VType.None || v.Type == vT) &&
                     (string.IsNullOrEmpty(regNumber) || v.Uuid == regNumber) &&
