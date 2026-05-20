@@ -1,5 +1,4 @@
-﻿//#define TESTMODE
-using Exercise4_Garage_2.MenuClasses;
+﻿using Exercise4_Garage_2.MenuClasses;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -17,9 +16,7 @@ namespace Exercise4_Garage_2 {
             Airplane = 5
         }
         internal static string ShowMenu(string title, string[] options, string backOption) {
-#if !TESTMODE
             Console.Clear();
-#endif
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write($"{Tab}* ");
             Console.ForegroundColor = ConsoleColor.Blue;
@@ -238,7 +235,7 @@ namespace Exercise4_Garage_2 {
             string Title = Text.ValjFil;
             ShowHeader(Title);
             Handler handler = new Handler();
-            string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string currentDirectory = Handler.GetInstallationPath();
             (valid, currentDirectory) = InputValgBibliotek(currentDirectory, 1);
             var content = Directory.GetDirectories(currentDirectory);
             do {
@@ -320,7 +317,6 @@ namespace Exercise4_Garage_2 {
             Handler handler = new Handler();
             string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
             var (valid, newDirectory) = InputValgBibliotek(currentDirectory, 1);
-
             var content = Directory.GetDirectories(newDirectory);
             do {
                 FileInfo[] files = new DirectoryInfo(currentDirectory).GetFiles();

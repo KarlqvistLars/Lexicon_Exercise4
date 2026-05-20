@@ -15,9 +15,10 @@ namespace Exercise4_Garage_2 {
         public Handler() { }
         Garage<IVehicle> garage = new Garage<IVehicle>(1);
 
-        static string path = Environment.GetCommandLineArgs()[0];
+        //static string path = Environment.GetCommandLineArgs()[0];
+        //path = AppDomain.CurrentDomain.BaseDirectory;
         public static string GetInstallationPath() {
-            return Path.GetDirectoryName(path);
+            return AppDomain.CurrentDomain.BaseDirectory;
         }
         public bool StartGarage(int garageSize = 0, bool populate = false) {
             string installationPath = GetInstallationPath();
