@@ -348,4 +348,22 @@
   <data name="SparaIKatalog" xml:space="preserve">
     <value>Save in this catalog (Yes/No/Abort - Enter)</value>
   </data>
+  <data name="VillDuSokaEfter" xml:space="preserve">
+    <value>Do you want to search after a 1.Car, 2. Bus, 3. Motorcycle, 4. Boat, 5. Airplane</value>
+  </data>
+  <data name="SokOchFiltrera" xml:space="preserve">
+    <value>Search and filter vehicle</value>
+  </data>
+  <data name="SlumpadeFordonHarLagtsTillIGaraget" xml:space="preserve">
+    <value> random vehicles has been added to the garage.</value>
+  </data>
+  <data name="SlumpadeFordon" xml:space="preserve">
+    <value> random vehicles.</value>
+  </data>
+  <data name="FordonKanFaPlats" xml:space="preserve">
+    <value> can fit.</value>
+  </data>
+  <data name="HurManga" xml:space="preserve">
+    <value>How many </value>
+  </data>
 </root>

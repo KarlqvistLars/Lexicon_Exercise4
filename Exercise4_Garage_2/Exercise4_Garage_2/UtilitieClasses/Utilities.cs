@@ -68,7 +68,6 @@ namespace Exercise4_Garage_2 {
                 ? text
                 : char.ToUpper(text[0]) + text[1..];
         }
-        // 1.
         public static string ReadInput(Garage<IVehicle> garage, int type, VType vType, bool searchFlag = false) {
             string input, output = string.Empty;
             switch (type) {
@@ -99,7 +98,6 @@ namespace Exercise4_Garage_2 {
             }
             return output;
         }
-        // 2.4
         public static string InputDecimal(string input, bool searchFlag = false) {
             if (searchFlag && input == string.Empty) { return input; }
             do {
@@ -112,7 +110,6 @@ namespace Exercise4_Garage_2 {
                 }
             } while (true);
         }
-        // 2.3
         public static string InputInteger(string input, bool searchFlag = false) {
             if (searchFlag && input == string.Empty) { return input; }
             do {
@@ -125,7 +122,6 @@ namespace Exercise4_Garage_2 {
                 }
             } while (true);
         }
-        // 2.2
         private static string InputColor(string input, bool searchFlag = false) {
             if (searchFlag && input == string.Empty) { return input; }
             do {
@@ -148,7 +144,6 @@ namespace Exercise4_Garage_2 {
                 }
             } while (true);
         }
-        // 2.1
         public static string InputRegNum(Garage<IVehicle> garage, string regNum, VType type, bool skipUniqCheck = false) {
             bool running = true;
             string[] RegNumCheck = new string[3];
@@ -178,7 +173,6 @@ namespace Exercise4_Garage_2 {
             while (running);
             return regNum;
         }
-        // 3.
         public static string[] ReadRegnumInput(VType type, string regNumber) {
             string[] result = new string[3];
             result[0] = "false";
@@ -269,7 +263,7 @@ namespace Exercise4_Garage_2 {
                         Console.WriteLine($"{Tab}{file.Name}");
                     }
                     Console.WriteLine($"{Line30}{Line30}");
-                    Console.Write($"{Tab}{Utilities.Cap(Text.ValgDassaFiler)}?");
+                    Console.Write($"{Tab}{Utilities.Cap(Text.ValgDassaFiler)}? ");
                     string choice = Console.ReadLine();
                     if (choice.ToUpper() == "Y") {
                         Title = Text.ValjFil;
@@ -346,7 +340,7 @@ namespace Exercise4_Garage_2 {
                 (valid, currentDirectory) = InputValgBibliotek(currentDirectory, open);
                 if (valid) {
                     Console.WriteLine($"{Utilities.Tab}{ShortenPath(currentDirectory)}");
-                    Console.Write($"{Tab}{Text.SparaIKatalog}: ");
+                    Console.Write($"{Tab}{Text.SparaIKatalog}? ");
                     string choice = Console.ReadLine();
                     if (choice.ToUpper() == "Y") {
                         Console.WriteLine($"{Line30}{Line30}");

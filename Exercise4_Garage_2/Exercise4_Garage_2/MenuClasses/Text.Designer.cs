@@ -22,7 +22,7 @@ namespace Exercise4_Garage_2.MenuClasses {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Text {
+    public class Text {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Exercise4_Garage_2.MenuClasses.Text", typeof(Text).Assembly);
@@ -51,7 +51,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to antal fordon i garaget.
         /// </summary>
-        internal static string AntalFordon {
+        public static string AntalFordon {
             get {
                 return ResourceManager.GetString("AntalFordon", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to  av .
         /// </summary>
-        internal static string Av {
+        public static string Av {
             get {
                 return ResourceManager.GetString("Av", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to avsluta.
         /// </summary>
-        internal static string Avsluta {
+        public static string Avsluta {
             get {
                 return ResourceManager.GetString("Avsluta", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to tillbaka.
         /// </summary>
-        internal static string Back {
+        public static string Back {
             get {
                 return ResourceManager.GetString("Back", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to bil.
         /// </summary>
-        internal static string Bil {
+        public static string Bil {
             get {
                 return ResourceManager.GetString("Bil", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to båt.
         /// </summary>
-        internal static string Boat {
+        public static string Boat {
             get {
                 return ResourceManager.GetString("Boat", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to max hastighet (knop).
         /// </summary>
-        internal static string BoatSpeed {
+        public static string BoatSpeed {
             get {
                 return ResourceManager.GetString("BoatSpeed", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to buss.
         /// </summary>
-        internal static string Buss {
+        public static string Buss {
             get {
                 return ResourceManager.GetString("Buss", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to färg.
         /// </summary>
-        internal static string Color {
+        public static string Color {
             get {
                 return ResourceManager.GetString("Color", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to (1. Röd, 2. Blå, 3. Grön, 4. Gul 5. Svart).
         /// </summary>
-        internal static string ColorChoise {
+        public static string ColorChoise {
             get {
                 return ResourceManager.GetString("ColorChoise", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Motor storlek i CC.
         /// </summary>
-        internal static string CubicInch {
+        public static string CubicInch {
             get {
                 return ResourceManager.GetString("CubicInch", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to aktivt bibliotek.
         /// </summary>
-        internal static string CurrentDir {
+        public static string CurrentDir {
             get {
                 return ResourceManager.GetString("CurrentDir", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Denna bilen .
         /// </summary>
-        internal static string DennaBilen {
+        public static string DennaBilen {
             get {
                 return ResourceManager.GetString("DennaBilen", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Denna bussen .
         /// </summary>
-        internal static string DennaBussen {
+        public static string DennaBussen {
             get {
                 return ResourceManager.GetString("DennaBussen", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Denna motorcykeln .
         /// </summary>
-        internal static string DennaMotorcykeln {
+        public static string DennaMotorcykeln {
             get {
                 return ResourceManager.GetString("DennaMotorcykeln", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to deplacement.
         /// </summary>
-        internal static string Deplac {
+        public static string Deplac {
             get {
                 return ResourceManager.GetString("Deplac", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to ange deplacement.
         /// </summary>
-        internal static string Deplacement {
+        public static string Deplacement {
             get {
                 return ResourceManager.GetString("Deplacement", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to avsluta.
         /// </summary>
-        internal static string exit {
+        public static string exit {
             get {
                 return ResourceManager.GetString("exit", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to felaktig input.
         /// </summary>
-        internal static string FelaktigInput {
+        public static string FelaktigInput {
             get {
                 return ResourceManager.GetString("FelaktigInput", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Filer i .
         /// </summary>
-        internal static string FilesIn {
+        public static string FilesIn {
             get {
                 return ResourceManager.GetString("FilesIn", resourceCulture);
             }
@@ -243,16 +243,25 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to flygplan.
         /// </summary>
-        internal static string Flygplan {
+        public static string Flygplan {
             get {
                 return ResourceManager.GetString("Flygplan", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to  fordon kan få plats..
+        /// </summary>
+        public static string FordonKanFaPlats {
+            get {
+                return ResourceManager.GetString("FordonKanFaPlats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fordon med Registrering.
         /// </summary>
-        internal static string FordonMedRegistrering {
+        public static string FordonMedRegistrering {
             get {
                 return ResourceManager.GetString("FordonMedRegistrering", resourceCulture);
             }
@@ -261,7 +270,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Garaget.
         /// </summary>
-        internal static string Garage {
+        public static string Garage {
             get {
                 return ResourceManager.GetString("Garage", resourceCulture);
             }
@@ -270,7 +279,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Garage 2.0.
         /// </summary>
-        internal static string GarageVer {
+        public static string GarageVer {
             get {
                 return ResourceManager.GetString("GarageVer", resourceCulture);
             }
@@ -279,7 +288,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to har tagits bort.
         /// </summary>
-        internal static string HarTagitsBort {
+        public static string HarTagitsBort {
             get {
                 return ResourceManager.GetString("HarTagitsBort", resourceCulture);
             }
@@ -288,7 +297,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to hittades.
         /// </summary>
-        internal static string Hittades {
+        public static string Hittades {
             get {
                 return ResourceManager.GetString("Hittades", resourceCulture);
             }
@@ -297,16 +306,25 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to hittades ej..
         /// </summary>
-        internal static string HittadesEj {
+        public static string HittadesEj {
             get {
                 return ResourceManager.GetString("HittadesEj", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hur många .
+        /// </summary>
+        public static string HurManga {
+            get {
+                return ResourceManager.GetString("HurManga", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to är fullt..
         /// </summary>
-        internal static string IsFull {
+        public static string IsFull {
             get {
                 return ResourceManager.GetString("IsFull", resourceCulture);
             }
@@ -315,7 +333,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Lägg till .
         /// </summary>
-        internal static string LaggTill {
+        public static string LaggTill {
             get {
                 return ResourceManager.GetString("LaggTill", resourceCulture);
             }
@@ -324,7 +342,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to har lagts till i garaget..
         /// </summary>
-        internal static string LagtsTillGaraget {
+        public static string LagtsTillGaraget {
             get {
                 return ResourceManager.GetString("LagtsTillGaraget", resourceCulture);
             }
@@ -333,7 +351,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to längd.
         /// </summary>
-        internal static string Length {
+        public static string Length {
             get {
                 return ResourceManager.GetString("Length", resourceCulture);
             }
@@ -342,7 +360,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to lyftkapacitet .
         /// </summary>
-        internal static string Lyftkapacitet {
+        public static string Lyftkapacitet {
             get {
                 return ResourceManager.GetString("Lyftkapacitet", resourceCulture);
             }
@@ -351,7 +369,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Huvudmeny.
         /// </summary>
-        internal static string MainHeader {
+        public static string MainHeader {
             get {
                 return ResourceManager.GetString("MainHeader", resourceCulture);
             }
@@ -360,7 +378,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to ange max hastighet (knop).
         /// </summary>
-        internal static string MaxSpeed {
+        public static string MaxSpeed {
             get {
                 return ResourceManager.GetString("MaxSpeed", resourceCulture);
             }
@@ -369,7 +387,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to ange djupgående (m).
         /// </summary>
-        internal static string MaxWaterDepth {
+        public static string MaxWaterDepth {
             get {
                 return ResourceManager.GetString("MaxWaterDepth", resourceCulture);
             }
@@ -378,7 +396,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to med registreringsnummer.
         /// </summary>
-        internal static string medRegistrering {
+        public static string medRegistrering {
             get {
                 return ResourceManager.GetString("medRegistrering", resourceCulture);
             }
@@ -387,7 +405,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to motorcykel.
         /// </summary>
-        internal static string Motorcykel {
+        public static string Motorcykel {
             get {
                 return ResourceManager.GetString("Motorcykel", resourceCulture);
             }
@@ -396,7 +414,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to antal dörrar.
         /// </summary>
-        internal static string NumDoors {
+        public static string NumDoors {
             get {
                 return ResourceManager.GetString("NumDoors", resourceCulture);
             }
@@ -405,7 +423,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to antal säten.
         /// </summary>
-        internal static string NumSeats {
+        public static string NumSeats {
             get {
                 return ResourceManager.GetString("NumSeats", resourceCulture);
             }
@@ -414,7 +432,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to passagerare.
         /// </summary>
-        internal static string Pax {
+        public static string Pax {
             get {
                 return ResourceManager.GetString("Pax", resourceCulture);
             }
@@ -423,7 +441,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to  platser..
         /// </summary>
-        internal static string platser {
+        public static string platser {
             get {
                 return ResourceManager.GetString("platser", resourceCulture);
             }
@@ -432,7 +450,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Bil.
         /// </summary>
-        internal static string Rad1AddVehicle {
+        public static string Rad1AddVehicle {
             get {
                 return ResourceManager.GetString("Rad1AddVehicle", resourceCulture);
             }
@@ -441,7 +459,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Svenska.
         /// </summary>
-        internal static string Rad1ChooseLanguage {
+        public static string Rad1ChooseLanguage {
             get {
                 return ResourceManager.GetString("Rad1ChooseLanguage", resourceCulture);
             }
@@ -450,7 +468,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Ladda sparade fordon från fil..
         /// </summary>
-        internal static string Rad1LoadVehicleFromFilePart1 {
+        public static string Rad1LoadVehicleFromFilePart1 {
             get {
                 return ResourceManager.GetString("Rad1LoadVehicleFromFilePart1", resourceCulture);
             }
@@ -459,7 +477,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Spara fordon till fil..
         /// </summary>
-        internal static string Rad1LoadVehicleFromFilePart2 {
+        public static string Rad1LoadVehicleFromFilePart2 {
             get {
                 return ResourceManager.GetString("Rad1LoadVehicleFromFilePart2", resourceCulture);
             }
@@ -468,7 +486,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Lägg till fordon.
         /// </summary>
-        internal static string Rad1Main {
+        public static string Rad1Main {
             get {
                 return ResourceManager.GetString("Rad1Main", resourceCulture);
             }
@@ -477,7 +495,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Sök och ta bort fordon.
         /// </summary>
-        internal static string Rad1RemoveVehicle {
+        public static string Rad1RemoveVehicle {
             get {
                 return ResourceManager.GetString("Rad1RemoveVehicle", resourceCulture);
             }
@@ -486,7 +504,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Visa alla fordon.
         /// </summary>
-        internal static string Rad1ShowVehicle {
+        public static string Rad1ShowVehicle {
             get {
                 return ResourceManager.GetString("Rad1ShowVehicle", resourceCulture);
             }
@@ -495,7 +513,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Buss.
         /// </summary>
-        internal static string Rad2AddVehicle {
+        public static string Rad2AddVehicle {
             get {
                 return ResourceManager.GetString("Rad2AddVehicle", resourceCulture);
             }
@@ -504,7 +522,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Engelska.
         /// </summary>
-        internal static string Rad2ChooseLanguage {
+        public static string Rad2ChooseLanguage {
             get {
                 return ResourceManager.GetString("Rad2ChooseLanguage", resourceCulture);
             }
@@ -513,7 +531,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Ta bort fordon.
         /// </summary>
-        internal static string Rad2Main {
+        public static string Rad2Main {
             get {
                 return ResourceManager.GetString("Rad2Main", resourceCulture);
             }
@@ -522,7 +540,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Ta bort fordon på regnummer.
         /// </summary>
-        internal static string Rad2RemoveVehicle {
+        public static string Rad2RemoveVehicle {
             get {
                 return ResourceManager.GetString("Rad2RemoveVehicle", resourceCulture);
             }
@@ -531,7 +549,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Visa fordon via regnummer.
         /// </summary>
-        internal static string Rad2ShowVehicle {
+        public static string Rad2ShowVehicle {
             get {
                 return ResourceManager.GetString("Rad2ShowVehicle", resourceCulture);
             }
@@ -540,7 +558,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Motorcykel.
         /// </summary>
-        internal static string Rad3AddVehicle {
+        public static string Rad3AddVehicle {
             get {
                 return ResourceManager.GetString("Rad3AddVehicle", resourceCulture);
             }
@@ -549,7 +567,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Visa fordon.
         /// </summary>
-        internal static string Rad3Main {
+        public static string Rad3Main {
             get {
                 return ResourceManager.GetString("Rad3Main", resourceCulture);
             }
@@ -558,7 +576,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Sök fordon på typ, regnummer, färg, vikt, längd.
         /// </summary>
-        internal static string Rad3ShowVehicle {
+        public static string Rad3ShowVehicle {
             get {
                 return ResourceManager.GetString("Rad3ShowVehicle", resourceCulture);
             }
@@ -567,7 +585,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Båt.
         /// </summary>
-        internal static string Rad4AddVehicle {
+        public static string Rad4AddVehicle {
             get {
                 return ResourceManager.GetString("Rad4AddVehicle", resourceCulture);
             }
@@ -576,7 +594,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Hämta/Spara fordon.
         /// </summary>
-        internal static string Rad4Main {
+        public static string Rad4Main {
             get {
                 return ResourceManager.GetString("Rad4Main", resourceCulture);
             }
@@ -585,7 +603,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Flygplan.
         /// </summary>
-        internal static string Rad5AddVehicle {
+        public static string Rad5AddVehicle {
             get {
                 return ResourceManager.GetString("Rad5AddVehicle", resourceCulture);
             }
@@ -594,7 +612,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Välj språk.
         /// </summary>
-        internal static string Rad5Main {
+        public static string Rad5Main {
             get {
                 return ResourceManager.GetString("Rad5Main", resourceCulture);
             }
@@ -603,7 +621,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Slumpmässigt.
         /// </summary>
-        internal static string Rad6AddVehicle {
+        public static string Rad6AddVehicle {
             get {
                 return ResourceManager.GetString("Rad6AddVehicle", resourceCulture);
             }
@@ -612,7 +630,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Lägg till fordonsdetaljer.
         /// </summary>
-        internal static string RadAddVehicle {
+        public static string RadAddVehicle {
             get {
                 return ResourceManager.GetString("RadAddVehicle", resourceCulture);
             }
@@ -621,7 +639,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to registreringsnummer.
         /// </summary>
-        internal static string RegNum {
+        public static string RegNum {
             get {
                 return ResourceManager.GetString("RegNum", resourceCulture);
             }
@@ -630,16 +648,43 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Garage 2.0.
         /// </summary>
-        internal static string Rubrik {
+        public static string Rubrik {
             get {
                 return ResourceManager.GetString("Rubrik", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to  slumpade fordon..
+        /// </summary>
+        public static string SlumpadeFordon {
+            get {
+                return ResourceManager.GetString("SlumpadeFordon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  slumpade fordon har lagts till garaget..
+        /// </summary>
+        public static string SlumpadeFordonHarLagtsTillIGaraget {
+            get {
+                return ResourceManager.GetString("SlumpadeFordonHarLagtsTillIGaraget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sök och filtrera fordon.
+        /// </summary>
+        public static string SokOchFiltrera {
+            get {
+                return ResourceManager.GetString("SokOchFiltrera", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Spara i denna katalog (Yes/No/Abort - Enter).
         /// </summary>
-        internal static string SparaIKatalog {
+        public static string SparaIKatalog {
             get {
                 return ResourceManager.GetString("SparaIKatalog", resourceCulture);
             }
@@ -648,7 +693,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Ta bort fordon.
         /// </summary>
-        internal static string TaBortFordon {
+        public static string TaBortFordon {
             get {
                 return ResourceManager.GetString("TaBortFordon", resourceCulture);
             }
@@ -657,7 +702,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to  togs bort från garaget. .
         /// </summary>
-        internal static string TogsBortGaraget {
+        public static string TogsBortGaraget {
             get {
                 return ResourceManager.GetString("TogsBortGaraget", resourceCulture);
             }
@@ -666,7 +711,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Tryck Retur för att fortsätta....
         /// </summary>
-        internal static string TryckRetur {
+        public static string TryckRetur {
             get {
                 return ResourceManager.GetString("TryckRetur", resourceCulture);
             }
@@ -675,7 +720,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Välj.
         /// </summary>
-        internal static string Valg {
+        public static string Valg {
             get {
                 return ResourceManager.GetString("Valg", resourceCulture);
             }
@@ -684,7 +729,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Välj någon av dessa filer (Yes/No/Abort - Enter).
         /// </summary>
-        internal static string ValgDassaFiler {
+        public static string ValgDassaFiler {
             get {
                 return ResourceManager.GetString("ValgDassaFiler", resourceCulture);
             }
@@ -693,7 +738,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Välj bibliotek.
         /// </summary>
-        internal static string ValjBibliotek {
+        public static string ValjBibliotek {
             get {
                 return ResourceManager.GetString("ValjBibliotek", resourceCulture);
             }
@@ -702,7 +747,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to Välj fil.
         /// </summary>
-        internal static string ValjFil {
+        public static string ValjFil {
             get {
                 return ResourceManager.GetString("ValjFil", resourceCulture);
             }
@@ -711,7 +756,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to fordon inlästa från fil.
         /// </summary>
-        internal static string VehicleLodedFrom {
+        public static string VehicleLodedFrom {
             get {
                 return ResourceManager.GetString("VehicleLodedFrom", resourceCulture);
             }
@@ -720,16 +765,25 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to vikt.
         /// </summary>
-        internal static string Vikt {
+        public static string Vikt {
             get {
                 return ResourceManager.GetString("Vikt", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vill du söka efter en 1. Bil, 2. Buss, 3. Motorcykel, 4. Båt, 5. Flygplan.
+        /// </summary>
+        public static string VillDuSokaEfter {
+            get {
+                return ResourceManager.GetString("VillDuSokaEfter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to spännvidd.
         /// </summary>
-        internal static string Vingbredd {
+        public static string Vingbredd {
             get {
                 return ResourceManager.GetString("Vingbredd", resourceCulture);
             }
@@ -738,7 +792,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to djupgående.
         /// </summary>
-        internal static string WaterDepth {
+        public static string WaterDepth {
             get {
                 return ResourceManager.GetString("WaterDepth", resourceCulture);
             }
@@ -747,7 +801,7 @@ namespace Exercise4_Garage_2.MenuClasses {
         /// <summary>
         ///   Looks up a localized string similar to hjul.
         /// </summary>
-        internal static string Wheel {
+        public static string Wheel {
             get {
                 return ResourceManager.GetString("Wheel", resourceCulture);
             }

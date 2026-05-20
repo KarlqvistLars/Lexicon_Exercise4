@@ -346,6 +346,24 @@
     <value>har tagits bort</value>
   </data>
   <data name="SparaIKatalog" xml:space="preserve">
-    <value>Spara i denna katalog (Yes/No/Abort - Enter)?</value>
+    <value>Spara i denna katalog (Yes/No/Abort - Enter)</value>
+  </data>
+  <data name="VillDuSokaEfter" xml:space="preserve">
+    <value>Vill du söka efter en 1. Bil, 2. Buss, 3. Motorcykel, 4. Båt, 5. Flygplan</value>
+  </data>
+  <data name="SokOchFiltrera" xml:space="preserve">
+    <value>Sök och filtrera fordon</value>
+  </data>
+  <data name="SlumpadeFordonHarLagtsTillIGaraget" xml:space="preserve">
+    <value> slumpade fordon har lagts till garaget.</value>
+  </data>
+  <data name="SlumpadeFordon" xml:space="preserve">
+    <value> slumpade fordon.</value>
+  </data>
+  <data name="FordonKanFaPlats" xml:space="preserve">
+    <value> fordon kan få plats.</value>
+  </data>
+  <data name="HurManga" xml:space="preserve">
+    <value>Hur många </value>
   </data>
 </root>
