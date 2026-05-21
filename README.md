@@ -3,6 +3,9 @@
 Övningsuppgift 4
 ```
 ![UML ClassDiagram](https://github.com/KarlqvistLars/Lexicon_Exercise4/blob/main/docs/F%C3%B6desDiagram/UML_ClassDiagram.jpg)
+<br>
+![example event parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?event=push)
+<br>
 
 ## Innehåll
 - [Garage 2.0](#garage-2.0)
