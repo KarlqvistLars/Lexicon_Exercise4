@@ -48,7 +48,15 @@ namespace Exercise4_Garage_2 {
         public void AddVehicle(Garage<IVehicle> garage, VType type) {
             string[] v = new string[4];
             string[] c = new string[4];
-            string Title = $"{Text.LaggTill} {type.ToString()}.";
+            string fordon = type switch {
+                VType.Car => Text.Bil,
+                VType.Bus => Text.Buss,
+                VType.Motorcycle => Text.Motorcykel,
+                VType.Boat => Text.Boat,
+                VType.Airplane => Text.Flygplan,
+                _ => string.Empty
+            };
+            string Title = $"{Text.LaggTill}{fordon}";
             Utilities.ShowHeader(Title);
             v = Vehicle.InDataVehicle(garage, type);
             c = type switch {
@@ -280,8 +288,8 @@ namespace Exercise4_Garage_2 {
             return ListVehicles(filteredGarage);
         }
         public bool OgitigtVal() {
-            System.Console.WriteLine($"{Utilities.Tab}Ogiltigt val");
-            Console.ReadKey();
+            System.Console.WriteLine($"{Utilities.Tab}Ogiltigt val\n{Utilities.Tab}{Text.TryckRetur}");
+            Console.ReadLine();
             return true;
         }
         public static void SaveVehicles(Garage<IVehicle> garage, string FullfilePath) {
