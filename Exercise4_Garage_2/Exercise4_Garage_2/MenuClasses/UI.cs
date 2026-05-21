@@ -2,6 +2,7 @@
 using Exercise4_Garage_2.MenuClasses;
 using System.Globalization;
 
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Exercise4_Garage_2.Tests")]
 namespace Exercise4_Garage_2 {
     public class UI : IUI {
         private static bool Running { get; set; } = true;
@@ -84,7 +85,7 @@ namespace Exercise4_Garage_2 {
                 }
             }
         }
-        public static void MenuAddVehicle(Garage<IVehicle> garage) {
+        internal static void MenuAddVehicle(Garage<IVehicle> garage) {
             bool running = true;
             while (running) {
                 LoadMenuText();
@@ -118,7 +119,7 @@ namespace Exercise4_Garage_2 {
                 }
             }
         }
-        private static void MenuRemoveVehicle(Garage<IVehicle> garage) {
+        internal static void MenuRemoveVehicle(Garage<IVehicle> garage) {
             bool running = true;
             while (running) {
                 string? input = Utilities.ShowMenu(Text.Rad2Main, menuTextRemove, Text.Back);
@@ -138,7 +139,7 @@ namespace Exercise4_Garage_2 {
                 }
             }
         }
-        private static void MenuShowVehicle(Garage<IVehicle> garage) {
+        internal static void MenuShowVehicle(Garage<IVehicle> garage) {
             bool running = true;
             while (running) {
                 string input = Utilities.ShowMenu(Text.Rad3Main, menuTextShow, Text.Back).Trim();
@@ -165,7 +166,7 @@ namespace Exercise4_Garage_2 {
                 }
             }
         }
-        private static Garage<IVehicle> MenuLoadVehicleFromFile(Garage<IVehicle> garage) {
+        internal static Garage<IVehicle> MenuLoadVehicleFromFile(Garage<IVehicle> garage) {
             bool running = true;
             while (running) {
                 string? input = Utilities.ShowMenu(Text.Rad4Main, menuLoadFromFile, Text.Back);
@@ -189,7 +190,7 @@ namespace Exercise4_Garage_2 {
             }
             return garage;
         }
-        private static void MenuChooseLanguage() {
+        internal static void MenuChooseLanguage() {
             bool running = true;
             while (running) {
                 string? input = Utilities.ShowMenu(Text.Rad5Main, menuTextLanguage, Text.Back);
@@ -213,7 +214,7 @@ namespace Exercise4_Garage_2 {
                 }
             }
         }
-        private static void ExitGarage() {
+        internal static void ExitGarage() {
             // Här kan allt sparas eller städas upp innan programmet avslutas
             string closing = "Programmet avslutas...";
             Console.Write(Utilities.Tab);
