@@ -5,9 +5,9 @@
 ![UML ClassDiagram](https://github.com/KarlqvistLars/Lexicon_Exercise4/blob/main/docs/F%C3%B6desDiagram/UML_ClassDiagram.jpg)
 
 ## Innehåll
-- [Garage 2.0](#garage 2.0)
-- [Programmets arkitektur](# programmets arkitektur)
-- [För installation och test av Program](# för installation och test av program)
+- [Garage 2.0](#garage-2.0)
+- [Programmets arkitektur](#programmets-arkitektur)
+- [För installation och test av Program](#för-installation-och-test-av-program)
 
 ## Garage 2.0
 
