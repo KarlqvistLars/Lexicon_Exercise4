@@ -1,0 +1,37 @@
+﻿VehicleClasses.txt
+
+Består av klasserna Car, Bus, Motorcycle, Boat och Airplane. 
+Alla fem klasserna har en egenskaperna:
+
+        private string? _uuid;
+        private string? _color;
+        private int _weight;
+        private int _length;
+        private string? _type;
+
+Som ärvs ifrån basklassen "Vehicle".
+Vehicle-klassen defineras i sin tur av interfacet IVehicle i Interfaces-mappen.
+
+Utöver dessa egenskaper har varje klass även unika egenskaper som är specifika för just den typen av fordon.
+
+Dessa är för Car: 
+        int numberOfDoors;
+        int wheels;
+
+        För Bus:
+        private int _numberOfSeats;
+        private int _wheels;
+        
+        För Motorcycle:
+        private int _cubicInch;
+        private int _wheels = 2;
+        
+        För Boat:
+        decimal maxWaterDepth;
+        decimal maxSpeed;
+        decimal deplacement;
+        
+        För Airplane:
+        int liftCapacity;
+        decimal wingSpan;
+        private int passengers;
