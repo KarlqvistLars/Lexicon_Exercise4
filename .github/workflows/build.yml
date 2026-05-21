@@ -20,6 +20,9 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 10.0.x
+
+    - name: Exercise4_Garage_2b
+      run: dotnet restore Exercise4_Garage_2b/Exercise4_Garage_2/Exercise4_Garage_2b.csproj
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
