@@ -23,9 +23,12 @@ jobs:
 
     - name: Exercise4_Garage_2b
       run: dotnet restore Exercise4_Garage_2b/Exercise4_Garage_2/Exercise4_Garage_2b.csproj
-    - name: Restore dependencies
-      run: dotnet restore
+      
+    - name: Exercise4_Garage_2b.Tests
+      run: dotnet restore Exercise4_Garage_2b/Exercise4_Garage_2b.Tests/Exercise4_Garage_2b.Tests.csproj
+      
     - name: Build
       run: dotnet build --no-restore
+      
     - name: Test
       run: dotnet test --no-build --verbosity normal
