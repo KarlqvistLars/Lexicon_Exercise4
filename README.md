@@ -117,3 +117,10 @@ Exercise4_Garage_2/
 │   └── Airplane.cs
 └── Exercise_Garage_2.Tests/
 ```
+## För installation och test av Program
+Ladda ned det zippade programmet här. <br>
+```
+Packa upp zipfilerna på lämplig plats och starta filen [Exercise4_Garage_2.exe].
+
+Antingen genom att dubbelklicka på filen i explorer eller genom att köra programmet från Terminal fönstret.
+```
