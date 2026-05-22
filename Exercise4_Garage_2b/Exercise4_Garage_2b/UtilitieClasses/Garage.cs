@@ -47,9 +47,5 @@ namespace Exercise4_Garage_2b {
             => _vehicles.RemoveAt(index);
         IEnumerator IEnumerable.GetEnumerator()
             => GetEnumerator();
-        //IEnumerator<T> IEnumerable<T>.GetEnumerator()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }
