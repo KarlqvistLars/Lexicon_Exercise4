@@ -159,7 +159,7 @@ namespace Exercise4_Garage_2b {
             }
             return false;
         }
-        private string SelectRegnr(Garage<IVehicle> garage, int input) {
+        internal string SelectRegnr(Garage<IVehicle> garage, int input) {
             int c = 0;
             string regnr = string.Empty;
             var enumerator = garage.GetEnumerator();

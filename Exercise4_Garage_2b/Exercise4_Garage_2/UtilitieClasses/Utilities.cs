@@ -16,7 +16,9 @@ namespace Exercise4_Garage_2b {
             Airplane = 5
         }
         internal static string ShowMenu(string title, string[] options, string backOption) {
-            Console.Clear();
+            if (!Console.IsOutputRedirected) {
+                Console.Clear();
+            }
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write($"{Tab}* ");
             Console.ForegroundColor = ConsoleColor.Blue;
@@ -39,9 +41,9 @@ namespace Exercise4_Garage_2b {
             return input ?? string.Empty;
         }
         internal static void ShowHeader(string title) {
-#if !TESTMODE
-            Console.Clear();
-#endif
+            if (!Console.IsOutputRedirected) {
+                Console.Clear();
+            }
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write($"{Tab}* ");
             Console.ForegroundColor = ConsoleColor.Blue;
