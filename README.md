@@ -7,6 +7,7 @@
 ![passing test](https://github.com/KarlqvistLars/Lexicon_Exercise4/actions/workflows/build.yml/badge.svg)
 <br>
 
+
 ## Innehåll
 - [Garage 2.0](#garage-2.0)
 - [Programmets arkitektur](#programmets-arkitektur)
