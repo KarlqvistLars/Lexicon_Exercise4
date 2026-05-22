@@ -1,4 +1,4 @@
-﻿using Exercise4_Garage_2b.VehicleClasses;
+using Exercise4_Garage_2b.VehicleClasses;
 using System.Globalization;
 using static Exercise4_Garage_2b.Utilities;
 

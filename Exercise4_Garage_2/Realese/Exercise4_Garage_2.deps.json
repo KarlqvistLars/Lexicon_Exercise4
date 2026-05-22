@@ -1,0 +1,31 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Exercise4_Garage_2/1.0.0": {
+        "runtime": {
+          "Exercise4_Garage_2.dll": {}
+        },
+        "resources": {
+          "en/Exercise4_Garage_2.resources.dll": {
+            "locale": "en"
+          },
+          "sv/Exercise4_Garage_2.resources.dll": {
+            "locale": "sv"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Exercise4_Garage_2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Exercise4_Garage_2.Garage&lt;T&gt;">
+    <Position X="21.75" Y="1.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAEAAAAAAABAQCAAABAQCAAIBAAAMCAAAAABQIAA=</HashCode>
+      <FileName>UtilitieClasses\Garage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Exercise4_Garage_2.Handler">
+    <Position X="12" Y="4.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>EAAEEAAABAAAAAACAAUAAIAEAAABAAAAAgAAAAAIAAA=</HashCode>
+      <FileName>UtilitieClasses\Handler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Exercise4_Garage_2.Utilities">
+    <Position X="8.25" Y="1.5" Width="3.5" />
+    <NestedTypes>
+      <Enum Name="Exercise4_Garage_2.Utilities.VType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UtilitieClasses\Utilities.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAhAAACAAAQgAIAAAAAAAIACRAAAAABAAAQAAAABAAA=</HashCode>
+      <FileName>UtilitieClasses\Utilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise4_Garage_2.Program">
+    <Position X="4.5" Y="1.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise4_Garage_2.Vehicle">
+    <Position X="16.75" Y="4.25" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AACBAAAAAAQoAJQUAAAAAABAACAAAAAABQAAgAAAAAA=</HashCode>
+      <FileName>VehicleClasses\Vehicle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Exercise4_Garage_2.Car">
+    <Position X="1" Y="10" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAABAAAAUAAAAAABBACAAAAAQAQAAkAAAAAA=</HashCode>
+      <FileName>VehicleClasses\Car.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise4_Garage_2.Bus">
+    <Position X="6.75" Y="10" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAUAAAAAABBACAAAAAQAQAAkAAAQAA=</HashCode>
+      <FileName>VehicleClasses\Bus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise4_Garage_2.VehicleClasses.Boat">
+    <Position X="18.5" Y="10" Width="7.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAEAAQUQAAEAEBBACAAAAAAAQAAgAAAAAA=</HashCode>
+      <FileName>VehicleClasses\Boat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise4_Garage_2.VehicleClasses.Motorcycle">
+    <Position X="12.5" Y="10" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAUAAAAAABBACAAAAAQAwAAwAAAAgA=</HashCode>
+      <FileName>VehicleClasses\Motorcycle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exercise4_Garage_2.VehicleClasses.Airplane">
+    <Position X="26.5" Y="10" Width="7" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAQAAAAUAAAAAABBACQAAgAEAQIAgAAAAAA=</HashCode>
+      <FileName>VehicleClasses\Airplane.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Exercise4_Garage_2.Interfaces.IGarage&lt;T&gt;">
+    <Position X="25.5" Y="1.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AEIAAEAAAAAAABAQCAAABAQCAAABAAAIAAAAAABQIAA=</HashCode>
+      <FileName>Interfaces\IGarage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Exercise4_Garage_2.Interfaces.IHandler">
+    <Position X="12" Y="1.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>EAAEEAAAAAAAAAACAAUAAAAEAAABAAAAAgAAAAAIAAA=</HashCode>
+      <FileName>Interfaces\IHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Exercise4_Garage_2.Interfaces.IUI">
+    <Position X="4.5" Y="3" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IUI.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Exercise4_Garage_2.IVehicle">
+    <Position X="16.75" Y="1.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAUAAAAAABAACAAAAAAAQAAgAAAAAA=</HashCode>
+      <FileName>Interfaces\IVehicle.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

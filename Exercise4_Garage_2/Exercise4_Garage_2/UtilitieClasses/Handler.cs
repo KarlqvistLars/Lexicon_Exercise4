@@ -46,31 +46,43 @@ namespace Exercise4_Garage_2 {
             return true;
         }
         public void AddVehicle(Garage<IVehicle> garage, VType type) {
-            string[] v = new string[4];
-            string[] c = new string[4];
-            string Title = $"{Text.LaggTill} {type.ToString()}.";
-            Utilities.ShowHeader(Title);
-            v = Vehicle.InDataVehicle(garage, type);
-            c = type switch {
-                VType.Car => Car.InData(),
-                VType.Bus => Bus.InData(),
-                VType.Motorcycle => Motorcycle.InData(),
-                VType.Boat => Boat.InData(),
-                VType.Airplane => Airplane.InData(),
-                _ => Array.Empty<string>()
-            };
-            garage.Add(type switch {
-                VType.Car => new Car(v[0], v[1], int.Parse(v[2]), decimal.Parse(v[3]), int.Parse(c[0]), int.Parse(c[1])),
-                VType.Bus => new Bus(v[0], v[1], int.Parse(v[2]), decimal.Parse(v[3]), int.Parse(c[0]), int.Parse(c[1])),
-                VType.Motorcycle => new Motorcycle(v[0], v[1], int.Parse(v[2]), decimal.Parse(v[3]), int.Parse(c[0]), int.Parse(c[1])),
-                VType.Boat => new Boat(v[0], v[1], int.Parse(v[2]), decimal.Parse(v[3]), decimal.Parse(c[0]), decimal.Parse(c[1]), decimal.Parse(c[2])),
-                VType.Airplane => new Airplane(v[0], v[1], int.Parse(v[2]), decimal.Parse(v[3]), int.Parse(c[0]), decimal.Parse(c[1]), int.Parse(c[2])),
-                _ => throw new ArgumentException("Invalid vehicle type")
-            });
-            Console.WriteLine($"\n{Utilities.Line30}{Utilities.Line30}");
-            Console.WriteLine($"{Utilities.Tab}{Cap(type.ToString())} {Text.LagtsTillGaraget}\n{garage.Last().ToString2(type)}");
-            Console.WriteLine($"{Utilities.Line30}{Utilities.Line30}");
-            Console.WriteLine($"{Utilities.Tab}{Utilities.Cap(Text.AntalFordon)} {garage.Count}{Text.Av}{garage.Capacity}{Text.platser}");
+            if (!garage.IsFull) {
+                string[] v = new string[4];
+                string[] c = new string[4];
+                string fordon = type switch {
+                    VType.Car => Text.Bil,
+                    VType.Bus => Text.Buss,
+                    VType.Motorcycle => Text.Motorcykel,
+                    VType.Boat => Text.Boat,
+                    VType.Airplane => Text.Flygplan,
+                    _ => string.Empty
+                };
+                string Title = $"{Text.LaggTill}{fordon}";
+                Utilities.ShowHeader(Title);
+                v = Vehicle.InDataVehicle(garage, type);
+                c = type switch {
+                    VType.Car => Car.InData(),
+                    VType.Bus => Bus.InData(),
+                    VType.Motorcycle => Motorcycle.InData(),
+                    VType.Boat => Boat.InData(),
+                    VType.Airplane => Airplane.InData(),
+                    _ => Array.Empty<string>()
+                };
+                garage.Add(type switch {
+                    VType.Car => new Car(v[0], v[1], int.Parse(v[2]), decimal.Parse(v[3]), int.Parse(c[0]), int.Parse(c[1])),
+                    VType.Bus => new Bus(v[0], v[1], int.Parse(v[2]), decimal.Parse(v[3]), int.Parse(c[0]), int.Parse(c[1])),
+                    VType.Motorcycle => new Motorcycle(v[0], v[1], int.Parse(v[2]), decimal.Parse(v[3]), int.Parse(c[0]), int.Parse(c[1])),
+                    VType.Boat => new Boat(v[0], v[1], int.Parse(v[2]), decimal.Parse(v[3]), decimal.Parse(c[0]), decimal.Parse(c[1]), decimal.Parse(c[2])),
+                    VType.Airplane => new Airplane(v[0], v[1], int.Parse(v[2]), decimal.Parse(v[3]), int.Parse(c[0]), decimal.Parse(c[1]), int.Parse(c[2])),
+                    _ => throw new ArgumentException("Invalid vehicle type")
+                });
+                Console.WriteLine($"\n{Utilities.Line30}{Utilities.Line30}");
+                Console.WriteLine($"{Utilities.Tab}{Cap(type.ToString())} {Text.LagtsTillGaraget}\n{garage.Last().ToString2(type)}");
+                Console.WriteLine($"{Utilities.Line30}{Utilities.Line30}");
+                Console.WriteLine($"{Utilities.Tab}{Utilities.Cap(Text.AntalFordon)} {garage.Count}{Text.Av}{garage.Capacity}{Text.platser}");
+            } else {
+                Console.WriteLine($"{Utilities.Tab}Garaget är fullt. Ta bort ett fordon innan du lägger till ett nytt.");
+            }
             Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
             Console.ReadLine();
         }
@@ -280,8 +292,8 @@ namespace Exercise4_Garage_2 {
             return ListVehicles(filteredGarage);
         }
         public bool OgitigtVal() {
-            System.Console.WriteLine($"{Utilities.Tab}Ogiltigt val");
-            Console.ReadKey();
+            System.Console.WriteLine($"{Utilities.Tab}Ogiltigt val\n{Utilities.Tab}{Text.TryckRetur}");
+            Console.ReadLine();
             return true;
         }
         public static void SaveVehicles(Garage<IVehicle> garage, string FullfilePath) {

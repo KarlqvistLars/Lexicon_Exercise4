@@ -3,11 +3,20 @@
 Övningsuppgift 4
 ```
 ![UML ClassDiagram](https://github.com/KarlqvistLars/Lexicon_Exercise4/blob/main/docs/F%C3%B6desDiagram/UML_ClassDiagram.jpg)
+<br>
+![passing test](https://github.com/KarlqvistLars/Lexicon_Exercise4/actions/workflows/build.yml/badge.svg)
+<br>
+
+## Innehåll
+- [Garage 2.0](#garage-2.0)
+- [Programmets arkitektur](#programmets-arkitektur)
+- [För installation och test av Program](#för-installation-och-test-av-program)
 
 ## Garage 2.0
 
 Detta projekt är en forsättning på Garage 1.0.<br>
-Det ärockså en konsolbaserad garageapplikation i C#. Programmet skall simulera ett enkelt garage där olika typer av fordon kan parkeras/förvaras.
+Det är också en konsolbaserad garageapplikation i C#. Programmet skall simulera ett enkelt garage där olika typer av fordon kan parkeras/förvaras.
+
 
 Vid program start kan man välja storlek på antalet fordon som ska kunna få plats.
 ```
@@ -94,7 +103,7 @@ Exercise4_Garage_2/
 ├── Program.cs
 ├── Documents/
 │   ├── Exercise4_Garage_2.cd
-│   └── Vehiclekalsses.txt
+│   └── Vehicleklasses.txt
 ├── Interfaces/
 │   ├── IGarage.cs
 │   ├── IHandler.cs
@@ -116,4 +125,11 @@ Exercise4_Garage_2/
 │   ├── Boat
 │   └── Airplane.cs
 └── Exercise_Garage_2.Tests/
+```
+## För installation och test av Program
+Ladda ned det zippade programmet [här](https://github.com/KarlqvistLars/Lexicon_Exercise4/blob/main/Releaser/Exercise4_Garage_2.zip). <br>
+```
+Packa upp zipfilerna på lämplig plats och starta filen [Exercise4_Garage_2.exe].
+
+Antingen genom att dubbelklicka på filen i explorer eller genom att köra programmet från Terminal fönstret.
 ```

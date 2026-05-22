@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Bil" xml:space="preserve">
+    <value>bil</value>
+  </data>
+  <data name="Rubrik" xml:space="preserve">
+    <value>Garage 2.0</value>
+  </data>
+  <data name="medRegistrering" xml:space="preserve">
+    <value>med registreringsnummer:</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>färg</value>
+  </data>
+  <data name="Vikt" xml:space="preserve">
+    <value>vikt</value>
+  </data>
+  <data name="Length" xml:space="preserve">
+    <value>längd</value>
+  </data>
+  <data name="NumDoors" xml:space="preserve">
+    <value>antal dörrar</value>
+  </data>
+  <data name="Wheel" xml:space="preserve">
+    <value>hjul</value>
+  </data>
+  <data name="MainHeader" xml:space="preserve">
+    <value>Huvudmeny</value>
+  </data>
+  <data name="Rad1Main" xml:space="preserve">
+    <value>Lägg till fordon</value>
+  </data>
+  <data name="Rad2Main" xml:space="preserve">
+    <value>Ta bort fordon</value>
+  </data>
+  <data name="Rad3Main" xml:space="preserve">
+    <value>Visa fordon</value>
+  </data>
+  <data name="Rad4Main" xml:space="preserve">
+    <value>Hämta/Spara fordon</value>
+  </data>
+  <data name="Valg" xml:space="preserve">
+    <value>Välj</value>
+  </data>
+  <data name="Rad1AddVehicle" xml:space="preserve">
+    <value>Bil</value>
+  </data>
+  <data name="Rad2AddVehicle" xml:space="preserve">
+    <value>Buss</value>
+  </data>
+  <data name="Rad3AddVehicle" xml:space="preserve">
+    <value>Motorcykel</value>
+  </data>
+  <data name="Rad4AddVehicle" xml:space="preserve">
+    <value>Båt</value>
+  </data>
+  <data name="Rad5AddVehicle" xml:space="preserve">
+    <value>Flygplan</value>
+  </data>
+  <data name="Rad6AddVehicle" xml:space="preserve">
+    <value>Slumpmässigt</value>
+  </data>
+  <data name="Rad1RemoveVehicle" xml:space="preserve">
+    <value>Sök och ta bort fordon</value>
+  </data>
+  <data name="Rad2RemoveVehicle" xml:space="preserve">
+    <value>Ta bort fordon på regnummer</value>
+  </data>
+  <data name="Rad1ShowVehicle" xml:space="preserve">
+    <value>Visa alla fordon</value>
+  </data>
+  <data name="Rad2ShowVehicle" xml:space="preserve">
+    <value>Visa fordon via regnummer</value>
+  </data>
+  <data name="Rad3ShowVehicle" xml:space="preserve">
+    <value>Sök fordon på typ, regnummer, färg, vikt, längd</value>
+  </data>
+  <data name="Rad1LoadVehicleFromFilePart1" xml:space="preserve">
+    <value>Ladda sparade fordon från fil.</value>
+  </data>
+  <data name="Rad1LoadVehicleFromFilePart2" xml:space="preserve">
+    <value>Spara fordon till fil.</value>
+  </data>
+  <data name="Rad5Main" xml:space="preserve">
+    <value>Välj språk</value>
+  </data>
+  <data name="RadAddVehicle" xml:space="preserve">
+    <value>Lägg till fordonsdetaljer</value>
+  </data>
+  <data name="RegNum" xml:space="preserve">
+    <value>registreringsnummer</value>
+  </data>
+  <data name="NumSeats" xml:space="preserve">
+    <value>antal säten</value>
+  </data>
+  <data name="MaxWaterDepth" xml:space="preserve">
+    <value>ange djupgående (m)</value>
+  </data>
+  <data name="MaxSpeed" xml:space="preserve">
+    <value>ange max hastighet (knop)</value>
+  </data>
+  <data name="Deplacement" xml:space="preserve">
+    <value>ange deplacement</value>
+  </data>
+  <data name="Rad1ChooseLanguage" xml:space="preserve">
+    <value>Svenska</value>
+  </data>
+  <data name="Rad2ChooseLanguage" xml:space="preserve">
+    <value>Engelska</value>
+  </data>
+  <data name="Avsluta" xml:space="preserve">
+    <value>avsluta</value>
+  </data>
+  <data name="exit" xml:space="preserve">
+    <value>avsluta</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>tillbaka</value>
+  </data>
+  <data name="LagtsTillGaraget" xml:space="preserve">
+    <value>har lagts till i garaget. </value>
+  </data>
+  <data name="TryckRetur" xml:space="preserve">
+    <value>Tryck Retur för att fortsätta...</value>
+  </data>
+  <data name="platser" xml:space="preserve">
+    <value> platser.</value>
+  </data>
+  <data name="Av" xml:space="preserve">
+    <value> av </value>
+  </data>
+  <data name="AntalFordon" xml:space="preserve">
+    <value>antal fordon i garaget</value>
+  </data>
+  <data name="LaggTill" xml:space="preserve">
+    <value>Lägg till </value>
+  </data>
+  <data name="ColorChoise" xml:space="preserve">
+    <value>(1. Röd, 2. Blå, 3. Grön, 4. Gul 5. Svart)</value>
+  </data>
+  <data name="Buss" xml:space="preserve">
+    <value>buss</value>
+  </data>
+  <data name="Motorcykel" xml:space="preserve">
+    <value>motorcykel</value>
+  </data>
+  <data name="Boat" xml:space="preserve">
+    <value>båt</value>
+  </data>
+  <data name="Flygplan" xml:space="preserve">
+    <value>flygplan</value>
+  </data>
+  <data name="DennaBilen" xml:space="preserve">
+    <value>Denna bilen </value>
+  </data>
+  <data name="DennaBussen" xml:space="preserve">
+    <value>Denna bussen </value>
+  </data>
+  <data name="DennaMotorcykeln" xml:space="preserve">
+    <value>Denna motorcykeln </value>
+  </data>
+  <data name="CubicInch" xml:space="preserve">
+    <value>Motor storlek i CC</value>
+  </data>
+  <data name="Lyftkapacitet" xml:space="preserve">
+    <value>lyftkapacitet </value>
+  </data>
+  <data name="Vingbredd" xml:space="preserve">
+    <value>spännvidd</value>
+  </data>
+  <data name="Pax" xml:space="preserve">
+    <value>passagerare</value>
+  </data>
+  <data name="TaBortFordon" xml:space="preserve">
+    <value>Ta bort fordon</value>
+  </data>
+  <data name="TogsBortGaraget" xml:space="preserve">
+    <value> togs bort från garaget. </value>
+  </data>
+  <data name="FordonMedRegistrering" xml:space="preserve">
+    <value>Fordon med registrering</value>
+  </data>
+  <data name="HittadesEj" xml:space="preserve">
+    <value>hittades ej</value>
+  </data>
+  <data name="Garage" xml:space="preserve">
+    <value>Garage</value>
+  </data>
+  <data name="IsFull" xml:space="preserve">
+    <value>är fullt.</value>
+  </data>
+  <data name="WaterDepth" xml:space="preserve">
+    <value>djupgående</value>
+  </data>
+  <data name="BoatSpeed" xml:space="preserve">
+    <value>max hastighet (knop)</value>
+  </data>
+  <data name="Deplac" xml:space="preserve">
+    <value>deplacement</value>
+  </data>
+  <data name="Hittades" xml:space="preserve">
+    <value>hittades</value>
+  </data>
+  <data name="GarageVer" xml:space="preserve">
+    <value>Garage 2.0</value>
+  </data>
+  <data name="ValgDassaFiler" xml:space="preserve">
+    <value>Välj någon av dessa filer (Yes/No/Abort - Enter)</value>
+  </data>
+  <data name="ValjBibliotek" xml:space="preserve">
+    <value>Välj bibliotek</value>
+  </data>
+  <data name="ValjFil" xml:space="preserve">
+    <value>Välj fil</value>
+  </data>
+  <data name="CurrentDir" xml:space="preserve">
+    <value>aktivt bibliotek</value>
+  </data>
+  <data name="FilesIn" xml:space="preserve">
+    <value>Filer i </value>
+  </data>
+  <data name="VehicleLodedFrom" xml:space="preserve">
+    <value>fordon inlästa från</value>
+  </data>
+  <data name="FelaktigInput" xml:space="preserve">
+    <value>felaktig input</value>
+  </data>
+  <data name="HarTagitsBort" xml:space="preserve">
+    <value>har tagits bort</value>
+  </data>
+  <data name="SparaIKatalog" xml:space="preserve">
+    <value>Spara i denna katalog (Yes/No/Abort - Enter)</value>
+  </data>
+  <data name="VillDuSokaEfter" xml:space="preserve">
+    <value>Vill du söka efter en 1. Bil, 2. Buss, 3. Motorcykel, 4. Båt, 5. Flygplan</value>
+  </data>
+  <data name="SokOchFiltrera" xml:space="preserve">
+    <value>Sök och filtrera fordon</value>
+  </data>
+  <data name="SlumpadeFordonHarLagtsTillIGaraget" xml:space="preserve">
+    <value> slumpade fordon har lagts till garaget.</value>
+  </data>
+  <data name="SlumpadeFordon" xml:space="preserve">
+    <value> slumpade fordon.</value>
+  </data>
+  <data name="FordonKanFaPlats" xml:space="preserve">
+    <value> fordon kan få plats.</value>
+  </data>
+  <data name="HurManga" xml:space="preserve">
+    <value>Hur många </value>
+  </data>
+</root>
