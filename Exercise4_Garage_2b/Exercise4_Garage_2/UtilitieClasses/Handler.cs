@@ -46,6 +46,12 @@ namespace Exercise4_Garage_2b {
             return true;
         }
         public void AddVehicle(Garage<IVehicle> garage, VType type) {
+            if (garage.IsFull) {
+                Console.WriteLine($"{Utilities.Tab}Garaget är fullt. Kan inte lägga till fler fordon.");
+                Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
+                Console.ReadLine();
+                return;
+            }
             string[] v = new string[4];
             string[] c = new string[4];
             string Title = $"{Text.LaggTill} {type.ToString()}.";
