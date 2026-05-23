@@ -9,15 +9,15 @@ namespace Exercise4_Garage_2b.Tests {
             TextReader originalIn = Console.In;
             TextWriter originalOut = Console.Out;
             Handler handler = new Handler();
-            using var input = new StringReader(param1 + "\n" + param2 + "\n" + param3 + "\n" + param4 + "\n");
-            using var output = new StringWriter();
+            using var input03 = new StringReader(param1 + "\n" + param2 + "\n" + param3 + "\n" + param4 + "\n");
+            using var output03 = new StringWriter();
             try {
-                Console.SetIn(input);
-                Console.SetOut(output);
+                Console.SetIn(input03);
+                Console.SetOut(output03);
                 // Act
-                bool result = handler.StartGarage();
+                bool result01 = handler.StartGarage();
                 // Assert
-                var consolUtrskrift = output.ToString();
+                var consolUtrskrift = output03.ToString();
                 // kontrollera konsolutskriften, behöver vara false för att föra alla testfall samtidigt
                 if (false) {
                     StreamWriter fileWriter = new StreamWriter("test_output.txt");
@@ -25,7 +25,7 @@ namespace Exercise4_Garage_2b.Tests {
                     fileWriter.Close();
                 }
                 Console.WriteLine(consolUtrskrift);
-                Assert.True(result);
+                Assert.True(result01);
                 if (param1 == "10" && param2.ToLower() == "y") {
                     Assert.Contains("   * Garage 2.0 * \r\n=====================", consolUtrskrift);
                     Assert.Contains("Press Enter to continue...", consolUtrskrift);
@@ -36,8 +36,6 @@ namespace Exercise4_Garage_2b.Tests {
             } finally {
                 Console.SetIn(originalIn);
                 Console.SetOut(originalOut);
-                input.Close();
-                output.Close();
             }
         }
     }

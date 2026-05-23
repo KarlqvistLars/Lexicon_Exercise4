@@ -9,14 +9,15 @@ namespace Exercise4_Garage_2b.Tests {
             TextWriter originalOut = Console.Out;
             Handler handler = new Handler();
             Garage<IVehicle> garageAdd = CreateGarageWithVehicles();
-            var input = new StringReader("GHI 789\n3\n1700\n4,8\n2\n4\n");
+            var input02 = new StringReader("GHI 789\n3\n1700\n4,8\n2\n4\n");
 
-            using var output = new StringWriter();
-            string consolUtrskrift = output.ToString();
+            using var output02 = new StringWriter();
+            string consolUtrskrift = output02.ToString();
 
             try {
 
-                Console.SetIn(input);
+                Console.SetIn(input02);
+                Console.SetOut(output02);
 
                 //Act
                 int countBefore = garageAdd.Count;
@@ -28,8 +29,8 @@ namespace Exercise4_Garage_2b.Tests {
             } finally {
                 Console.SetIn(originalIn);
                 Console.SetOut(originalOut);
-                input.Close();
-                output.Close();
+                input02.Close();
+                output02.Close();
             }
         }
     }

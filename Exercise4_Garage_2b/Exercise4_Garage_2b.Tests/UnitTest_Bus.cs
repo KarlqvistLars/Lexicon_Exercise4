@@ -1,12 +1,13 @@
 ﻿namespace Exercise4_Garage_2b.Tests {
     public class UnitTest_Bus {
-        [Fact]
-        public void TestBusClass() {
+        [Theory]
+        [InlineData("BUS 123", "Blå", 15000, 12.2, 2, 4)]
+        public void TestBusClass(string in_uuid, string in_color, int in_weight, double in_length, int in_numberOfSeats, int in_wheels) {
             //Arrange
             TextReader originalIn = Console.In;
             TextWriter originalOut = Console.Out;
 
-            Vehicle bus = new Bus("BUS 123", "Blå", 15000, 12.2m, 2, 4);
+            Vehicle bus = new Bus(in_uuid, in_color, in_weight, (decimal)in_length, in_numberOfSeats, in_wheels);
 
             using var input = new StringReader("");
             using var output = new StringWriter();
@@ -23,7 +24,7 @@
                 var length = bus.Length;
                 var numberOfSeats = ((Bus)bus).NumberOfSeats;
                 var wheels = ((Bus)bus).Wheels;
-                bool result = id == "BUS 123" && color == "Blå" && weight == 15000 && length == 12.2m && numberOfSeats == 2 && wheels == 4;
+                bool result = id == in_uuid && color == in_color && weight == in_weight && length == (decimal)in_length && numberOfSeats == in_numberOfSeats && wheels == in_wheels;
                 string consolUtrskrift = bus.ToString2(Utilities.VType.Bus);
 
                 if (false) {
@@ -34,12 +35,12 @@
 
                 // Assert
                 Assert.True(result);
-                Assert.Contains("BUS 123", consolUtrskrift);
-                Assert.Contains("Blå", consolUtrskrift);
-                Assert.Contains("15000", consolUtrskrift);
-                Assert.Contains("12,2", consolUtrskrift);
-                Assert.Contains("2", consolUtrskrift);
-                Assert.Contains("4", consolUtrskrift);
+                Assert.Contains(in_uuid, consolUtrskrift);
+                Assert.Contains(in_color, consolUtrskrift);
+                Assert.Contains(in_weight.ToString(), consolUtrskrift);
+                Assert.Contains(((decimal)in_length).ToString(), consolUtrskrift);
+                Assert.Contains(in_numberOfSeats.ToString(), consolUtrskrift);
+                Assert.Contains(in_wheels.ToString(), consolUtrskrift);
 
             } finally {
                 Console.SetIn(originalIn);
