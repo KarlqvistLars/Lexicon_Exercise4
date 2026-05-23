@@ -155,8 +155,9 @@ namespace Exercise4_Garage_2b {
                 Console.ReadLine();
                 return false;
             }
-            //Console.ReadLine();
+            Console.ReadLine();
         }
+
         internal bool RemoveFromGarageList(Garage<IVehicle> garage, string regnr) {
             var enumerator = garage.GetEnumerator();
             while (enumerator.MoveNext()) {
