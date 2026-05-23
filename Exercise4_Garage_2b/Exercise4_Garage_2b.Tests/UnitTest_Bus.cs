@@ -26,6 +26,12 @@
                 bool result = id == "BUS 123" && color == "Blå" && weight == 15000 && length == 12.2m && numberOfSeats == 2 && wheels == 4;
                 string consolUtrskrift = bus.ToString2(Utilities.VType.Bus);
 
+                if (false) {
+                    StreamWriter fileWriter = new StreamWriter("test_output.txt");
+                    fileWriter.WriteLine(consolUtrskrift);
+                    fileWriter.Close();
+                }
+
                 // Assert
                 Assert.True(result);
                 Assert.Contains("BUS 123", consolUtrskrift);
