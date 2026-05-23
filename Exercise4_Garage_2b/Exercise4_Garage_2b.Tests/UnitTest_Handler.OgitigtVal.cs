@@ -11,7 +11,7 @@ namespace Exercise4_Garage_2b.Tests {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("sv-SE");
             Handler handler = new Handler();
 
-            using var input08 = new StringReader("k");
+            using var input08 = new StringReader("k\n");
             using var output08 = new StringWriter();
 
             try {
