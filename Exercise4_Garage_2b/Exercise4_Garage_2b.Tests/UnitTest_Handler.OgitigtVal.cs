@@ -11,19 +11,19 @@ namespace Exercise4_Garage_2b.Tests {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("sv-SE");
             Handler handler = new Handler();
 
-            using var input = new StringReader("k");
-            using var output = new StringWriter();
+            using var input08 = new StringReader("k");
+            using var output08 = new StringWriter();
 
             try {
-                Console.SetIn(input);
-                Console.SetOut(output);
+                Console.SetIn(input08);
+                Console.SetOut(output08);
 
                 // Act
-                Console.SetIn(input);
+                Console.SetIn(input08);
                 var result = handler.OgitigtVal();
 
                 // Assert
-                string consolUtrskrift = output.ToString();
+                string consolUtrskrift = output08.ToString();
                 Assert.True(result);
                 Assert.True(consolUtrskrift.Contains("Ogiltigt val"));
                 Assert.Contains("Tryck Retur", consolUtrskrift);
@@ -33,8 +33,6 @@ namespace Exercise4_Garage_2b.Tests {
                 Console.SetOut(originalOut);
                 Console.SetIn(originalIn);
                 Console.SetOut(originalOut);
-                input.Close();
-                output.Close();
             }
         }
     }
