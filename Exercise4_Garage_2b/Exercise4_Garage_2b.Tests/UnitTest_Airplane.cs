@@ -4,7 +4,7 @@ namespace Exercise4_Garage_2b.Tests {
     public class UnitTest_Airplane {
         [Theory]
         [InlineData("SE-UPP", "Vit", 280, 6.6, 450, 15, 1)]
-        //[InlineData("Fl45003", "Vit", 14000, 15.2, 2, 14.3, 22000)]
+        [InlineData("SE-NER", "Vit", 285, 6.5, 455, 14.3, 1)]
         public void TestAirplaneClass(string in_uuid, string in_color, int in_weight, double in_length, int in_lift, int in_wingspan, int in_passengers) {
             //Arrange
             TextReader originalIn = Console.In;
@@ -12,15 +12,15 @@ namespace Exercise4_Garage_2b.Tests {
 
             Vehicle airplane = new Airplane(in_uuid, in_color, in_weight, (decimal)in_length, in_lift, in_wingspan, in_passengers);
 
-            using var input = new StringReader("");
-            using var output = new StringWriter();
+            using var input04 = new StringReader("");
+            using var output04 = new StringWriter();
 
             try {
-                Console.SetIn(input);
-                Console.SetOut(output);
+                Console.SetIn(input04);
+                Console.SetOut(output04);
 
                 // Act
-                Console.SetIn(input);
+                Console.SetIn(input04);
                 var id = airplane.Uuid;
                 var color = airplane.Color;
                 var weight = airplane.Weight;
@@ -28,11 +28,11 @@ namespace Exercise4_Garage_2b.Tests {
                 var lift = ((Airplane)airplane).LiftCapacity;
                 var wingspan = ((Airplane)airplane).WingSpan;
                 var passengers = ((Airplane)airplane).Passengers;
-                bool result = id == in_uuid && color == in_color && weight == in_weight && length == (decimal)in_length && lift == in_lift && wingspan == in_wingspan && passengers == in_passengers;
+                bool result04 = id == in_uuid && color == in_color && weight == in_weight && length == (decimal)in_length && lift == in_lift && wingspan == in_wingspan && passengers == in_passengers;
                 string consolUtrskrift = airplane.ToString2(Utilities.VType.Airplane);
 
                 // Assert
-                Assert.True(result);
+                Assert.True(result04);
                 Assert.Contains(in_uuid, consolUtrskrift);
                 Assert.Contains(in_color, consolUtrskrift);
                 Assert.Contains(in_weight.ToString(), consolUtrskrift);
@@ -44,8 +44,6 @@ namespace Exercise4_Garage_2b.Tests {
             } finally {
                 Console.SetIn(originalIn);
                 Console.SetOut(originalOut);
-                input.Close();
-                output.Close();
             }
         }
     }

@@ -10,18 +10,18 @@ namespace Exercise4_Garage_2b.Tests {
             TextWriter originalOut = Console.Out;
 
             Handler handler = new Handler();
-            using var output01 = new StringWriter();
+            using var output05 = new StringWriter();
 
             Garage<IVehicle> tomtGarage = new Garage<IVehicle>(10);
 
             try {
-                Console.SetOut(output01);
+                Console.SetOut(output05);
 
                 //Act
                 var result = handler.ShowGarageSearch(tomtGarage, VType.None, string.Empty, string.Empty, 0, 0);
 
                 //Assert
-                string consolUt = output01.ToString();
+                string consolUt = output05.ToString();
                 // kontrollera konsolutskriften, behöver vara false för att föra alla testfall samtidigt
                 if (false) {
                     StreamWriter fileWriter = new StreamWriter("test_output.txt");
@@ -35,8 +35,6 @@ namespace Exercise4_Garage_2b.Tests {
             } finally {
                 Console.SetIn(originalIn);
                 Console.SetOut(originalOut);
-                //input.Close();
-                output01.Close();
             }
         }
     }

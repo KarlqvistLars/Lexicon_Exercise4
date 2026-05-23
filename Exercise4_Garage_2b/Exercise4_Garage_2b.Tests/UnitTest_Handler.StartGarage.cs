@@ -17,21 +17,21 @@ namespace Exercise4_Garage_2b.Tests {
                 // Act
                 bool result01 = handler.StartGarage();
                 // Assert
-                var consolUtrskrift = output03.ToString();
+                var consolUtskr03 = output03.ToString();
                 // kontrollera konsolutskriften, behöver vara false för att föra alla testfall samtidigt
                 if (false) {
                     StreamWriter fileWriter = new StreamWriter("test_output.txt");
-                    fileWriter.WriteLine(consolUtrskrift);
+                    fileWriter.WriteLine(consolUtskr03);
                     fileWriter.Close();
                 }
-                Console.WriteLine(consolUtrskrift);
+                Console.WriteLine(consolUtskr03);
                 Assert.True(result01);
                 if (param1 == "10" && param2.ToLower() == "y") {
-                    Assert.Contains("   * Garage 2.0 * \r\n=====================", consolUtrskrift);
-                    Assert.Contains("Press Enter to continue...", consolUtrskrift);
+                    Assert.Contains("   * Garage 2.0 * \r\n=====================", consolUtskr03);
+                    Assert.Contains("Press Enter to continue...", consolUtskr03);
                 } else {
-                    Assert.True(consolUtrskrift.Contains("Programmet avslutas..."));
-                    Assert.True(consolUtrskrift.Contains("Vill du starta med ett fullt garage? (Y/N):"));
+                    Assert.True(consolUtskr03.Contains("Programmet avslutas..."));
+                    Assert.True(consolUtskr03.Contains("Vill du starta med ett fullt garage? (Y/N):"));
                 }
             } finally {
                 Console.SetIn(originalIn);
