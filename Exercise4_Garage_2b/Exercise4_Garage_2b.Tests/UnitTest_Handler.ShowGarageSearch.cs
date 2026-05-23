@@ -23,7 +23,7 @@ namespace Exercise4_Garage_2b.Tests {
                 //Assert
                 string consolUtrskrift = output.ToString();
                 // kontrollera konsolutskriften, behöver vara false för att föra alla testfall samtidigt
-                if (true) {
+                if (false) {
                     StreamWriter fileWriter = new StreamWriter("test_output.txt");
                     fileWriter.WriteLine(consolUtrskrift);
                     fileWriter.Close();

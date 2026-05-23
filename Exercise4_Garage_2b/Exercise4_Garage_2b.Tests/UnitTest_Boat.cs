@@ -29,6 +29,7 @@ namespace Exercise4_Garage_2b.Tests {
                 bool result = id == "BC12345" && color == "Vit" && weight == 12000 && length == 15.2m && maxWaterDepth == 2 && maxSpeed == 14.3m && deplacement == 20000;
                 string consolUtrskrift = boat.ToString2(Utilities.VType.Boat);
 
+
                 // Assert
                 Assert.True(result);
                 Assert.Contains("BC12345", consolUtrskrift);
