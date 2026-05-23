@@ -4,7 +4,6 @@
 ```
 ![UML ClassDiagram](https://github.com/KarlqvistLars/Lexicon_Exercise4/blob/main/docs/F%C3%B6desDiagram/UML_ClassDiagram.jpg)
 <br>
-![passing test](https://github.com/KarlqvistLars/Lexicon_Exercise4/actions/workflows/build.yml/badge.svg)
 [![Build Status](https://github.com/KarlqvistLars/Lexicon_Exercise4/actions/workflows/build.yml/badge.svg)](https://github.com/KarlqvistLars/Lexicon_Exercise4/actions/workflows/build.yml)
 <br>
 
