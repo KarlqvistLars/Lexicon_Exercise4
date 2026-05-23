@@ -8,24 +8,29 @@ namespace Exercise4_Garage_2b.Tests {
             //Arrange
             TextReader originalIn = Console.In;
             TextWriter originalOut = Console.Out;
+
             Handler handler = new Handler();
             using var input03 = new StringReader(param1 + "\n" + param2 + "\n" + param3 + "\n" + param4 + "\n");
             using var output03 = new StringWriter();
+
             try {
                 Console.SetIn(input03);
                 Console.SetOut(output03);
+
                 // Act
-                bool result01 = handler.StartGarage();
+                bool result03 = handler.StartGarage();
                 // Assert
                 var consolUtskr03 = output03.ToString();
+
                 // kontrollera konsolutskriften, behöver vara false för att föra alla testfall samtidigt
                 if (false) {
                     StreamWriter fileWriter = new StreamWriter("test_output.txt");
                     fileWriter.WriteLine(consolUtskr03);
                     fileWriter.Close();
                 }
-                Console.WriteLine(consolUtskr03);
-                Assert.True(result01);
+
+                Assert.True(result03);
+
                 if (param1 == "10" && param2.ToLower() == "y") {
                     Assert.Contains("   * Garage 2.0 * \r\n=====================", consolUtskr03);
                     Assert.Contains("Press Enter to continue...", consolUtskr03);
