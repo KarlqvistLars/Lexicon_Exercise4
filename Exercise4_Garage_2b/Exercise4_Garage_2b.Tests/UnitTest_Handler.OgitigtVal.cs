@@ -19,13 +19,12 @@ namespace Exercise4_Garage_2b.Tests {
                 Console.SetOut(output08);
 
                 // Act
-                Console.SetIn(input08);
                 var result = handler.OgitigtVal();
 
                 // Assert
                 string consolUtrskrift = output08.ToString();
                 Assert.True(result);
-                Assert.True(consolUtrskrift.Contains("Ogiltigt val"));
+                Assert.Contains("Ogiltigt val", consolUtrskrift);
                 Assert.Contains("Tryck Retur", consolUtrskrift);
 
             } finally {
