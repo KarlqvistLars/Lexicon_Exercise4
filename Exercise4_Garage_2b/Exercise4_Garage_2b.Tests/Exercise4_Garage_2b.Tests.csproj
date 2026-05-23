@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Exercise4_Garage_2b\Exercise4_Garage_2b.csproj" />
-    <ProjectReference Include="..\Exercise4_Garage_2\Exercise4_Garage_2b.csproj" />
+    <ProjectReference Include="..\Exercise4_Garage_2b\Exercise4_Garage_2b.csproj" />
   </ItemGroup>
 
   <ItemGroup>

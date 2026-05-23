@@ -127,7 +127,7 @@ namespace Exercise4_Garage_2b {
         internal void AddStartVehicles(Garage<IVehicle> garage, int count) {
             AddRandomVehicles(garage, count);
         }
-        public void RemoveVehicle(Garage<IVehicle> garage) {
+        public bool RemoveVehicle(Garage<IVehicle> garage) {
             string Title = $"{Utilities.Cap(Text.Rad1RemoveVehicle)}.";
             Utilities.ShowHeader(Title);
             var (result, filteredGarage) = SeachAndFilterVehicles(garage);
@@ -139,7 +139,7 @@ namespace Exercise4_Garage_2b {
                     Console.WriteLine($"{Utilities.Tab}{Utilities.Cap(Text.FelaktigInput)}.");
                     Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
                     Console.ReadLine();
-                    return;
+                    return false;
                 }
                 var vehicleToRemove = filteredGarage[input - 1];
                 string regnr = vehicleToRemove.Uuid;
@@ -148,14 +148,17 @@ namespace Exercise4_Garage_2b {
                 } else {
                     Console.WriteLine($"{Utilities.Tab}{Utilities.Cap(Text.FordonMedRegistrering)} {regnr} {Text.HittadesEj}.");
                 }
+                return result;
             } else {
                 Console.WriteLine($"{Utilities.Tab}{Utilities.Cap(Text.HittadesEj)}.");
                 Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
                 Console.ReadLine();
+                return false;
             }
             Console.ReadLine();
         }
-        private bool RemoveFromGarageList(Garage<IVehicle> garage, string regnr) {
+
+        internal bool RemoveFromGarageList(Garage<IVehicle> garage, string regnr) {
             var enumerator = garage.GetEnumerator();
             while (enumerator.MoveNext()) {
                 if (enumerator.Current.Uuid.Equals(regnr, StringComparison.OrdinalIgnoreCase)) {
@@ -321,7 +324,7 @@ namespace Exercise4_Garage_2b {
                 }
             }
             Console.WriteLine($"{Utilities.Tab}Sparar fordon till \n{FullfilePath}");
-            Console.ReadKey();
+            Console.ReadLine();
             File.WriteAllText(FullfilePath, sb.ToString());
             sb.Clear();
         }
@@ -348,7 +351,7 @@ namespace Exercise4_Garage_2b {
                     var uuid = parts[1].Split(':')[1].Trim();
                     var color = parts[2].Split(':')[1].Trim();
                     var weight = int.Parse(parts[3].Split(':')[1].Trim());
-                    var length = int.Parse(parts[4].Split(':')[1].Trim());
+                    var length = decimal.Parse(parts[4].Split(':')[1].Trim());
                     var specificData = vehicleParts[1].Trim(']');
                     switch (type) {
                         case "Car":
