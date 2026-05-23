@@ -5,13 +5,13 @@ namespace Exercise4_Garage_2b.Tests {
         [Fact]
         public void TestOgitigtVal() {
             //Arrange
-            TextReader originalIn = Console.In;
-            TextWriter originalOut = Console.Out;
+            TextReader orig08In = Console.In;
+            TextWriter orig08Out = Console.Out;
 
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("sv-SE");
             Handler handler = new Handler();
 
-            using var input08 = new StringReader("k");
+            using var input08 = new StringReader("k\n");
             using var output08 = new StringWriter();
 
             try {
@@ -28,8 +28,8 @@ namespace Exercise4_Garage_2b.Tests {
                 Assert.Contains("Tryck Retur", consolUtrsk08);
 
             } finally {
-                Console.SetIn(originalIn);
-                Console.SetOut(originalOut);
+                Console.SetIn(orig08In);
+                Console.SetOut(orig08Out);
             }
         }
     }
