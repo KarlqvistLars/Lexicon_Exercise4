@@ -129,7 +129,7 @@ Exercise4_Garage_2/
 ```
 ## För installation och test av Program
 Ladda ned det zippade programmet [här](https://github.com/KarlqvistLars/Lexicon_Exercise4/blob/main/Releaser/Exercise4_Garage_2b.zip). <br>
-Programet behöver .NET version 10 för att fungera som tänkt. <br>
+Programmet behöver .NET version 10 för att fungera som tänkt. <br>
 ```
 Packa upp zipfilerna på lämplig plats och starta filen [Exercise4_Garage_2.exe].
 
