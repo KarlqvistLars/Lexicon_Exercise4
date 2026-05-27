@@ -32,7 +32,5 @@ jobs:
       - name: Build Test project
         run: dotnet build Exercise4_Garage_2b/Exercise4_Garage_2b.Tests/Exercise4_Garage_2b.Tests.csproj --no-restore
         
-      - name: Run tests
-        env:
-          DOTNET_TEST_NEW_VSTEST_EXPERIENCE: "true" # Detta aktiverar stöd för .NET 10+
-        run: dotnet test Exercise4_Garage_2b/Exercise4_Garage_2b.Tests/Exercise4_Garage_2b.Tests.csproj --no-build
+      - name: Run Tests
+        run: dotnet run --project Exercise4_Garage_2b/Exercise4_Garage_2b.Tests/Exercise4_Garage_2b.Tests.csproj --no-build
