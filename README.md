@@ -139,5 +139,5 @@ Antingen genom att dubbelklicka på filen i explorer eller genom att köra progr
 
 - [Garage 2.0](#garage-2.0)
 
-- [^^ Till toppen ^^](#garage-2.0)
+[^^ Till toppen ^^](#garage-2.0)
 
