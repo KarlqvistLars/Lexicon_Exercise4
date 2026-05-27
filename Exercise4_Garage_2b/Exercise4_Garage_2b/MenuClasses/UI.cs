@@ -79,8 +79,8 @@ namespace Exercise4_Garage_2b {
                         UI.ExitGarage();
                         break;
                     default:
-                        Console.WriteLine($"{Utilities.Tab}Ogiltigt val");
-                        Console.ReadKey();
+                        Console.WriteLine($"{Utilities.Tab}Ogiltigt val\n{Utilities.Tab}{Text.TryckRetur}");
+                        Console.ReadLine();
                         break;
                 }
             }
