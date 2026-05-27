@@ -4,8 +4,9 @@
 ```
 ![UML ClassDiagram](https://github.com/KarlqvistLars/Lexicon_Exercise4/blob/main/docs/F%C3%B6desDiagram/UML_ClassDiagram.jpg)
 <br>
-![passing test](https://github.com/KarlqvistLars/Lexicon_Exercise4/actions/workflows/build.yml/badge.svg)
+[![Build Status](https://github.com/KarlqvistLars/Lexicon_Exercise4/actions/workflows/build.yml/badge.svg)](https://github.com/KarlqvistLars/Lexicon_Exercise4/actions/workflows/build.yml)
 <br>
+
 
 ## Innehåll
 - [Garage 2.0](#garage-2.0)
@@ -127,7 +128,8 @@ Exercise4_Garage_2/
 └── Exercise_Garage_2.Tests/
 ```
 ## För installation och test av Program
-Ladda ned det zippade programmet [här](https://github.com/KarlqvistLars/Lexicon_Exercise4/blob/main/Releaser/Exercise4_Garage_2.zip). <br>
+Ladda ned det zippade programmet [här](https://github.com/KarlqvistLars/Lexicon_Exercise4/blob/main/Releaser/Exercise4_Garage_2b.zip). <br>
+Programmet behöver .NET version 10 för att fungera som tänkt. <br>
 ```
 Packa upp zipfilerna på lämplig plats och starta filen [Exercise4_Garage_2.exe].
 
