@@ -135,3 +135,5 @@ Packa upp zipfilerna på lämplig plats och starta filen [Exercise4_Garage_2.exe
 
 Antingen genom att dubbelklicka på filen i explorer eller genom att köra programmet från Terminal fönstret.
 ```
+<br>
+[^^ Till toppen ^^](#garage-2.0)
