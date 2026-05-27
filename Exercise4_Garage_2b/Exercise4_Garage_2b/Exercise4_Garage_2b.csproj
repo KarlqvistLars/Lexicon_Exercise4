@@ -5,6 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>Exercise4_Garage_2b.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +24,12 @@
 			     <_Parameter1>MyApp.Tests</_Parameter1>
 		</AssemblyAttribute>
 	</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.TestPlatform" Version="18.6.0" />
+    <PackageReference Include="Microsoft.TestPlatform.Portable" Version="18.6.0" />
+    <PackageReference Include="xunit.v3.core.mtp-v2" Version="3.2.2" />
+  </ItemGroup>
 
 
 </Project>
