@@ -14,7 +14,7 @@ D --> E
 
 start
 
-if (Valid input?) then (yes)
+if (?) then (yes)
   :Continue;
 else (no)
   :Show error;
