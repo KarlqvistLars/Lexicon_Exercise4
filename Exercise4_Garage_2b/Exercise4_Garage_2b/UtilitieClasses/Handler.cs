@@ -14,7 +14,6 @@ namespace Exercise4_Garage_2b {
     public class Handler : IHandler {
         public Handler() { }
         Garage<IVehicle> garage = new Garage<IVehicle>(1);
-
         //static string path = Environment.GetCommandLineArgs()[0];
         //path = AppDomain.CurrentDomain.BaseDirectory;
         public static string GetInstallationPath() {
@@ -46,6 +45,14 @@ namespace Exercise4_Garage_2b {
             return true;
         }
         public void AddVehicle(Garage<IVehicle> garage, VType type) {
+            string fordon = type switch {
+                VType.Car => $"{Text.Bil}",
+                VType.Bus => $"{Text.Buss}",
+                VType.Motorcycle => $"{Text.Motorcykel}",
+                VType.Boat => $"{Text.Boat}",
+                VType.Airplane => $"{Text.Flygplan}",
+                _ => $"{type.ToString()}"
+            };
             if (garage.IsFull) {
                 Console.WriteLine($"{Utilities.Tab}Garaget är fullt. Kan inte lägga till fler fordon.");
                 Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
@@ -54,7 +61,7 @@ namespace Exercise4_Garage_2b {
             }
             string[] v = new string[4];
             string[] c = new string[4];
-            string Title = $"{Text.LaggTill} {type.ToString()}.";
+            string Title = $"{Text.LaggTill}{fordon}.";
             Utilities.ShowHeader(Title);
             v = Vehicle.InDataVehicle(garage, type);
             c = type switch {
@@ -74,7 +81,7 @@ namespace Exercise4_Garage_2b {
                 _ => throw new ArgumentException("Invalid vehicle type")
             });
             Console.WriteLine($"\n{Utilities.Line30}{Utilities.Line30}");
-            Console.WriteLine($"{Utilities.Tab}{Cap(type.ToString())} {Text.LagtsTillGaraget}\n{garage.Last().ToString2(type)}");
+            Console.WriteLine($"{Utilities.Tab}{Cap(fordon)} {Text.LagtsTillGaraget}\n{garage.Last().ToString3(type)}");
             Console.WriteLine($"{Utilities.Line30}{Utilities.Line30}");
             Console.WriteLine($"{Utilities.Tab}{Utilities.Cap(Text.AntalFordon)} {garage.Count}{Text.Av}{garage.Capacity}{Text.platser}");
             Console.WriteLine($"{Utilities.Tab}{Text.TryckRetur}");
@@ -143,6 +150,9 @@ namespace Exercise4_Garage_2b {
                 }
                 var vehicleToRemove = filteredGarage[input - 1];
                 string regnr = vehicleToRemove.Uuid;
+                Console.WriteLine($"{Utilities.Tab}Du valde fordon:\n {garage.FindByRegNumber(regnr)?.ToString2(garage.FindByRegNumber(regnr).Type) ?? "okänt"} \ni den filtrerade listan.");
+                Console.ReadLine();
+
                 if (RemoveFromGarageList(garage, regnr)) {
                     Console.WriteLine($"{Utilities.Tab}{Utilities.Cap(Text.FordonMedRegistrering)} {regnr} {Text.HarTagitsBort}.");
                 } else {
@@ -157,7 +167,6 @@ namespace Exercise4_Garage_2b {
             }
             Console.ReadLine();
         }
-
         internal bool RemoveFromGarageList(Garage<IVehicle> garage, string regnr) {
             var enumerator = garage.GetEnumerator();
             while (enumerator.MoveNext()) {
@@ -169,6 +178,7 @@ namespace Exercise4_Garage_2b {
             return false;
         }
         internal string SelectRegnr(Garage<IVehicle> garage, int input) {
+
             int c = 0;
             string regnr = string.Empty;
             var enumerator = garage.GetEnumerator();

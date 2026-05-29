@@ -20,7 +20,6 @@ namespace Exercise4_Garage_2b {
             this._length = length;
             this._type = (VType)type;
         }
-        public static string Tab { get => new string(' ', 3); }
         public string? Uuid {
             get => _uuid;
             set => _uuid = value;
@@ -112,6 +111,5 @@ namespace Exercise4_Garage_2b {
             }
             return sb.ToString();
         }
-
     }
 }

@@ -143,7 +143,7 @@ namespace Exercise4_Garage_2b {
                 }
             } while (true);
         }
-        public static string InputRegNum(Garage<IVehicle> garage, string regNum, VType type, bool skipUniqCheck = false) {
+        public static string InputRegNum(Garage<IVehicle> garage, string regNum, VType type) {
             bool running = true;
             string[] RegNumCheck = new string[3];
             do {
@@ -155,7 +155,7 @@ namespace Exercise4_Garage_2b {
                         return regNum;
                     }
                     foreach (var item in garage) {
-                        if (skipUniqCheck || item.Uuid != regNum) {
+                        if (item.Uuid != regNum) {
                             running = false;
                             return regNum;
                         } else {
